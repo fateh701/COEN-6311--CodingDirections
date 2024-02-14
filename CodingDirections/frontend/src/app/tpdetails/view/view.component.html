@@ -1,0 +1,26 @@
+<p>view works!</p>
+
+<table class="table table-striped">
+
+<thead>
+        <tr>
+            <th>title</th>
+            <th>image</th>
+            <th>author</th>
+            <th>genre</th>
+            <th>year</th>
+            <th>price</th>
+            <th>rating</th>
+        </tr>
+</thead>
+<tbody>
+        <tr *ngFor="let items of TpdetailsList">
+          <td>{{items.title}}</td>
+          <td>{{items.image}}</td>
+          <td>{{items.author}}</td>
+          <td>{{items.genre}}</td>
+          <td>{{items.year}}</td>
+          <td>{{items.price}}</td>
+          <td>{{items.rating}}</td>
+        </tr>
+</table>
