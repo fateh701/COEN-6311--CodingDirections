@@ -3,21 +3,21 @@ from .models import Flight, Hotel, Activity, TravelPackage
 from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer
 
 
-class FlightViewSet(viewsets.HyperlinkedModelViewSet):
+class FlightViewSet(viewsets.ModelViewSet):
     queryset = Flight.objects.all()
     serializer_class = FlightSerializer
 
 
-class HotelViewSet(viewsets.HyperlinkedModelViewSet):
+class HotelViewSet(viewsets.ModelViewSet):
     queryset = Hotel.objects.all()
     serializer_class = HotelSerializer
 
 
-class ActivityViewSet(viewsets.HyperlinkedModelViewSet):
+class ActivityViewSet(viewsets.ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
 
 
-class TravelPackageViewSet(viewsets.HyperlinkedModelViewSet):
+class TravelPackageViewSet(viewsets.ModelViewSet):
     queryset = TravelPackage.objects.all()
     serializer_class = TravelPackageSerializer

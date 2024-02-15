@@ -15,14 +15,17 @@ Including another URLconf
 """
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from travelAgencyApi.views import FlightViewSet, HotelViewSet, ActivityViewSet, TravelPackageViewSet
+import travelAgencyApi.views as views
+from django.contrib import admin
 
 router = DefaultRouter()
-router.register(r'flights', FlightViewSet)
-router.register(r'hotels', HotelViewSet)
-router.register(r'activities', ActivityViewSet)
-router.register(r'travel-packages', TravelPackageViewSet)
+router.register(r'flights', views.FlightViewSet)
+router.register(r'hotels', views.HotelViewSet)
+router.register(r'activities', views.ActivityViewSet)
+router.register(r'travel-packages', views.TravelPackageViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('admin/', admin.site.urls),
+    path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page
 ]
