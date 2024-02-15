@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'travelAgencyApi', # Add the travelAgencyApi app to the list of installed apps
+    'travelAgencyApi',  # Add the travelAgencyApi app to the list of installed apps
 ]
 
 MIDDLEWARE = [
