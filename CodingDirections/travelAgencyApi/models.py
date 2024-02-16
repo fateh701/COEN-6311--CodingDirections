@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+#
 class Flight(models.Model):
     name = models.CharField(max_length=100)
     departure_city = models.CharField(max_length=100)
