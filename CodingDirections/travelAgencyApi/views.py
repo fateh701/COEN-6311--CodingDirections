@@ -3,14 +3,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Flight, Hotel, Activity, TravelPackage
 from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer
-def list(self, request, *args, **kwargs):
-    queryset = self.filter_queryset(self.get_queryset())
-    serializer = self.get_serializer(queryset, many=True)
-    return Response(serializer.data)
-def destroy(self, request, *args, **kwargs):
-    instance = self.get_object()
-    self.perform_destroy(instance)
-    return Response(status=status.HTTP_204_NO_CONTENT)
+     def list(self, request, *args, **kwargs):
+      queryset = self.filter_queryset(self.get_queryset())
+      serializer = self.get_serializer(queryset, many=True)
+      return Response(serializer.data)
+     def destroy(self, request, *args, **kwargs):
+      instance = self.get_object()
+      self.perform_destroy(instance)
+      return Response(status=status.HTTP_204_NO_CONTENT)
 
 class FlightViewSet(viewsets.ModelViewSet):
     queryset = Flight.objects.all()
