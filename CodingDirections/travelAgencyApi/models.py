@@ -54,3 +54,9 @@ class TravelPackage(models.Model):
 
     class Meta:
         ordering = ['name']
+class Notification(models.Model):
+    Notification = (‘info', 'Information'),
+    message = models.TextField()
+    notification = models.CharField(max_length=250, models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.message
