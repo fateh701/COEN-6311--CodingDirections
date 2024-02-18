@@ -19,7 +19,8 @@ class Flight(models.Model):
 class Hotel(models.Model):
     name = models.CharField(max_length=100)
     checkinDate = models.DateTimeField(default=timezone.now())  # Set the default value to the current date
-    checkoutDate = models.DateTimeField(default=timezone.now()+timezone.timedelta(days=1))  # Set the default value to the current date + 1 day
+    checkoutDate = models.DateTimeField(default=timezone.now()+timezone.timedelta(days=1))  # Set the default value
+    # to the current date + 1 day
     location = models.CharField(max_length=100)
     occupancy = models.IntegerField(default=1) # Set the default value to 1
     price_per_night = models.DecimalField(max_digits=10, decimal_places=2)
@@ -53,11 +54,16 @@ class TravelPackage(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['name']
+      ordering = ['name']
+  
 class Notification(models.Model):
     Notification = ('info', 'Information'),
     message = models.TextField()
     notification = models.CharField(max_length=250, default= 'info')
     Date_Time = models.DateTimeField(auto_now_add=True)
+    
     def __str__(self):
         return self.message
+      
+    class Meta:
+        ordering = ['name']
