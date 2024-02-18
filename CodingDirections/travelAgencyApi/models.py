@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+#
 class Flight(models.Model):
     name = models.CharField(max_length=100)
     departure_city = models.CharField(max_length=100)
@@ -53,5 +53,17 @@ class TravelPackage(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+      ordering = ['name']
+  
+class Notification(models.Model):
+    Notification = ('info', 'Information'),
+    message = models.TextField()
+    notification = models.CharField(max_length=250, default= 'info')
+    Date_Time = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.message
+      
     class Meta:
         ordering = ['name']
