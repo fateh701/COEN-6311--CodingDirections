@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import Flight, Hotel, Activity, TravelPackage
-from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer
+from .models import Flight, Hotel, Activity, TravelPackage, Modification
+from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, ModificationSerializer
 class FlightViewSet(viewsets.ModelViewSet):
     queryset = Flight.objects.all()
     serializer_class = FlightSerializer
@@ -40,3 +40,6 @@ class TravelPackageViewSet(viewsets.ModelViewSet):
         if search_query:
             queryset = queryset.filter(name__icontains=search_query)
         return queryset
+class ModificationViewSet(viewsets.ModelViewSet):
+    queryset = Modification.objects.all()
+    serializer_class = ModificationSerializer

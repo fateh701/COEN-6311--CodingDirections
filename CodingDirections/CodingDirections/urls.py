@@ -23,9 +23,10 @@ router.register(r'flights', views.FlightViewSet)
 router.register(r'hotels', views.HotelViewSet)
 router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
-
+router.register(r'modification', ModificationViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page
+    path('', include(router.urls)),
 ]
