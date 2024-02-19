@@ -23,7 +23,7 @@ router.register(r'flights', views.FlightViewSet)
 router.register(r'hotels', views.HotelViewSet)
 router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
-router.register(r'modification', ModificationViewSet)
+router.register(r'modification', views.ModificationViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
