@@ -64,7 +64,7 @@ class Notification(models.Model):
 
 class Modification(models.Model):
     Client = models.CharField(max_length=50)
-    Request = models.TextField()
+    request = models.TextField()
     Request_creation_Date_Time= models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.Client
