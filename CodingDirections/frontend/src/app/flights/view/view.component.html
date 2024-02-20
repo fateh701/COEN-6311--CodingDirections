@@ -1,1 +1,22 @@
-<p>view works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Departure City</th>
+      <th>Arrival City</th>
+      <th>Departure Time</th>
+      <th>Arrival Time</th>
+      <th>Price</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let flight of flightsList">
+      <td>{{ flight.name }}</td>
+      <td>{{ flight.departure_city }}</td>
+      <td>{{ flight.arrival_city }}</td>
+      <td>{{ flight.departure_time }}</td>
+      <td>{{ flight.arrival_time }}</td>
+      <td>{{ flight.price }}</td>
+      </tr>
+  </tbody>
+</table>

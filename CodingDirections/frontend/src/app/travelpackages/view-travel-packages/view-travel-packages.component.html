@@ -1,0 +1,27 @@
+<p>Inside View Travel Packages View component!</p>
+
+<!-- view-travel-package.component.html -->
+<div *ngIf="selectedPackage">
+  <<h2>{{ selectedPackage.name }}</h2>
+  <div>
+    <h3>Flights</h3>
+    <ul>
+
+      <li *ngFor="let flight of selectedPackage.flights">{{ flight.name }}</li>
+<!--      &lt;!&ndash;as in backend we have travelpackages and then by id we can go to specify details,so applying the route for the same &ndash;&gt;-->
+<!--      <a routerLink="/flights/{{ flight.id }}">{{ flight.name }}</a>-->
+    </ul>
+  </div>
+  <div>
+    <h3>Hotels</h3>
+    <ul>
+      <li *ngFor="let hotel of selectedPackage.hotels">{{ hotel.name }}</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Activities</h3>
+    <ul>
+      <li *ngFor="let activity of selectedPackage.activities">{{ activity.name }}</li>
+    </ul>
+  </div>
+</div>
