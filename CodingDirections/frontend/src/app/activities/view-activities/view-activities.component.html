@@ -1,1 +1,5 @@
-<p>view-activities works!</p>
+<div *ngIf="selectedActivity">
+  <h5>Name: {{selectedActivity.name}} </h5>
+  <h5>Location: {{selectedActivity.location}}</h5>
+  <h5>Price: {{selectedActivity.price}}</h5>
+</div>

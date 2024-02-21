@@ -1,22 +1,8 @@
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Departure City</th>
-      <th>Arrival City</th>
-      <th>Departure Time</th>
-      <th>Arrival Time</th>
-      <th>Price</th>
-      </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let flight of flightsList">
-      <td>{{ flight.name }}</td>
-      <td>{{ flight.departure_city }}</td>
-      <td>{{ flight.arrival_city }}</td>
-      <td>{{ flight.departure_time }}</td>
-      <td>{{ flight.arrival_time }}</td>
-      <td>{{ flight.price }}</td>
-      </tr>
-  </tbody>
-</table>
+<div *ngIf="selectedFlight">
+  <h5>Name: {{selectedFlight.name}} </h5>
+  <h5>Departure City: {{ selectedFlight.departure_city }} </h5>
+  <h5>Arrival City: {{ selectedFlight.arrival_city }} </h5>
+  <h5>Departure Time: {{ selectedFlight.departure_time }} </h5>
+  <h5>Arrival Time: {{ selectedFlight.arrival_time }} </h5>
+  <h5>Price: {{ selectedFlight.price }} </h5>
+</div>
