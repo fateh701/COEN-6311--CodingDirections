@@ -1,9 +1,20 @@
 
-<div class="travel-packages">
+<!--<div class="travel-packages">-->
+<!--  <h2>Travel Packages</h2>-->
+<!--  <ul>-->
+<!--    <li *ngFor="let package of travelPackagesList">-->
+<!--      &lt;!&ndash;as in backend we have travelpackages and then by id we can go to specify details,so applying the route for the same &ndash;&gt;-->
+<!--      <a routerLink="/travelpackages/{{ package.id }}">{{ package.name }}</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
+
+
+<div>
+  <input type="text" [(ngModel)]="searchQuery" (input)="getFilteredTravelpackagesList()" placeholder="Search by name">
   <h2>Travel Packages</h2>
   <ul>
-    <li *ngFor="let package of travelPackagesList">
-      <!--as in backend we have travelpackages and then by id we can go to specify details,so applying the route for the same -->
+    <li *ngFor="let package of filteredTravelPackagesList">
       <a routerLink="/travelpackages/{{ package.id }}">{{ package.name }}</a>
     </li>
   </ul>
