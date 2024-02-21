@@ -28,6 +28,7 @@ export class SharedService {
   getSelectedTravelpackage(id:any):Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/travel-packages/' + id + '/',{headers:this.httpHeaders});
   }
+
   getHotelsList():Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/hotels/',{headers:this.httpHeaders});
   }
