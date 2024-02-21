@@ -21,6 +21,12 @@ export class SharedService {
     return this.http.post(this.baseAPIUrl + '/flights/',val,{headers:this.httpHeaders});
   }
 
+  getSelectedFlight(id:any):Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl + '/flights/' + id + '/',{headers:this.httpHeaders});
+  }
+
+
+
   getTravelpackagesList():Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/travel-packages/',{headers:this.httpHeaders});
   }
@@ -33,8 +39,17 @@ export class SharedService {
     return this.http.get<any[]>(this.baseAPIUrl + '/hotels/',{headers:this.httpHeaders});
   }
 
+  getSelectedHotel(id:any):Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl + '/hotels/' + id + '/',{headers:this.httpHeaders});
+  }
+
+
   getActivitiesList():Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/activities/',{headers:this.httpHeaders});
+  }
+
+  getSelectedActivity(id:any):Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl + '/activities/' + id + '/',{headers:this.httpHeaders});
   }
 
 }

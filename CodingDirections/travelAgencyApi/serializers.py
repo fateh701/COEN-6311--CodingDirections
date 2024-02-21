@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Flight, Hotel, Activity, TravelPackage
+from .models import Flight, Hotel, Activity, TravelPackage, Notification, BookingDetails
 
 
 class FlightSerializer(serializers.ModelSerializer):
@@ -27,4 +27,15 @@ class TravelPackageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TravelPackage
+        fields = '__all__'
+
+class NotificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notification
+        fields = '__all__'
+
+class BookingDetailsSerializer(serializers.ModelSerializer):
+    travel_package = TravelPackageSerializer(many=True)
+    class Meta:
+        model = BookingDetails
         fields = '__all__'

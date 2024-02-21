@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
+
 #
 class Flight(models.Model):
     name = models.CharField(max_length=100)
@@ -49,6 +51,7 @@ class TravelPackage(models.Model):
     flights = models.ManyToManyField(Flight)
     hotels = models.ManyToManyField(Hotel)
     activities = models.ManyToManyField(Activity, blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2,default=1122.00)
 
     def __str__(self):
         return self.name
@@ -67,3 +70,15 @@ class Notification(models.Model):
       
     class Meta:
         ordering = ['Date_Time']
+
+class BookingDetails(models.Model):
+    customer = models.ForeignKey(User, on_delete=models.CASCADE)
+    travel_package = models.ManyToManyField(TravelPackage)
+    payment_status_flag = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.customer.username + " " + str(self.payment_status_flag)
+
+    class Meta:
+        ordering = ['customer']
+

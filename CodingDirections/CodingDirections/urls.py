@@ -23,6 +23,7 @@ router.register(r'flights', views.FlightViewSet)
 router.register(r'hotels', views.HotelViewSet)
 router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
+router.register(r'booking-details', views.BookingDetailsViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

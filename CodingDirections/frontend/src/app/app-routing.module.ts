@@ -8,10 +8,13 @@ import { ViewTravelPackagesComponent } from "./travelpackages/view-travel-packag
 
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
+                         {path:'flights/:id', component:FlightsComponent},
                          {path : 'travelpackages', component : TravelpackagesComponent},
                          {path : 'travelpackages/:id', component : ViewTravelPackagesComponent},
                          {path : 'hotels', component : HotelsComponent},
+                         {path:'hotels/:id', component:HotelsComponent},
                          {path : 'activities', component : ActivitiesComponent},
+                         {path:'activities/:id', component:ActivitiesComponent},
         ];
 
 @NgModule({

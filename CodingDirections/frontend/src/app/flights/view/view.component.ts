@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedService } from "../../shared.service";
+import {ActivatedRoute} from "@angular/router";
 
 
 @Component({
@@ -9,22 +10,21 @@ import { SharedService } from "../../shared.service";
 
 })
 export class ViewComponent {
-  flightsList: any = [];
+  selectedFlight: any = [];
 
-  constructor(private service: SharedService) {
-    this.getFlightsList();
+  constructor(private route: ActivatedRoute, private service: SharedService) {
+    this.getSelectedFlight();
   }
 
-  getFlightsList = () => {
-    this.service.getFlightsList().subscribe(
+  getSelectedFlight = () => {
+    var flightId = this.route.snapshot.paramMap.get('id');
+    this.service.getSelectedFlight(flightId).subscribe(
       data => {
-        this.flightsList = data;
+        this.selectedFlight = data;
       },
       error => {
         console.log(error);
       },
     );
   }
-
-
 }
