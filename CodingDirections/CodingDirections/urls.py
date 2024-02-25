@@ -19,6 +19,10 @@ import travelAgencyApi.views as views
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.core.mail import send_mail
+from django.conf import settings
+from django.shortcuts import render
+from django.http import HttpResponse
 
 router = DefaultRouter()
 router.register(r'flights', views.FlightViewSet)
@@ -33,4 +37,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('travelAgencyApi/', include('travelAgencyApi.urls')),
     path('search/', views.flight, name='flight'),
+    path('send_confirmation_email/', views.send_confirmation_email, name='send_confirmation_email'),
+
 ]

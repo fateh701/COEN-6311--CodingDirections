@@ -12,7 +12,7 @@ class FlightViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(name__icontains=search_query)
         return queryset
     def get_flight(request):
-        arrival city = request.GET.get('arrival city')
+        arrival_city = request.GET.get('arrival city')
         arrival_time = request.GET.get('arrival_time')
         departure_time = request.GET.get('departure_time')
         price = request.GET.get('price')
@@ -50,3 +50,14 @@ class TravelPackageViewSet(viewsets.ModelViewSet):
 class ModificationViewSet(viewsets.ModelViewSet):
     queryset = Modification.objects.all()
     serializer_class = ModificationSerializer
+
+    def send_confirmation_email(request):
+        modified_data = " All the modified data"
+        send_mail(
+            'Confirmation for the Modifications',
+            f'All the required modifications have been implemented successfully.Modified data: {modified_data}',
+            settings.EMAIL_HOST_USER,  # email address of the sender
+            ['customer@example.com'],  #list of recievers
+            fail_silently=False,
+         )
+        return HttpResponse('Email Sent Successfully')
