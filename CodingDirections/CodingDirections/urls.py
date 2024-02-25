@@ -17,6 +17,8 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 import travelAgencyApi.views as views
 from django.contrib import admin
+from django.urls import path
+from . import views
 
 router = DefaultRouter()
 router.register(r'flights', views.FlightViewSet)
@@ -29,4 +31,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page
     path('', include(router.urls)),
+    path('travelAgencyApi/', include('travelAgencyApi.urls')),
+    path('search/', views.flight, name='flight'),
 ]
