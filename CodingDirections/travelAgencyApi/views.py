@@ -1,7 +1,7 @@
 from rest_framework.response import Response
 from rest_framework import viewsets,status
-from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails
-from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer
+from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent
+from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
 from django.contrib.auth.models import User
@@ -58,6 +58,15 @@ class TravelPackageViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(name__icontains=search_query)
         return queryset
 
+class BookingAgentViewSet(viewsets.ModelViewSet):
+    queryset = BookingAgent.objects.all()
+    serializer_class = BookingAgentSerializer
+    def get_queryset(self):
+        queryset = BookingAgent.objects.all()
+        search_query = self.request.query_params.get('search')
+        if search_query:
+            queryset = queryset.filter(name__icontains=search_query)
+        return queryset
 
 class BookingDetailsViewSet(viewsets.ModelViewSet):
     queryset = BookingDetails.objects.all()
@@ -77,6 +86,11 @@ def create_booking(request):
         user_id = User.objects.get(pk=request.user.id)
         logger.info('Booking to be created for user %s with travel package %s', user_id, travel_package_id)
 
+        customer_location = "canada" #get the location of the customer from the request send from frontend
+        # which we will do when we create the user profile in the EPIC6
+        bookingAgent = BookingAgent.objects.filter(location=customer_location).first()
+        if bookingAgent is None:
+            return  Response({'error': 'Booking agent not found'}, status=status.HTTP_400_BAD_REQUEST)
 
         #     return Response({'error': 'User id is required'}, status=status.HTTP_400_BAD_REQUEST)
         # else:
@@ -87,7 +101,7 @@ def create_booking(request):
         travel_package = get_object_or_404(TravelPackage, id=travel_package_id)
 
         #create a Booking
-        booking = BookingDetails.objects.create(customer=user_id,payment_status_flag=True)
+        booking = BookingDetails.objects.create(customer=user_id,payment_status_flag=True,agent=bookingAgent)
         booking.travel_package.set([travel_package])
         serializer: BookingDetailsSerializer = BookingDetailsSerializer(booking)
 

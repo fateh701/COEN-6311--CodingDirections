@@ -71,13 +71,25 @@ class Notification(models.Model):
     class Meta:
         ordering = ['Date_Time']
 
+class BookingAgent(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE) # OneToOneField is used to create a one-to-one relationship between two models
+    location = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.user.username
+
+    class Meta:
+        ordering = ['user']
+
 class BookingDetails(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
     travel_package = models.ManyToManyField(TravelPackage)
     payment_status_flag = models.BooleanField(default=False)
+    agent = models.ForeignKey(BookingAgent, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.customer.username + " " + str(self.payment_status_flag)
 
     class Meta:
         ordering = ['customer']
+
