@@ -24,6 +24,7 @@ router.register(r'hotels', views.HotelViewSet)
 router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
 router.register(r'booking-details', views.BookingDetailsViewSet)
+router.register(r'booking-agent', views.BookingAgentViewSet)
 #add url for create_booking method
 
 urlpatterns = [

@@ -178,3 +178,38 @@ Bad Request: /create-booking/
 "POST /create-booking/ HTTP/1.1" 400 24
 Bad Request: /create-booking/
 "POST /create-booking/ HTTP/1.1" 400 24
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11097
+"GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 200 540434
+"GET /booking-agent/ HTTP/1.1" 200 14133
+"POST /booking-agent/ HTTP/1.1" 201 14249
+"POST /booking-agent/ HTTP/1.1" 201 14247
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10854
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10854
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 10822
+"GET / HTTP/1.1" 200 11097
+"GET /booking-agent/ HTTP/1.1" 200 14370
+"GET / HTTP/1.1" 200 11097
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10854
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10854
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 10822
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 10833
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /create-booking/ HTTP/1.1" 201 12460
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /create-booking/ HTTP/1.1" 201 12197
