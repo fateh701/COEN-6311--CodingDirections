@@ -14,9 +14,12 @@ import { ViewTravelPackagesComponent } from './travelpackages/view-travel-packag
 
 import { SharedService } from './shared.service';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,provideHttpClient,withFetch } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {getSharedCompilationState} from "@angular-devkit/build-angular/src/tools/esbuild/angular/compilation-state";
+import { BookingsComponent } from './bookings/bookings.component';
+import { BookingsReviewComponent } from './bookings/bookings-review/bookings-review.component';
+import { BookingsConfirmationComponent } from './bookings/bookings-confirmation/bookings-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import {getSharedCompilationState} from "@angular-devkit/build-angular/src/tools
     ViewComponent,            //This is the component that will be used to display the details of the selected flight
     ViewActivitiesComponent,  //This is the component that will be used to display the details of the selected activity
     ViewHotelsComponent,      //This is the component that will be used to display the details of the selected hotel
-    ViewTravelPackagesComponent, //This is the component that will be used to display the details of the selected travel package
+    ViewTravelPackagesComponent,
+    BookingsComponent,
+    BookingsReviewComponent,
+    BookingsConfirmationComponent, //This is the component that will be used to display the details of the selected travel package
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,8 @@ import {getSharedCompilationState} from "@angular-devkit/build-angular/src/tools
   ],
   providers: [
     SharedService, //This is the service that will be used to make the HTTP requests to the server
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
 })

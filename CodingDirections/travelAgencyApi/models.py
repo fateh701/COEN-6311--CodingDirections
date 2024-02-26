@@ -81,4 +81,3 @@ class BookingDetails(models.Model):
 
     class Meta:
         ordering = ['customer']
-

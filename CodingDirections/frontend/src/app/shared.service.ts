@@ -52,4 +52,13 @@ export class SharedService {
     return this.http.get<any[]>(this.baseAPIUrl + '/activities/' + id + '/',{headers:this.httpHeaders});
   }
 
+  getSelectedBooking(id:any):Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl + '/booking-details/' + id + '/',{headers:this.httpHeaders})
+  }
+
+  postConfirmBooking(val:number):Observable<any>{
+    console.log("From service.ts file its getting package:",val);
+    return this.http.post<any>(this.baseAPIUrl + '/create-booking/',{travel_package_id: val},{headers:this.httpHeaders});
+  }
+
 }

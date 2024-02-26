@@ -1,0 +1,9 @@
+<p> Booking Confirmation Page for : {{userinfo}}</p>
+
+<div *ngIf="selectedBooking">
+  <h2>Review Your package here</h2>
+  <h3>{{ selectedBooking.name }}</h3>
+  <h4></h4>
+  <button (click)="confirmBooking()">Confirm Booking</button>
+  <h4>done</h4>
+</div>
