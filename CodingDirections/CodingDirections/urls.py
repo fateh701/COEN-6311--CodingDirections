@@ -38,5 +38,6 @@ urlpatterns = [
     path('travelAgencyApi/', include('travelAgencyApi.urls')),
     path('search/', views.flight, name='flight'),
     path('send_confirmation_email/', views.send_confirmation_email, name='send_confirmation_email'),
-
+    path('bookings/<int:booking_id>/cancel', views.cancel booking, name='cancel booking'),
+    path('bookings/<int:booking_id>/update', views.update booking, name='update booking'),
 ]
