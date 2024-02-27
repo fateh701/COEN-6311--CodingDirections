@@ -1,4 +1,4 @@
-from django.db import models
+from django.db import models, forms
 from django.utils import timezone
 #
 class Flight(models.Model):
@@ -68,3 +68,20 @@ class Modification(models.Model):
     Request_creation_Date_Time= models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.Client
+class BookingAgent(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    def __str__(self):
+        return self.name
+
+    from django import forms
+    class BookingForm(forms.Form):
+        location = forms.CharField(label='Location', max_length=100)
+        date = forms.DateField(label='Date')
+        pricerange = forms.ChoiceField(label='Price Range', choices=[
+            ('1000-2000', '$1000 - $2000'),
+            ('2000-3000', '$2000 - $30000'),
+            ('40000-5000', '40000 - $5000'),
+            ('5000+', '$5000+')
+        ])

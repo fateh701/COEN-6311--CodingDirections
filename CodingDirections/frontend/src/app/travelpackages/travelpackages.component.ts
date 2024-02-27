@@ -6,8 +6,36 @@ import { Component } from '@angular/core';
   styleUrl: './travelpackages.component.css'
 })
 export class TravelpackagesComponent {
-
 }
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+const server = http.createServer((req, res) => {
+    let filePath = '.' + req.url;
+    if (filePath === './') {
+        filePath = './index.html';
+    }
+    const extname = path.extname(filePath);
+    let contentType = 'text/html';
+    if (extname === '.css') {
+        contentType = 'text/css';
+    }
+    fs.readFile(filePath, (err, content) => {
+        if (err) {
+            res.writeHead(404);
+            res.end('404 Not Found');
+        } else {
+            res.writeHead(200, { 'Content-Type': contentType });
+            res.end(content, 'utf-8');
+        }
+    });
+});
+
+const port = 3000;
+server.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+
 const cancelTravelPackage = async (TravelPackage_name) => {
   try {
     const response = await fetch(`/TravelPackage/${TravelPackage_name}/cancel`, {
@@ -54,7 +82,7 @@ app.get('/', (req, res) => {
 app.post('/update Travel’Package, (req, res) => {
     const {  name, flights, hotels, activities } = req.body;
     const TravelPackage = TravelPackage.find(TravelPackage => TravelPackage.name == name);
-    if (booking) {
+    if (TravelPackage) {
      TravelPackage.flights = flights;
       TravelPackage.hotels = hotels;
         TravelPackage.activities = activities;

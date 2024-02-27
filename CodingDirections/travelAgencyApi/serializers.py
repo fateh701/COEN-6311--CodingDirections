@@ -28,3 +28,8 @@ class ModificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Modification
         fields = '__all__'
+
+class BookingFormSerializer(Serializers.ModelSerializer):
+    class Meta:
+        model= BookingForm
+        fields ='--all--'

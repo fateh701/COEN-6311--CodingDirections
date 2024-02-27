@@ -52,7 +52,7 @@ class TravelPackageViewSet(viewsets.ModelViewSet):
         TravelPackage = get_object_or_404(Booking, pk=TravelPackage_name)
         TravelPackage.cancelled = True
         TravelPackage.save()
-        return JsonResponse({'message': 'TravelPackage'})
+        return JsonResponse({'message': 'TravelPackage cancelled'})
     def update TravelPackage(request, TravelPackage_name):
         TravelPackage = get_object_or_404(TravelPackage, pk=Travel_Package_name)
         data = json.loads(request.body)
@@ -75,3 +75,23 @@ class ModificationViewSet(viewsets.ModelViewSet):
          )
         return HttpResponse('Email Sent Successfully')
 
+class BookingFormViewSet(viewsets.ModelViewSet):
+    queryset = BookingForm.objects.all()
+    serializer_class = BookingFormSerializer
+    from django.shortcuts import render
+    from .forms import BookingForm
+
+    def booking_view(request):
+        if request.method == 'POST':
+            form = BookingForm(request.POST)
+            if form.is_valid():
+                 form.cleaned_data['location']
+                date = form.cleaned_data['date']
+                pricerange = form.cleaned_data['price_range']
+        else:
+            form = BookingForm()
+        return render(request, 'booking.html', {'form': form})
+
+     def booking_view(request):
+         form = BookingForm()
+        return render(request, 'booking.html', {'form': form})
