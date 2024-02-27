@@ -1,14 +1,15 @@
 from rest_framework.response import Response
 from rest_framework import viewsets,status
-from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent
-from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer
-from django.shortcuts import get_object_or_404
+from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent,Modification,Notification
+from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer,NotificationSerializer
+from django.shortcuts import get_object_or_404, render
 from rest_framework.decorators import api_view
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 import logging
 from rest_framework.views import APIView
+from django.core.mail import send_mail
 
 logger = logging.getLogger(__name__) # creating  a logger instance
 
@@ -59,6 +60,12 @@ class TravelPackageViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(name__icontains=search_query)
         return queryset
 
+    # def cancel_TravelPackage(request,TravelPackage.name):
+    #     TravelPackage = get_object_or_404(Booking, pk=TravelPackage_name)
+    #     TravelPackage.cancelled = True
+    #     TravelPackage.save()
+    #     return JsonResponse({'message': 'TravelPackage cancelled'})
+
 class BookingAgentViewSet(viewsets.ModelViewSet):
     queryset = BookingAgent.objects.all()
     serializer_class = BookingAgentSerializer
@@ -78,6 +85,8 @@ class BookingDetailsViewSet(viewsets.ModelViewSet):
         if search_query:
             queryset = queryset.filter(name__icontains=search_query)
         return queryset
+
+
 
 @api_view(['POST'])
 def create_booking(request):
@@ -120,8 +129,54 @@ def current_user_info(request):
 
 
 class CustomerBookingsViewSet(APIView):
-    def get(self, request):
-        user_id = request.user.id
-        bookings = BookingDetails.objects.filter(customer=user_id)
-        serializer = BookingDetailsSerializer(bookings, many=True)
-        return Response(serializer.data)
+
+    def get_single_object(self,pk):
+
+        try:
+            return get_object_or_404(BookingDetails,pk=pk) #get the booking object from the database
+        except BookingDetails.DoesNotExist:
+            return Response({'error': 'Booking object not found'}, status=status.HTTP_404_NOT_FOUND)
+
+
+    # Retrieve all the bookings made by the logged in user
+    def get(self, request,pk=None):
+        if pk is not None:
+            # Retrieve a single booking by its primary key,will be needed for crud operations api redirection
+            booking= get_object_or_404(BookingDetails, pk=pk)
+            serializer = BookingDetailsSerializer(booking)
+            return Response(serializer.data,status=status.HTTP_200_OK)
+        else:
+            # Retrieve all bookings for the current customer
+            user_id = request.user.id
+            bookings = BookingDetails.objects.filter(customer=user_id)
+            serializer = BookingDetailsSerializer(bookings, many=True)
+            return Response(serializer.data)
+
+    #Update the booking detail as per the user request
+    def put(self,request,pk=None):
+        booking = self.get_single_object(pk)
+        serializer = BookingDetailsSerializer(booking, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data,status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    #Delete the booking detail as per the user request
+    def delete(self,request,pk=None):
+        booking = self.get_single_object(pk)
+        booking.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class NotificationViewSet(viewsets.ModelViewSet):
+    notificationlist = Notification.objects.all()
+
+
+    # for notification in notificationlist:
+    #     send_mail(
+    #         'Booking Update Notification',
+    #         notification.message,
+    #         'abc@gmail.com',
+    #         [notification.recepient.email],
+    #         fail_silently=False,
+    #     )

@@ -23,7 +23,7 @@ router.register(r'flights', views.FlightViewSet)
 router.register(r'hotels', views.HotelViewSet)
 router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
-router.register(r'booking-details', views.BookingDetailsViewSet)
+router.register(r'booking-details', views.BookingDetailsViewSet) #get all the bookings made till now
 router.register(r'booking-agent', views.BookingAgentViewSet)
 #add url for create_booking method
 
@@ -31,6 +31,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('customerBookings/',views.CustomerBookingsViewSet.as_view(),name='customerBookings'), #for customer booking details
+    path('customerBookings/<int:pk>/',views.CustomerBookingsViewSet.as_view(),name='customerBookingsCURD'), #for customer booking details
     path(r'create-booking/',views.create_booking,name='create-booking'), #add booking detail in form of json,mainly used for frontend,dont remove
     path(r'current-user-info/',views.current_user_info,name='current-user-info'), #for current user info
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page

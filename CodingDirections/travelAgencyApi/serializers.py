@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Flight, Hotel, Activity, TravelPackage, Notification, BookingDetails, BookingAgent
+from .models import Flight, Hotel, Activity, TravelPackage, Notification, BookingDetails, BookingAgent, Modification
 
 
 class FlightSerializer(serializers.ModelSerializer):
@@ -35,7 +35,7 @@ class NotificationSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class BookingDetailsSerializer(serializers.ModelSerializer):
-    travel_package = TravelPackageSerializer(many=True)
+    travel_package = TravelPackageSerializer(many=True,read_only=True) #read_only=True is used to make the field read only wwhen we want to update the booking detail
     class Meta:
         model = BookingDetails
         fields = '__all__'
@@ -43,4 +43,10 @@ class BookingDetailsSerializer(serializers.ModelSerializer):
 class BookingAgentSerializer(serializers.ModelSerializer):
     class Meta:
         model = BookingAgent
+        fields = '__all__'
+
+#Patch by Prinkal: 26-2-2024
+class ModificationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Modification
         fields = '__all__'
