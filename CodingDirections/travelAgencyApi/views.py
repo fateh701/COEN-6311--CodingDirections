@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
 import logging
+from rest_framework.views import APIView
 
 logger = logging.getLogger(__name__) # creating  a logger instance
 
@@ -116,3 +117,11 @@ def current_user_info(request):
     userId = request.user.id
     username = request.user.username
     return JsonResponse({'id':userId,'username': username})
+
+
+class CustomerBookingsViewSet(APIView):
+    def get(self, request):
+        user_id = request.user.id
+        bookings = BookingDetails.objects.filter(customer=user_id)
+        serializer = BookingDetailsSerializer(bookings, many=True)
+        return Response(serializer.data)

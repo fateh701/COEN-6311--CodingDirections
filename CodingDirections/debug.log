@@ -213,3 +213,31 @@ Watching for file changes with StatReloader
 C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
 Watching for file changes with StatReloader
 "POST /create-booking/ HTTP/1.1" 201 12197
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /current-user-info/ HTTP/1.1" 200 28
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\urls.py changed, reloading.
+Watching for file changes with StatReloader
