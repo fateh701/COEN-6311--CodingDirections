@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django import forms
 
 #
 class Flight(models.Model):
@@ -60,16 +61,12 @@ class TravelPackage(models.Model):
       ordering = ['name'];
   
 class Notification(models.Model):
-    Notification = ('info', 'Information'),
-    message = models.TextField()
-    notification = models.CharField(max_length=250, default= 'info')
+    #Notification = ('info', 'Information'),
+    recepient = models.ForeignKey(User, on_delete=models.CASCADE,default=2)
+    message = models.TextField(default='')
+    #notification = models.CharField(max_length=250, default= 'info')
     Date_Time = models.DateTimeField(auto_now_add=True)
-    
-    def __str__(self):
-        return self.message
-      
-    class Meta:
-        ordering = ['Date_Time']
+
 
 class BookingAgent(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE) # OneToOneField is used to create a one-to-one relationship between two models
@@ -92,3 +89,22 @@ class BookingDetails(models.Model):
 
     class Meta:
         ordering = ['customer']
+
+#Patch by Prinkal: 27-2-2024
+class Modification(models.Model):
+    Client = models.CharField(max_length=50)
+    request = models.TextField()
+    Request_creation_Date_Time= models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.Client
+
+# class BookingForm(forms.Form):
+#     #travel_package_id = forms.IntegerField()
+#     location = forms.CharField(label='Location', max_length=100)
+#     date = forms.DateField(label='Date')
+#     pricerange = forms.ChoiceField(label='Price Range', choices=[
+#         ('1000-2000', '$1000 - $2000'),
+#         ('2000-3000', '$2000 - $30000'),
+#         ('40000-5000', '40000 - $5000'),
+#         ('5000+', '$5000+')
+#     ])
