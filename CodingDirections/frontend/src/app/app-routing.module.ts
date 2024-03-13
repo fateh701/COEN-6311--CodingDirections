@@ -9,6 +9,12 @@ import { BookingsComponent} from "./bookings/bookings.component";
 import { BookingsReviewComponent} from "./bookings/bookings-review/bookings-review.component";
 import { BookingsConfirmationComponent} from "./bookings/bookings-confirmation/bookings-confirmation.component";
 
+//Component of Authentication and Authorization
+import { HeaderComponent } from "./header/header.component";
+import { AccountComponent } from "./account/account.component";
+import { AuthenticationComponent } from "./authentication/authentication.component";
+
+
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'flights/:id', component:FlightsComponent},
                          {path : 'travelpackages', component : TravelpackagesComponent},
@@ -20,7 +26,10 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'booking-review',component:BookingsReviewComponent},
                          {path:'booking-review/:id',component:BookingsReviewComponent},
                          {path:'bookings-confirmation',component:BookingsConfirmationComponent},
-                         {path:'bookings-confirmation/:id',component:BookingsConfirmationComponent}
+                         {path:'bookings-confirmation/:id',component:BookingsConfirmationComponent},
+                         {path:'profile',component:AccountComponent},
+                         {path:'authentication',component:AuthenticationComponent},
+
         ];
 
 @NgModule({

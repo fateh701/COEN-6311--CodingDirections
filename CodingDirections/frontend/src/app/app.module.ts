@@ -20,6 +20,10 @@ import {getSharedCompilationState} from "@angular-devkit/build-angular/src/tools
 import { BookingsComponent } from './bookings/bookings.component';
 import { BookingsReviewComponent } from './bookings/bookings-review/bookings-review.component';
 import { BookingsConfirmationComponent } from './bookings/bookings-confirmation/bookings-confirmation.component';
+//import { AuthenticationComponent } from './authentication/authentication.component';
+import { AccountComponent } from './account/account.component';
+import { HeaderComponent } from './header/header.component';
+import {AuthenticationModule} from "./authentication/authentication.module";
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import { BookingsConfirmationComponent } from './bookings/bookings-confirmation/
     ViewTravelPackagesComponent,
     BookingsComponent,
     BookingsReviewComponent,
-    BookingsConfirmationComponent, //This is the component that will be used to display the details of the selected travel package
+    BookingsConfirmationComponent,
+    //AuthenticationComponent,
+    AccountComponent,
+    HeaderComponent, //This is the component that will be used to display the details of the selected travel package
   ],
   imports: [
     BrowserModule,
@@ -42,6 +49,7 @@ import { BookingsConfirmationComponent } from './bookings/bookings-confirmation/
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AuthenticationModule,
   ],
   providers: [
     SharedService, //This is the service that will be used to make the HTTP requests to the server

@@ -1,0 +1,106 @@
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3" *ngIf="!isLoginMode">
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+      <div class="form-group">
+        <label for="first_name">FirstName</label>
+        <input
+          type="text"
+          class="form-control"
+          id="first_name"
+          formControlName="first_name"
+          name="first_name">
+        <span class="help-block" style="color: red;" *ngIf="!signupForm.get('first_name')?.value && signupForm.get('first_name')?.touched">First Name is required</span>
+      </div>
+      <div class="form-group">
+        <label for="last_name">LastName</label>
+        <input
+          type="text"
+          class="form-control"
+          id="last_name"
+          formControlName="last_name"
+          name="last_name">
+        <span class="help-block" style="color: red;" *ngIf="!signupForm.get('last_name')?.value && signupForm.get('last_name')?.touched">Last Name is required</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName="email"
+          name="email">
+        <span class="help-block" style="color: red;" *ngIf="!signupForm.get('email')?.value && signupForm.get('email')?.touched">Email is Required</span>
+
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          formControlName="username"
+          name="username">
+        <span class="help-block" style="color: red;" *ngIf="!signupForm.get('username')?.value && signupForm.get('username')?.touched">Username is Required</span>
+      </div>
+      <div formGroupName="passwords">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            formControlName="password"
+            name="password">
+          <span class="help-block" style="color: red;" *ngIf="!signupForm.get('passwords.password')?.value && signupForm.get('passwords.password')?.touched">
+                        Password is Required and must be atleast 8 of length</span>
+        </div>
+        <div class="form-group">
+          <label for="confirmpassword">confirmPassword</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmpassword"
+            formControlName="confirmpassword"
+            name="confirmpassword">
+        </div>
+        <span class="help-block" style="color: red;" *ngIf="!signupForm.get('passwords.confirmpassword')?.value && signupForm.get('passwords.confirmpassword')?.touched && !signupForm.get('passwords')?.errors?.['notsame']">
+                        Passwords must be same!</span>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid">Signup</button>
+      <button class="btn btn-primary" type="button" (click)="onSwitch()">Switch to Login</button>
+    </form>
+  </div>
+
+    <div class="col-xs-12 col-md-6 col-md-offset-3" *ngIf="isLoginMode">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName="email"
+          name="email">
+        <span class="help-block" style="color: red;" *ngIf="!loginForm.get('email')?.value && loginForm.get('email')?.touched">Field Required</span>
+
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          formControlName="password"
+          name="password">
+        <span class="help-block" style="color: red;" *ngIf="!loginForm.get('password')?.value && loginForm.get('password')?.touched">Field Required</span>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+      <button class="btn btn-primary" type="button" (click)="onSwitch()">Switch to Signup</button>
+
+    </form>
+
+  </div>
+
+</div>

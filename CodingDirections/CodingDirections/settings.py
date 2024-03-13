@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken', # Add the rest_framework.authtoken app to the list of installed apps
     'travelAgencyApi',  # Add the travelAgencyApi app to the list of installed apps
     'authenticationBackend',  # Add the authenticationBackend app to the list of installed apps
     'corsheaders',  #

@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 import travelAgencyApi.views as views
+
 from django.contrib import admin
 
 router = DefaultRouter()
@@ -30,6 +31,7 @@ router.register(r'booking-agent', views.BookingAgentViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('admin/', admin.site.urls),
+    path('create-user/',include('tokenizationBackend.urls')), #for signup
     path('customerBookings/',views.CustomerBookingsViewSet.as_view(),name='customerBookings'), #for customer booking details
     path('customerBookings/<int:pk>/',views.CustomerBookingsViewSet.as_view(),name='customerBookingsCURD'), #for customer booking details
     path(r'create-booking/',views.create_booking,name='create-booking'), #add booking detail in form of json,mainly used for frontend,dont remove

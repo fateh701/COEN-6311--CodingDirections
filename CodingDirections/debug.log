@@ -1008,3 +1008,128 @@ Watching for file changes with StatReloader
 "GET /admin/ HTTP/1.1" 200 9820
 "GET /admin/authenticationBackend/user/ HTTP/1.1" 200 14144
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11106
+"GET /admin/ HTTP/1.1" 200 9820
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/css/base.css HTTP/1.1" 304 0
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 14144
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/img/search.svg HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /admin/authenticationBackend/user/4/change/ HTTP/1.1" 200 16926
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"POST /admin/authenticationBackend/user/4/change/ HTTP/1.1" 302 0
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 14374
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /admin/authenticationBackend/user/3/change/ HTTP/1.1" 200 16990
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 14154
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11106
+"GET /admin/ HTTP/1.1" 200 10189
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11106
+"GET /admin/ HTTP/1.1" 200 10875
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 11295
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 15668
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authenticationBackend/user/5/change/ HTTP/1.1" 200 17463
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authenticationBackend/user/5/delete/ HTTP/1.1" 200 10364
+"GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+"POST /admin/authenticationBackend/user/5/delete/ HTTP/1.1" 302 0
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 15347
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authenticationBackend/user/4/change/ HTTP/1.1" 200 17503
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authenticationBackend/user/4/delete/ HTTP/1.1" 200 10364
+"POST /admin/authenticationBackend/user/4/delete/ HTTP/1.1" 302 0
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 14858
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 11295
+"GET /admin/authtoken/tokenproxy/add/ HTTP/1.1" 200 12221
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/authtoken/tokenproxy/add/ HTTP/1.1" 302 0
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 11778
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11106
+"GET /admin/ HTTP/1.1" 200 11881
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+Not Found: /signup
+"GET /signup HTTP/1.1" 404 8193
+Not Found: /signup/
+"GET /signup/ HTTP/1.1" 404 8265
+"GET /signup/signup HTTP/1.1" 301 0
+Method Not Allowed: /signup/signup/
+"GET /signup/signup/ HTTP/1.1" 405 13556
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /signup/signup/
+"GET /signup/signup/ HTTP/1.1" 404 8222
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10863
+"GET /create-user/signup HTTP/1.1" 301 0
+Method Not Allowed: /create-user/signup/
+"GET /create-user/signup/ HTTP/1.1" 405 13586
+Bad Request: /create-user/signup/
+"POST /create-user/signup/ HTTP/1.1" 400 13717
+"POST /create-user/signup/ HTTP/1.1" 201 13782
+"GET /admin/ HTTP/1.1" 200 11881
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 11788
+"GET /admin/ HTTP/1.1" 200 11881
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 15199
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authenticationBackend/user/7/change/ HTTP/1.1" 200 17509
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authenticationBackend/user/7/delete/ HTTP/1.1" 200 10478
+"POST /admin/authenticationBackend/user/7/delete/ HTTP/1.1" 302 0
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 14862
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authenticationBackend/user/7/delete/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 12363
+"GET /static/admin/img/icon-alert.svg HTTP/1.1" 200 504
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 11540
+"GET /admin/ HTTP/1.1" 200 12196
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\tokenizationBackend\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\tokenizationBackend\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11106
+"GET /admin/ HTTP/1.1" 200 12196
+Not Found: /create-user/
+"GET /create-user/ HTTP/1.1" 404 8464
+"GET /create-user/login HTTP/1.1" 301 0
+Method Not Allowed: /create-user/login/
+"GET /create-user/login/ HTTP/1.1" 405 40
+Method Not Allowed: /create-user/signup/
+"GET /create-user/signup/ HTTP/1.1" 405 13586
