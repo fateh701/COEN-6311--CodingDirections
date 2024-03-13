@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'travelAgencyApi',  # Add the travelAgencyApi app to the list of installed apps
+    'authenticationBackend',  # Add the authenticationBackend app to the list of installed apps
     'corsheaders',  #
 ]
 
@@ -150,3 +151,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True  # Add this line to allow all origins
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200", # Adding the URL of the Angular app
+]
+
+AUTH_USER_MODEL = 'authenticationBackend.User'  # Add the path to the custom user model

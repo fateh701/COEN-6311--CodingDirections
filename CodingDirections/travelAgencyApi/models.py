@@ -1,7 +1,12 @@
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 from django import forms
+
+#Afer authenticationAPI implemented in backend ,it gives uerror if we still use the inbuilt user class ,so
+from django.conf import settings
+User = settings.AUTH_USER_MODEL
+
 
 #
 class Flight(models.Model):
