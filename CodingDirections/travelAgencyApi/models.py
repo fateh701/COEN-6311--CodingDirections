@@ -74,9 +74,7 @@ class BookingAgent(models.Model):
     email = models.EmailField()
     def __str__(self):
         return self.name
-
-    from django import forms
-    class BookingForm(forms.Form):
+  class BookingForm(forms.Form):
         location = forms.CharField(label='Location', max_length=100)
         date = forms.DateField(label='Date')
         pricerange = forms.ChoiceField(label='Price Range', choices=[
