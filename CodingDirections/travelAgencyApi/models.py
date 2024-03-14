@@ -84,4 +84,4 @@ class BookingAgent(models.Model):
             ('5000+', '$5000+')
         ])
 
-        #
+
