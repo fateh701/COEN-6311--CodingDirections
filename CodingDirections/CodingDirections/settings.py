@@ -152,6 +152,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True  # Add this line to allow all origins
+CORS_ALLOW_CREDENTIALS = True  # Add this line to allow credentials
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200", # Adding the URL of the Angular app

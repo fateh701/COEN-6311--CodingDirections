@@ -21,13 +21,13 @@ export interface loginModel{
 }
 
 export class User{
-    constructor(
-        public id: string,
-        public email: string,
-        public username: string,
-        public first_name: string,
-        public last_name: string,
-        public token: string
-    ){}
+  constructor(
+    public id: string | undefined,
+    public email: string,
+    public username: string,
+    public first_name: string | undefined,
+    public last_name: string | undefined,
+    public token: string | undefined
+  ){}
 
 }

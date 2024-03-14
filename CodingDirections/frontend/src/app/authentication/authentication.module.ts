@@ -14,7 +14,7 @@ import { AuthenticationService } from './authentication.service';
         ReactiveFormsModule,
         CommonModule
     ],
-    providers: [],
+    providers: [AuthenticationService],
     bootstrap: [AuthenticationComponent]
 })
 export class AuthenticationModule{}

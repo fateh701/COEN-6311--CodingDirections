@@ -17,7 +17,7 @@ export class AuthenticationComponent{
   signupForm: FormGroup; //This variable will be used to store the form that will be used to sign up the user
   loginForm: FormGroup; //This variable will be used to store the form that will be used to log in the user
   error: string = ''; //This variable will be used to store any error messages that are returned from the server
-  //token: string; //This variable will be used to store the token that is returned from the server
+  token: string | undefined; //This variable will be used to store the token that is returned from the server
   success:string=''; //This variable will be used to store any success messages that are returned from the server
   constructor(private authenticationService: AuthenticationService, private router: Router) {
     this.signupForm = new FormGroup({
@@ -36,6 +36,8 @@ export class AuthenticationComponent{
       'email': new FormControl(null,[Validators.required,Validators.email]),
       'password': new FormControl(null,[Validators.required,Validators.minLength(8)])
     });
+    //this.authenticationService.autoLogin();
+
     }
 
 
@@ -46,27 +48,38 @@ export class AuthenticationComponent{
 
   onSignup(){
     console.log(this.signupForm.value);
-    // this.authenticationService.signup({
-    //   'first_name': this.signupForm.value.first_name,
-    //   'last_name': this.signupForm.value.last_name,
-    //   'username': this.signupForm.value.username,
-    //   'email': this.signupForm.value.email,
-    //   'password': this.signupForm.value.passwords.password
-    // }).subscribe(
-    //   (data: AuthResData) => {
-    //     this.isLoginMode = true;
-    //     this.success = 'signup successful';
-    //     this.error = '';
-    //
-    //   },(errorRes: { error: { error: string; }; }) => {
-    //     this.error = errorRes.error.error;
-    //   }
-    // )
+    this.authenticationService.signup({
+      'first_name': this.signupForm.value.first_name,
+      'last_name': this.signupForm.value.last_name,
+      'username': this.signupForm.value.username,
+      'email': this.signupForm.value.email,
+      'password': this.signupForm.value.passwords.password
+    }).subscribe(
+      (data: AuthResData) => {
+        this.isLoginMode = true;
+        this.success = 'signup successful';
+        this.error = '';
+
+      },(errorRes) => {
+        this.error = errorRes;
+      }
+    )
   }
 
   onLogin(){
-    console.log(this.loginForm.value);
+    this.authenticationService.login(this.loginForm.value).subscribe(
+      (data: AuthResData) => {
+        this.token = data.token;
+        console.log(data);
+        this.router.navigate(['/profile'])
+      },(errorRes) => {
+        this.error = errorRes;
+      }
+    )
+    this.loginForm.reset()
   }
+
+
 
   passwordCheck(): Validators {
     return (control: FormControl): { [key: string]: boolean } | null => {
