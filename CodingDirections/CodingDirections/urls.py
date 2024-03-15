@@ -36,5 +36,6 @@ urlpatterns = [
     path('customerBookings/<int:pk>/',views.CustomerBookingsViewSet.as_view(),name='customerBookingsCURD'), #for customer booking details
     path(r'create-booking/',views.create_booking,name='create-booking'), #add booking detail in form of json,mainly used for frontend,dont remove
     #path(r'current-user-info/',views.current_user_info,name='current-user-info'), #for current user info
+    path(r'profile/',views.profile_view,name='profile'), #for current user info
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page
 ]

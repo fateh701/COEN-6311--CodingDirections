@@ -14,7 +14,7 @@ import { ViewTravelPackagesComponent } from './travelpackages/view-travel-packag
 
 import { SharedService } from './shared.service';
 
-import { HttpClientModule,provideHttpClient,withFetch } from '@angular/common/http';
+import { HttpClientModule,provideHttpClient,withFetch,withInterceptors } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {getSharedCompilationState} from "@angular-devkit/build-angular/src/tools/esbuild/angular/compilation-state";
 import { BookingsComponent } from './bookings/bookings.component';
@@ -24,7 +24,9 @@ import { BookingsConfirmationComponent } from './bookings/bookings-confirmation/
 import { AccountComponent } from './account/account.component';
 import { HeaderComponent } from './header/header.component';
 import {AuthenticationModule} from "./authentication/authentication.module";
+import {tokenInterceptor } from "./token.interceptor";
 
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,7 @@ import {AuthenticationModule} from "./authentication/authentication.module";
   providers: [
     SharedService, //This is the service that will be used to make the HTTP requests to the server
     provideClientHydration(),
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch(), withInterceptors([tokenInterceptor])),
   ],
   bootstrap: [AppComponent]
 })

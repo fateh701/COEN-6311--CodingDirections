@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-_ape6ep-%2_wsd!uhrudtcf0$l4%05_3+3c-67nave@q3ja4iz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "http://localhost:4200"
+]
 
 LOGGING = {
     'version': 1,
@@ -46,6 +50,7 @@ LOGGING = {
         },
     },
 }
+#CSRF_TRUSTED_ORIGINS = ['http://localhost:4200']  # Add the URL of the Angular app to the list of trusted origins
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200", # Add the URL of the Angular app to the list of allowed origins
@@ -153,9 +158,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True  # Add this line to allow all origins
 CORS_ALLOW_CREDENTIALS = True  # Add this line to allow credentials
-
+ACCESS_CONTROL_ALLOW_ORIGIN = True  # Add this line to allow the origin header
+ACCESS_CONTROL_ALLOW_CREDENTIALS = True  # Add this line to allow the credentials header
+ACCESS_CONTROL_ALLOW_HEADERS = ['content-type','x-requested-with','authorization']  # Add this line to allow the headers header
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200", # Adding the URL of the Angular app
+    "http://127.0.0.1.4200",
 ]
-
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:4200',  # Add your Angular application's domain
+]
 AUTH_USER_MODEL = 'authenticationBackend.User'  # Add the path to the custom user model
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        #'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+}

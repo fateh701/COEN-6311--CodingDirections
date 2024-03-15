@@ -27,3 +27,6 @@ class LoginView(ObtainAuthToken):
 
             }
         )
+
+    # def get(self,request,*args,**kwargs):
+    #     //return Response({'message':'This is a login page'}) #this is a get request,so we are returning a message
