@@ -1,0 +1,16 @@
+<p>Your Bookings List</p>
+<h3>Total Booking Made By You : {{allbookingsbyID.length}}</h3>
+<div *ngIf="allbookingsbyID.length === 0">
+  <p>No bookings found</p>
+</div>
+
+<div *ngFor="let booking of allbookingsbyID">
+  <div *ngFor = "let package of booking.travel_package">
+<!--    <a routerLink="/travelpackages/{{ package.id }}">{{package.name }}</a>-->
+    <li>Travel Package: {{package.name}}, payment_status_flag: {{booking.payment_status_flag}}</li>
+  </div>
+</div>
+
+
+
+

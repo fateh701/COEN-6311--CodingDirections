@@ -8,6 +8,7 @@ import { ViewTravelPackagesComponent } from "./travelpackages/view-travel-packag
 import { BookingsComponent} from "./bookings/bookings.component";
 import { BookingsReviewComponent} from "./bookings/bookings-review/bookings-review.component";
 import { BookingsConfirmationComponent} from "./bookings/bookings-confirmation/bookings-confirmation.component";
+import { BookingsAllComponent } from "./bookings/bookings-all/bookings-all.component";
 
 //Component of Authentication and Authorization
 import { HeaderComponent } from "./header/header.component";
@@ -29,6 +30,7 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'bookings-confirmation/:id',component:BookingsConfirmationComponent},
                          {path:'profile',component:AccountComponent},
                          {path:'authentication',component:AuthenticationComponent},
+                         {path:'bookings',component:BookingsAllComponent},
 
         ];
 

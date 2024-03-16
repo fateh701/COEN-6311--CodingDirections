@@ -4,37 +4,19 @@ import {SharedService} from "../../shared.service";
 import {AuthResData} from "../../authentication/authentication.model";
 
 @Component({
-  selector: 'app-bookings-review',
-  templateUrl: './bookings-review.component.html',
-  styleUrl: './bookings-review.component.css'
+  selector: 'app-bookings-all',
+  templateUrl: './bookings-all.component.html',
+  styleUrl: './bookings-all.component.css'
 })
-export class BookingsReviewComponent {
-  selectedBooking: any = {};
+export class BookingsAllComponent {
   allbookingsbyID: any[] = [];
+  selectedBooking: any = {};
 
   constructor(private route: ActivatedRoute,private router:Router, private service: SharedService) {
-    this.getSelectedBooking();
     this.fetchBookingsByUserID();
   }
 
-  getSelectedBooking = () => {    //get package detail for particular package id only
-    const packageId = this.route.snapshot.paramMap.get('id');
-    this.service.getSelectedTravelpackage(packageId).subscribe(
-      data => {
-        this.selectedBooking = data;
-      },
-      error => {
-        console.log(error);
-      }
-    )
-  }
-
-  bookNow=(packageItem: any)=>{
-    //book the selected travelpackage
-    this.router.navigate(['/bookings-confirmation', packageItem.id]);
-  }
-
-  getUserID() {
+   getUserID() {
     if (typeof localStorage === 'undefined' || localStorage === null || !localStorage.getItem('userData')!) {
     return;
     }
@@ -42,19 +24,25 @@ export class BookingsReviewComponent {
     const userInfo = JSON.parse(localStorage.getItem('userData')!);
     // @ts-ignore
     console.log("user id return while fetching all its booking:",userInfo.id);
+
     return userInfo.id;
   }
   fetchBookingsByUserID = () => {
-
-    //get all bookings by user id
-    this.service.getAllBookingsByID(this.getUserID()).subscribe(
+    const userID = this.getUserID();
+    if (userID === undefined || userID === null || userID === '' || userID === 0 || isNaN(userID)) {
+      console.log("userID not found in local storage,trace the fetchBookingsByUserID function");
+    }
+    else {
+      //get all bookings by user id
+      this.service.getAllBookingsByID(+this.getUserID()).subscribe(
         (data: any[]) => {
-        this.allbookingsbyID = data;
-      },
+          this.allbookingsbyID = data;
+        },
         (error: any) => {
-        console.log(error);
-      }
-    )
+          console.log(error);
+        }
+      )
+    }
   }
 
   selectBooking(booking: any) {

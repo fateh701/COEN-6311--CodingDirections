@@ -150,7 +150,12 @@ class CustomerBookingsViewSet(APIView):
             return Response(serializer.data,status=status.HTTP_200_OK)
         else:
             # Retrieve all bookings for the current customer
-            user_id = request.user.id
+            #user_id = request.user.id
+            user_id = request.query_params.get('user_id')   #PATCH-BY-PUJAN 15-3 (URL with userid =3 will be  http://127.0.0.1:8000/customerBookings/?user_id=3)
+            if user_id is None:
+                return Response({'error': 'User ID not send for GET request'}, status=status.HTTP_400_BAD_REQUEST)
+
+            logger.log(logging.INFO, 'Retrieving bookings for user %s', user_id)
             bookings = BookingDetails.objects.filter(customer=user_id)
             serializer = BookingDetailsSerializer(bookings, many=True)
             return Response(serializer.data)
