@@ -59,12 +59,12 @@ export class SharedService {
   //   return this.http.get<any[]>(this.baseAPIUrl + '/booking-details/' + id + '/',{headers:this.httpHeaders})
   // }
 
-  postConfirmBooking(val:number):Observable<any>{
+  postConfirmBooking(val:number,userid:number):Observable<any>{
     const headers = new HttpHeaders({'Content-Type':'application/json',
     'Authorization':`Bearer ${this.authService.getUserToken()}`,  //will pass token of loggedin user
     });
     console.log("From service.ts file its getting package:",val,headers);
-    return this.http.post<any>(this.baseAPIUrl + '/create-booking/',{ travel_package_id: val },{ headers:headers });
+    return this.http.post<any>(this.baseAPIUrl + '/create-booking/',{ travel_package_id: val, user_id:userid },{ headers:headers });
   }
 
   getAllBookingsByID(userid:any):Observable<any[]>{

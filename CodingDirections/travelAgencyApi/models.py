@@ -77,6 +77,8 @@ class BookingAgent(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE) # OneToOneField is used to create a one-to-one relationship between two models
     location = models.CharField(max_length=100)
 
+    #
+
     def __str__(self):
         return self.user.username
 

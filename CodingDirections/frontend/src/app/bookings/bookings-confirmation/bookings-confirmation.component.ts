@@ -21,6 +21,18 @@ export class BookingsConfirmationComponent {
 
   }
 
+  getUserID() {
+    if (typeof localStorage === 'undefined' || localStorage === null || !localStorage.getItem('userData')!) {
+    return;
+    }
+    //const userid: AuthResData = JSON.parse(localStorage.getItem('userData')!);
+    const userInfo = JSON.parse(localStorage.getItem('userData')!);
+    // @ts-ignore
+    console.log("user id return while fetching user id for create booking:",userInfo.id);
+
+    return userInfo.id;
+  }
+
   getSelectedBooking = () => {
     //fetch and display the booking details
     const bookingId = this.route.snapshot.paramMap.get('id'); //packageid will be passed here from booking review component.ts
@@ -44,21 +56,26 @@ export class BookingsConfirmationComponent {
     // ))
 
     confirmBooking(): void {
-    //const userToken = this.authService.getUserINFO()?.token;
-    const userDict = this.authService.getUserINFO();
-    console.log("User info dict:",userDict);
-    // @ts-ignore
-    this.service.postConfirmBooking(this.selectedBooking.id).subscribe(
-      response => {
-        //Handle successful booking confirmation
-        console.log("Booking confirmed")
-        this.router.navigate(['/travelpackages']);
-      },
-      error => {
-        console.log("Error confirming booking:",error);
-      },
-    )
-  }
+      //const userToken = this.authService.getUserINFO()?.token;
+      const userID = this.getUserID();
+      //console.log("Userid from user info dict:", userID);
+      if (userID === undefined || userID === null || userID === '' || userID === 0 || isNaN(userID)) {
+        console.log("userID not found in local storage,trace the confirmBooking function");
+      } else {
+        console.log("Userid from user info dict:", userID);
+        // @ts-ignore
+        this.service.postConfirmBooking(this.selectedBooking.id, userID).subscribe(
+          response => {
+            //Handle successful booking confirmation
+            console.log("Booking confirmed")
+            this.router.navigate(['/travelpackages']);
+          },
+          error => {
+            console.log("Error confirming booking:", error);
+          },
+        )
+      }
+    }
 
 
 
