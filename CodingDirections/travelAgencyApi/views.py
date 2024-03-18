@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import viewsets,status
 from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent,Modification,Notification
@@ -100,18 +101,21 @@ class BookingDetailsViewSet(viewsets.ModelViewSet):
 #creating a  function to create booking using only travel package id as input
 @api_view(['POST'])
 #@authentication_classes([TokenAuthentication]) #15-3
-@permission_classes([IsAuthenticated]) #15-3
+#@permission_classes([IsAuthenticated]) #15-3
 def create_booking(request):
     if request.method == 'POST':
         # Assuming the request contains the travel package ID
         travel_package_id = request.data.get('travel_package_id')
+
+        #pass here user id so that we can get the user object and use it to create booking
         try:
             travel_package = TravelPackage.objects.get(pk=travel_package_id)
             # return Response({'message': 'Travel package exists', 'travel_package': travel_package.name})
             try:
-                user = request.user
+                #user = request.user
+                user = User.objects.get(pk=request.data.get('user_id'))  #18-3
                 logger.info('Booking to be created for user %s with travel package %s', user.id, travel_package_id)
-                customer_location = "canada"  # get the location of the customer from the request send from frontend
+                customer_location = "canada"  # get the location of the customer from the request send from frontend ,pick location from user profiel directly
                 bookingAgent = BookingAgent.objects.filter(location=customer_location).first()
                 if bookingAgent is None:
                     return Response({'error': 'Booking agent not found'}, status=status.HTTP_400_BAD_REQUEST)

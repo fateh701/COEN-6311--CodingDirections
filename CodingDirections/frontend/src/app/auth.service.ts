@@ -30,9 +30,7 @@ export class AuthService {
     const userData: AuthResData = JSON.parse(localStorage.getItem('userData')!);
     return userData
   }
-  getCurrentUser(): Observable<string> {
-    return this.http.get<any>('http://127.0.0.1:8000/current-user-info/')
-  }
+
   // login(username: string, password: string): Observable<any> {
   //   //return this.http.post<any>(this.baseURL, {username, password})
   // }
