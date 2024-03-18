@@ -2,14 +2,24 @@ from rest_framework.response import Response
 from rest_framework import viewsets,status
 from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent,Modification,Notification
 from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer,NotificationSerializer
-from django.shortcuts import get_object_or_404, render
-from rest_framework.decorators import api_view
-from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404, render, HttpResponse
+from rest_framework.decorators import api_view, permission_classes, authentication_classes
+#from django.contrib.auth.models import User
+from authenticationBackend.models import User
 from django.contrib.auth.decorators import login_required
-from django.http import JsonResponse
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
 import logging
 from rest_framework.views import APIView
+from channels.layers import get_channel_layer
+import json
+from django.template import RequestContext
+from asgiref.sync import async_to_sync
+#from ..notification_app.tasks import test_func
 from django.core.mail import send_mail
+import sys
+sys.path.append("../..")
+
 
 logger = logging.getLogger(__name__) # creating  a logger instance
 
@@ -87,46 +97,44 @@ class BookingDetailsViewSet(viewsets.ModelViewSet):
         return queryset
 
 
-
+#creating a  function to create booking using only travel package id as input
 @api_view(['POST'])
+#@authentication_classes([TokenAuthentication]) #15-3
+@permission_classes([IsAuthenticated]) #15-3
 def create_booking(request):
-    try:
-        travel_package_id = request.data.get('travel_package_id')  # get the travel package id from the request send from frontend
-        # if request.data.get('user_id')=='':
-        user_id = User.objects.get(pk=request.user.id)
-        logger.info('Booking to be created for user %s with travel package %s', user_id, travel_package_id)
+    if request.method == 'POST':
+        # Assuming the request contains the travel package ID
+        travel_package_id = request.data.get('travel_package_id')
+        try:
+            travel_package = TravelPackage.objects.get(pk=travel_package_id)
+            # return Response({'message': 'Travel package exists', 'travel_package': travel_package.name})
+            try:
+                user = request.user
+                logger.info('Booking to be created for user %s with travel package %s', user.id, travel_package_id)
+                customer_location = "canada"  # get the location of the customer from the request send from frontend
+                bookingAgent = BookingAgent.objects.filter(location=customer_location).first()
+                if bookingAgent is None:
+                    return Response({'error': 'Booking agent not found'}, status=status.HTTP_400_BAD_REQUEST)
+            except User.DoesNotExist:
+                return Response({'error': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
-        customer_location = "canada" #get the location of the customer from the request send from frontend
-        # which we will do when we create the user profile in the EPIC6
-        bookingAgent = BookingAgent.objects.filter(location=customer_location).first()
-        if bookingAgent is None:
-            return  Response({'error': 'Booking agent not found'}, status=status.HTTP_400_BAD_REQUEST)
-
-        #     return Response({'error': 'User id is required'}, status=status.HTTP_400_BAD_REQUEST)
-        # else:
-        #     user_id = request.data.get('id') # get the user id from the request send from frontend
-
-
-        # Check if the travel package exists or not
-        travel_package = get_object_or_404(TravelPackage, id=travel_package_id)
-
-        #create a Booking
-        booking = BookingDetails.objects.create(customer=user_id,payment_status_flag=True,agent=bookingAgent)
-        booking.travel_package.set([travel_package])
-        serializer: BookingDetailsSerializer = BookingDetailsSerializer(booking)
-
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
-    except:
-        return Response({'error': 'Invalid data'}, status=status.HTTP_400_BAD_REQUEST)
+            travel_package = get_object_or_404(TravelPackage, id=travel_package_id)
+            booking = BookingDetails.objects.create(customer=user, payment_status_flag=False, agent=bookingAgent)
+            booking.travel_package.set([travel_package])
+            serializer: BookingDetailsSerializer = BookingDetailsSerializer(booking)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        except TravelPackage.DoesNotExist:
+            return Response({'error': 'Travel package does not exist'}, status=status.HTTP_404_NOT_FOUND)
+    #to test whether create booking page works or not uncomment below two line,you will get user info who is logged in.
+    # elif request.method=='GET':
+    #     return profile_view(request)
 
 
-#made for testing purposes in API endpoint
+
+
 @api_view(['GET'])
-def current_user_info(request):
-    userId = request.user.id
-    username = request.user.username
-    return JsonResponse({'id':userId,'username': username})
-
+def profile_view(request):
+    return render(request, 'profile.html', {'user': request.user})
 
 class CustomerBookingsViewSet(APIView):
 
@@ -147,7 +155,12 @@ class CustomerBookingsViewSet(APIView):
             return Response(serializer.data,status=status.HTTP_200_OK)
         else:
             # Retrieve all bookings for the current customer
-            user_id = request.user.id
+            #user_id = request.user.id
+            user_id = request.query_params.get('user_id')   #PATCH-BY-PUJAN 15-3 (URL with userid =3 will be  http://127.0.0.1:8000/customerBookings/?user_id=3)
+            if user_id is None:
+                return Response({'error': 'User ID not send for GET request'}, status=status.HTTP_400_BAD_REQUEST)
+
+            logger.log(logging.INFO, 'Retrieving bookings for user %s', user_id)
             bookings = BookingDetails.objects.filter(customer=user_id)
             serializer = BookingDetailsSerializer(bookings, many=True)
             return Response(serializer.data)
@@ -180,3 +193,21 @@ class NotificationViewSet(viewsets.ModelViewSet):
     #         [notification.recepient.email],
     #         fail_silently=False,
     #     )
+
+def notificationhome(request):
+    return render(request, 'index.html', {
+        'room_name': "broadcast"
+    })
+
+def testnotification(request):
+    channel_layer = get_channel_layer()
+    #as messsages are asyncronous,we need to use async_to_sync to send the message
+    async_to_sync(channel_layer.group_send)(
+        "notification_broadcast",
+        {
+            'type': 'send_notification',
+            'message': json.dumps("Notification")
+        }
+    )
+    return HttpResponse("Notification  sent successfully")
+

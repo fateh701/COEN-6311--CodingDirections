@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 import logging
 
@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure-_ape6ep-%2_wsd!uhrudtcf0$l4%05_3+3c-67nave@q3ja4iz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+REDIS_HOSTNAME = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 0
+
+# ALLOWED_HOSTS = [
+#     "localhost",
+#     "127.0.0.1",
+#     "http://localhost:4200"
+# ]
 
 LOGGING = {
     'version': 1,
@@ -46,6 +54,7 @@ LOGGING = {
         },
     },
 }
+#CSRF_TRUSTED_ORIGINS = ['http://localhost:4200']  # Add the URL of the Angular app to the list of trusted origins
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200", # Add the URL of the Angular app to the list of allowed origins
@@ -53,6 +62,7 @@ CORS_ALLOWED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -60,8 +70,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken', # Add the rest_framework.authtoken app to the list of installed apps
     'travelAgencyApi',  # Add the travelAgencyApi app to the list of installed apps
+    'authenticationBackend',  # Add the authenticationBackend app to the list of installed apps
     'corsheaders',  #
+    'notification_app',  # Add the notification_app app to the list of installed apps
+    'django_celery_results',  # Add the django_celery_results app to the list of installed apps
+    'django_celery_beat',  # Add the django_celery_beat app to the list of installed apps
+    # Add the channels to the list of installed apps,daphne server for websocket because wsgi prebeuilt djnago server does not support websocket
+
 ]
 
 MIDDLEWARE = [
@@ -76,7 +93,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware", # Add the CommonMiddleware to the list of middleware classes
 ]
 
-ROOT_URLCONF = 'CodingDirections.urls'
+#ROOT_URLCONF = 'CodingDirections.urls'
 
 TEMPLATES = [
     {
@@ -93,8 +110,11 @@ TEMPLATES = [
         },
     },
 ]
+ROOT_URLCONF = 'CodingDirections.urls'  # Add the path to the root URL configuration file
 
-WSGI_APPLICATION = 'CodingDirections.wsgi.application'
+#WSGI_APPLICATION = 'CodingDirections.wsgi.application'
+ASGI_APPLICATION = 'CodingDirections.asgi.application' #as we are now using asgi server for notification
+#ASGI_APPLICATION = 'CodingDirections.settings' #as we are now using asgi server for notification
 
 
 # Database
@@ -150,3 +170,47 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True  # Add this line to allow all origins
+CORS_ALLOW_CREDENTIALS = True  # Add this line to allow credentials
+ACCESS_CONTROL_ALLOW_ORIGIN = True  # Add this line to allow the origin header
+ACCESS_CONTROL_ALLOW_CREDENTIALS = True  # Add this line to allow the credentials header
+ACCESS_CONTROL_ALLOW_HEADERS = ['content-type','x-requested-with','authorization']  # Add this line to allow the headers header
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200", # Adding the URL of the Angular app
+    "http://127.0.0.1.4200",
+]
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:4200',  # Add your Angular application's domain
+]
+AUTH_USER_MODEL = 'authenticationBackend.User'  # Add the path to the custom user model
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        #'BACKEND': "channels.layers.InMemoryChannelLayer",
+        'CONFIG': {
+            "hosts": [(REDIS_HOSTNAME, REDIS_PORT)],
+        },
+    },
+}
+
+# CELERY SETTINGS
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SELERLIZER = 'json'
+CELERY_TIMEZONE = 'UTC'
+
+CELERY_RESULT_BACKEND = 'django-db'  # Add the path to the result backend
+
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'  # Add the path to the beat scheduler
+#CELERY_IMPORTS = ('notification_app.tasks',)  # Add the path to the tasks module
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        #'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+}
+
+

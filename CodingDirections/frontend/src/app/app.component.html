@@ -1,3 +1,12 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
 <div class="container">
     <h3 class="d-flex justify-content-center">Coding Directions</h3>
     <h5 class="d-flex justify-content-center">Package Management Portal</h5>
@@ -5,11 +14,12 @@
     <nav class="navbar navbar-expand-sm bg-light navbar-dark">
     <ul class="navbar-nav">
         <li class="nav-item">
-            <button routerLink="travelpackages" class="m-1 btn btn-light btn-outline-primary">Travel Package</button>
+            <button routerLink="travelpackages" class="m-1 btn btn-light btn-outline-primary">Browse Travel Packages</button>
+            <button routerLink="bookings" class ="m-1 btn btn-light btn-outline-primary">My Bookings</button>
         </li>
     </ul>
     </nav>
 
 </div>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> <!--router-outlet is used to load the component based on the route.-->
 

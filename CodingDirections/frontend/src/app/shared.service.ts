@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
-
+import {AuthService} from "./auth.service";
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +9,12 @@ import {Observable} from 'rxjs';
 export class SharedService {
 
   readonly baseAPIUrl = "http://127.0.0.1:8000";
-  httpHeaders = new HttpHeaders({'Content-Type':'application/json'});
+  httpHeaders = new HttpHeaders({'Content-Type':'application/json',
+   'Authorization':`Bearer ${this.authService.getUserToken()}`,  //will pass token of loggedin user
+    });
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private authService:AuthService) {
+  }
 
   getFlightsList():Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/flights/',{headers:this.httpHeaders});
@@ -52,13 +55,20 @@ export class SharedService {
     return this.http.get<any[]>(this.baseAPIUrl + '/activities/' + id + '/',{headers:this.httpHeaders});
   }
 
-  getSelectedBooking(id:any):Observable<any[]>{
-    return this.http.get<any[]>(this.baseAPIUrl + '/booking-details/' + id + '/',{headers:this.httpHeaders})
-  }
+  // getSelectedBooking(id:any):Observable<any[]>{
+  //   return this.http.get<any[]>(this.baseAPIUrl + '/booking-details/' + id + '/',{headers:this.httpHeaders})
+  // }
 
   postConfirmBooking(val:number):Observable<any>{
-    console.log("From service.ts file its getting package:",val);
-    return this.http.post<any>(this.baseAPIUrl + '/create-booking/',{travel_package_id: val},{headers:this.httpHeaders});
+    const headers = new HttpHeaders({'Content-Type':'application/json',
+    'Authorization':`Bearer ${this.authService.getUserToken()}`,  //will pass token of loggedin user
+    });
+    console.log("From service.ts file its getting package:",val,headers);
+    return this.http.post<any>(this.baseAPIUrl + '/create-booking/',{ travel_package_id: val },{ headers:headers });
+  }
+
+  getAllBookingsByID(userid:any):Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl + '/customerBookings/?user_id='+userid,{headers:this.httpHeaders});
   }
 
 }
