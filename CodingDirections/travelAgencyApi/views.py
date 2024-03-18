@@ -1,9 +1,8 @@
 from rest_framework.response import Response
-from django.http import JsonResponse
 from rest_framework import viewsets,status
 from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent,Modification,Notification
 from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer,NotificationSerializer
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, HttpResponse
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 #from django.contrib.auth.models import User
 from authenticationBackend.models import User
@@ -12,9 +11,15 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 import logging
 from rest_framework.views import APIView
+from channels.layers import get_channel_layer
+import json
+from django.template import RequestContext
+from asgiref.sync import async_to_sync
+#from ..notification_app.tasks import test_func
 from django.core.mail import send_mail
 import sys
 sys.path.append("../..")
+
 
 logger = logging.getLogger(__name__) # creating  a logger instance
 
@@ -188,3 +193,21 @@ class NotificationViewSet(viewsets.ModelViewSet):
     #         [notification.recepient.email],
     #         fail_silently=False,
     #     )
+
+def notificationhome(request):
+    return render(request, 'index.html', {
+        'room_name': "broadcast"
+    })
+
+def testnotification(request):
+    channel_layer = get_channel_layer()
+    #as messsages are asyncronous,we need to use async_to_sync to send the message
+    async_to_sync(channel_layer.group_send)(
+        "notification_broadcast",
+        {
+            'type': 'send_notification',
+            'message': json.dumps("Notification")
+        }
+    )
+    return HttpResponse("Notification  sent successfully")
+
