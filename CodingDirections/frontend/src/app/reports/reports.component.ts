@@ -10,6 +10,8 @@ import "papaparse"
 })
 export class ReportsComponent {
   chart:any;
+  revenueChart:any;
+  totalRevenue: number = 0;
   colors: string[] = []; // Array to store dynamically generated colors
   searchPackage: string = ''; // Variable to store the search package name
   originalData: any[] = []; // Original chart data
@@ -17,6 +19,7 @@ export class ReportsComponent {
 
   constructor(private service:SharedService) {
     this.getTravelPackageVsBookingCountReport()
+    this.getRevenuePerPackageReport()
   }
 
   //This is the main method
@@ -98,6 +101,32 @@ export class ReportsComponent {
     return csv;
 }
 
+  formatRevenueDataAsCSV(labels: string[], counts: number[]): string {
+    let csv = 'TravelPackageName,Revenue\n';
+    for (let i = 0; i < labels.length; i++) {
+      csv += `${labels[i]},${counts[i]}\n`;
+    }
+    return csv;
+  }
+
+  exportRevenueData() {
+    const labels = this.revenueChart.data.labels;
+    const counts = this.revenueChart.data.datasets[0].data;
+    const csvData = this.formatRevenueDataAsCSV(labels, counts);
+    const blob = new Blob([csvData], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'RevenuePerPackage.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  }
+
+
+
   //called from frontend when we provide input to search button
   applyFilter(): void {
     if (this.searchPackage.trim() === '') {
@@ -125,5 +154,48 @@ export class ReportsComponent {
     const b = Math.floor(Math.random() * 156) + 100; // Blue component (100-255)
     return `rgb(${r}, ${g}, ${b})`;
   }
+
+
+  getRevenuePerPackageReport(){
+    this.service.getRevenuePerPackageData().subscribe(
+      data => {
+        const labels = data.map(entry => entry.travel_package_name)
+        const counts = data.map(entry => entry.revenue)
+
+        //Calculating the total revenue
+        this.totalRevenue = counts.reduce((acc, val) => acc + val, 0);
+
+        this.revenueChart = new Chart('revenuePerPackageChart',{
+          type:'pie',
+          data:{
+            labels: labels,
+            datasets:[{
+              label: 'Revenue Per Package',
+              data: counts,
+              backgroundColor: this.generateColors(counts.length), // Assign colors dynamically
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio:4,  //width/height ration
+            animation: {
+              duration: 2000, // Set the duration of the animation in milliseconds
+              easing: 'easeInOutQuart' // Set the easing function for the animation
+            }
+          }
+        });
+
+
+
+
+      },
+      error => {
+        console.log(error);
+      },
+    );
+  }
+
 
 }
