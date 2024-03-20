@@ -16,7 +16,7 @@ Including another URLconf
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 import travelAgencyApi.views as views
-import notification_app.urls as no_urls
+# import notification_app.urls as no_urls
 
 from django.contrib import admin
 
@@ -31,7 +31,7 @@ router.register(r'booking-agent', views.BookingAgentViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    #path('',include(no_urls)), #for notification
+    path('',include('notification_app.urls')), #for notification
     path('admin/', admin.site.urls),
     path('create-user/',include('tokenizationBackend.urls')), #for signup
     path('customerBookings/',views.CustomerBookingsViewSet.as_view(),name='customerBookings'), #for customer booking details
@@ -39,8 +39,8 @@ urlpatterns = [
     path(r'create-booking/',views.create_booking,name='create-booking'), #add booking detail in form of json,mainly used for frontend,dont remove
     #path(r'current-user-info/',views.current_user_info,name='current-user-info'), #for current user info
     path(r'profile/',views.profile_view,name='profile'), #for current user info
-    path(r'notification',views.notificationhome,name='notification'), #for notification
-    path(r'test/',views.testnotification,name='test'), #for testing notification
+    # path(r'notification',views.notificationhome,name='notification'), #for notification
+    # path(r'test/',views.testnotification,name='test'), #for testing notification
     #path(r'home/',views.notificationhome,name='home'), #for notification
     #path(r'celery/',views.celerytest,name='celery'), #for testing celery
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page

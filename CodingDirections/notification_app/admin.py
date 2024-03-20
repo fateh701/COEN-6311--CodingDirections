@@ -1,6 +1,4 @@
 from django.contrib import admin
-from .models import BroadcastNotification
+from .models import Notification
 
-
-# Register your models here.
-admin.site.register(BroadcastNotification)
+admin.site.register(Notification)

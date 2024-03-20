@@ -68,7 +68,7 @@ export class BookingsConfirmationComponent {
           response => {
             //Handle successful booking confirmation
             console.log("Booking confirmed")
-            this.router.navigate(['/travelpackages']);
+            this.router.navigate(['/bookings']);
           },
           error => {
             console.log("Error confirming booking:", error);

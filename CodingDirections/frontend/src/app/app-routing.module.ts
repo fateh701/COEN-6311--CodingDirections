@@ -14,6 +14,7 @@ import { BookingsAllComponent } from "./bookings/bookings-all/bookings-all.compo
 import { HeaderComponent } from "./header/header.component";
 import { AccountComponent } from "./account/account.component";
 import { AuthenticationComponent } from "./authentication/authentication.component";
+import { NotificationsComponent} from "./notifications/notifications.component";
 
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'profile',component:AccountComponent},
                          {path:'authentication',component:AuthenticationComponent},
                          {path:'bookings',component:BookingsAllComponent},
+                          {path:'notifications',component:NotificationsComponent},
 
         ];
 

@@ -65,12 +65,12 @@ class TravelPackage(models.Model):
     class Meta:
       ordering = ['name'];
   
-class Notification(models.Model):
-    #Notification = ('info', 'Information'),
-    recepient = models.ForeignKey(User, on_delete=models.CASCADE,default=2)
-    message = models.TextField(default='')
-    #notification = models.CharField(max_length=250, default= 'info')
-    Date_Time = models.DateTimeField(auto_now_add=True)
+# class Notification(models.Model):
+#     #Notification = ('info', 'Information'),
+#     recepient = models.ForeignKey(User, on_delete=models.CASCADE,default=2)
+#     message = models.TextField(default='')
+#     #notification = models.CharField(max_length=250, default= 'info')
+#     Date_Time = models.DateTimeField(auto_now_add=True)
 
 
 class BookingAgent(models.Model):
