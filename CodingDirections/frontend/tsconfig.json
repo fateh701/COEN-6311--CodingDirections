@@ -22,7 +22,10 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+//    "paths": {
+//      "papaparse": ["node_modules/papaparse/papaparse.min.js"]
+//    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

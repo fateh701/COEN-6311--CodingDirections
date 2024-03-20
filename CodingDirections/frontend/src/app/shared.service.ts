@@ -79,4 +79,12 @@ export class SharedService {
     return this.webSocketSubject.asObservable();
   }
 
+  getTravelPackageVsBookingCountData():Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl+'/tpvscount/',{headers:this.httpHeaders});
+  }
+
+  getRevenuePerPackageData():Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl+'/revenue/',{headers:this.httpHeaders});
+  }
+
 }
