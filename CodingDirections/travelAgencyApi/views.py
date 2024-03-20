@@ -1,8 +1,8 @@
 from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import viewsets,status
-from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent,Modification,Notification
-from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer,NotificationSerializer
+from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent,Modification
+from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer
 from django.shortcuts import get_object_or_404, render, HttpResponse
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 #from django.contrib.auth.models import User
@@ -185,8 +185,8 @@ class CustomerBookingsViewSet(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class NotificationViewSet(viewsets.ModelViewSet):
-    notificationlist = Notification.objects.all()
+# class NotificationViewSet(viewsets.ModelViewSet):
+#     notificationlist = Notification.objects.all()
 
 
     # for notification in notificationlist:
@@ -198,20 +198,20 @@ class NotificationViewSet(viewsets.ModelViewSet):
     #         fail_silently=False,
     #     )
 
-def notificationhome(request):
-    return render(request, 'index.html', {
-        'room_name': "broadcast"
-    })
-
-def testnotification(request):
-    channel_layer = get_channel_layer()
-    #as messsages are asyncronous,we need to use async_to_sync to send the message
-    async_to_sync(channel_layer.group_send)(
-        "notification_broadcast",
-        {
-            'type': 'send_notification',
-            'message': json.dumps("Notification")
-        }
-    )
-    return HttpResponse("Notification  sent successfully")
+# def notificationhome(request):
+#     return render(request, 'index.html', {
+#         'room_name': "broadcast"
+#     })
+#
+# def testnotification(request):
+#     channel_layer = get_channel_layer()
+#     #as messsages are asyncronous,we need to use async_to_sync to send the message
+#     async_to_sync(channel_layer.group_send)(
+#         "notification_broadcast",
+#         {
+#             'type': 'send_notification',
+#             'message': json.dumps("Notification")
+#         }
+#     )
+#     return HttpResponse("Notification  sent successfully")
 

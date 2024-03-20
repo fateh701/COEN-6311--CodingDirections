@@ -2,10 +2,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+
       <router-outlet></router-outlet>
     </div>
   </div>
 </div>
+
 
 <div class="container">
     <h3 class="d-flex justify-content-center">Coding Directions</h3>
@@ -17,9 +19,13 @@
             <button routerLink="travelpackages" class="m-1 btn btn-light btn-outline-primary">Browse Travel Packages</button>
             <button routerLink="bookings" class ="m-1 btn btn-light btn-outline-primary">My Bookings</button>
             <button routerLink="addtravelpackage" class="m-1 btn btn-light btn-outline-primary">Create a Custom Package</button>
+            <button routerLink="notifications" class="m-1 btn btn-light btn-outline-primary">Notifications</button>
+
         </li>
     </ul>
     </nav>
+
+
 
 </div>
 <router-outlet></router-outlet> <!--router-outlet is used to load the component based on the route.-->

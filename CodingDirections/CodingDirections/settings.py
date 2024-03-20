@@ -75,8 +75,8 @@ INSTALLED_APPS = [
     'authenticationBackend',  # Add the authenticationBackend app to the list of installed apps
     'corsheaders',  #
     'notification_app',  # Add the notification_app app to the list of installed apps
-    'django_celery_results',  # Add the django_celery_results app to the list of installed apps
-    'django_celery_beat',  # Add the django_celery_beat app to the list of installed apps
+    #'django_celery_results',  # Add the django_celery_results app to the list of installed apps
+    #'django_celery_beat',  # Add the django_celery_beat app to the list of installed apps
     # Add the channels to the list of installed apps,daphne server for websocket because wsgi prebeuilt djnago server does not support websocket
 
 ]
@@ -93,12 +93,10 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware", # Add the CommonMiddleware to the list of middleware classes
 ]
 
-#ROOT_URLCONF = 'CodingDirections.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'], #change on 19/3
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,7 +114,11 @@ ROOT_URLCONF = 'CodingDirections.urls'  # Add the path to the root URL configura
 ASGI_APPLICATION = 'CodingDirections.asgi.application' #as we are now using asgi server for notification
 #ASGI_APPLICATION = 'CodingDirections.settings' #as we are now using asgi server for notification
 
-
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': "channels.layers.InMemoryChannelLayer"
+    }
+}
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -152,10 +154,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Toronto'  # Add the time zone for  your choice,original it was UTC
 
 USE_I18N = True
-
+USE_L10N = True  # Add the localization setting
 USE_TZ = True
 
 
@@ -183,27 +185,27 @@ CORS_ORIGIN_WHITELIST = [
 ]
 AUTH_USER_MODEL = 'authenticationBackend.User'  # Add the path to the custom user model
 
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        #'BACKEND': "channels.layers.InMemoryChannelLayer",
-        'CONFIG': {
-            "hosts": [(REDIS_HOSTNAME, REDIS_PORT)],
-        },
-    },
-}
+# CHANNEL_LAYERS = {
+#     'default': {
+#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
+#         #'BACKEND': "channels.layers.InMemoryChannelLayer",
+#         'CONFIG': {
+#             "hosts": [(REDIS_HOSTNAME, REDIS_PORT)],
+#         },
+#     },
+# }
 
-# CELERY SETTINGS
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
-CELERY_RESULT_BACKEND = 'django-db'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TASK_SELERLIZER = 'json'
-CELERY_TIMEZONE = 'UTC'
-
-CELERY_RESULT_BACKEND = 'django-db'  # Add the path to the result backend
-
-CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'  # Add the path to the beat scheduler
+# # CELERY SETTINGS
+# CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+# CELERY_RESULT_BACKEND = 'django-db'
+# CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_TIMEZONE = 'America/Toronto'
+#
+# CELERY_RESULT_BACKEND = 'django-db'  # Add the path to the result backend
+#
+# CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'  # Add the path to the beat scheduler
 #CELERY_IMPORTS = ('notification_app.tasks',)  # Add the path to the tasks module
 
 REST_FRAMEWORK = {

@@ -2,11 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {AuthService} from "./auth.service";
+import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
+  private webSocketSubject: WebSocketSubject<any>;
+
 
   readonly baseAPIUrl = "http://127.0.0.1:8000";
   httpHeaders = new HttpHeaders({'Content-Type':'application/json',
@@ -14,6 +17,7 @@ export class SharedService {
     });
 
   constructor(private http:HttpClient,private authService:AuthService) {
+    this.webSocketSubject = webSocket('ws://localhost:8000/ws/notify/'); //for Realtime notifications setup
   }
 
   getFlightsList():Observable<any[]>{
@@ -69,6 +73,10 @@ export class SharedService {
 
   getAllBookingsByID(userid:any):Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/customerBookings/?user_id='+userid,{headers:this.httpHeaders});
+  }
+
+  getNotifications():Observable<any[]>{
+    return this.webSocketSubject.asObservable();
   }
 
 }

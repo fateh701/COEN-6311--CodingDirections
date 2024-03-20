@@ -26,6 +26,7 @@ import { HeaderComponent } from './header/header.component';
 import {AuthenticationModule} from "./authentication/authentication.module";
 import {tokenInterceptor } from "./token.interceptor";
 import { BookingsAllComponent } from './bookings/bookings-all/bookings-all.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 // @ts-ignore
 @NgModule({
@@ -45,7 +46,8 @@ import { BookingsAllComponent } from './bookings/bookings-all/bookings-all.compo
     //AuthenticationComponent,
     AccountComponent,
     HeaderComponent,
-    BookingsAllComponent, //This is the component that will be used to display the details of the selected travel package
+    BookingsAllComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,93 +1,87 @@
 {% extends 'base.html' %}
-{% load static %}
-{% block title %}
-{% endblock %}
-{% block css %}
+{% block title %} Home {% endblock %}
+{% block css_style %}
 <style>
-    .container {
-        max-width: 960px;
+    .fa-solid {
+        font-size: 26px;
     }
 
-    /*
- * Custom translucent site header
- */
-
-    .site-header {
-        background-color: rgba(0, 0, 0, .85);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        backdrop-filter: saturate(180%) blur(20px);
-    }
-
-    .site-header a {
-        color: #8e8e8e;
-        transition: color .15s ease-in-out;
-    }
-
-    .site-header a:hover {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    /*
- * Dummy devices (replace them with your own or something else entirely!)
- */
-
-    .product-device {
+    .fa-solid[data-count]:after {
         position: absolute;
-        right: 10%;
-        bottom: -30%;
-        width: 300px;
-        height: 540px;
-        background-color: #333;
-        border-radius: 21px;
-        transform: rotate(30deg);
-    }
-
-    .product-device::before {
-        position: absolute;
-        top: 10%;
-        right: 10px;
-        bottom: 10%;
-        left: 10px;
-        content: "";
-        background-color: rgba(255, 255, 255, .1);
-        border-radius: 5px;
-    }
-
-    .product-device-2 {
-        top: -25%;
-        right: auto;
-        bottom: 0;
-        left: 5%;
-        background-color: #e5e5e5;
-    }
-
-
-    /*
- * Extra utilities
- */
-
-    .flex-equal>* {
-        flex: 1;
-    }
-
-    @media (min-width: 768px) {
-        .flex-md-equal>* {
-            flex: 1;
-        }
+        right: 0%;
+        top: 1%;
+        content: attr(data-count);
+        font-size: 36%;
+        padding: .6em;
+        border-radius: 999px;
+        line-height: .75em;
+        color: white;
+        background: rgba(255, 0, 0, .85);
+        text-align: center;
+        min-width: 2em;
+        font-weight: bold;
     }
 </style>
-{% endblock %}
-</head>
-
-
-{% block body %}
-<main>
-    </main>
 
 {% endblock %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Welcome to Notify</h1>
+</div>
+{% endblock %}
 
-{% block js %}
+{% block js_script %}
 <script>
+    // setup chat scoket
+    const notifyScoket = new WebSocket(
+        'ws://'
+        + window.location.host
+        + '/ws/notify/'
+    );
+
+    // on socket open
+    notifyScoket.onopen = function (e) {
+        console.log('Socket successfully connected.');
+    };
+
+    // on socket close
+    notifyScoket.onclose = function (e) {
+        console.log('Socket closed unexpectedly');
+    };
+
+    // on receiving message on group
+    notifyScoket.onmessage = function (e) {
+        const data = JSON.parse(e.data);
+        const message = data.message;
+        // Call the setMessage function to add the new li element
+        setMessage(message);
+
+    };
+
+    function setMessage(message) {
+        // Create a new li element
+        var newLi = document.createElement('li');
+
+        // Create a new anchor element
+        var newAnchor = document.createElement('a');
+        newAnchor.className = 'dropdown-item text-wrap';
+        newAnchor.href = '#';
+        newAnchor.textContent = message;
+
+        // Append the anchor element to the li element
+        newLi.appendChild(newAnchor);
+
+        // Get the ul element with the id "notify"
+        var ulElement = document.getElementById('notify');
+
+        // Append the new li element to the ul element
+        ulElement.appendChild(newLi);
+
+        // getting object of count
+        count = document.getElementById('bellCount').getAttribute('data-count');
+        document.getElementById('bellCount').setAttribute('data-count', parseInt(count) + 1);
+    }
+
+
 </script>
 {% endblock %}
