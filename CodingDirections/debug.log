@@ -15008,3 +15008,2050 @@ HTTP GET /static/admin/img/icon-addlink.svg 200 [0.01, 127.0.0.1:61982]
 HTTP GET /static/admin/img/tooltag-add.svg 200 [0.01, 127.0.0.1:61983]
 HTTP OPTIONS /customerBookings/?user_id=9 200 [0.01, 127.0.0.1:62234]
 HTTP GET /customerBookings/?user_id=9 200 [0.03, 127.0.0.1:62234]
+Watching for file changes with StatReloader
+HTTP OPTIONS /create-user/login/ 200 [0.02, 127.0.0.1:50452]
+HTTP POST /create-user/login/ 200 [1.03, 127.0.0.1:50452]
+HTTP OPTIONS /travel-packages/ 200 [0.01, 127.0.0.1:50467]
+HTTP GET /travel-packages/ 200 [0.04, 127.0.0.1:50467]
+HTTP OPTIONS /travel-packages/1/ 200 [0.03, 127.0.0.1:50467]
+HTTP OPTIONS /travel-packages/1/ 200 [0.02, 127.0.0.1:50475]
+HTTP GET /customerBookings/?user_id=9 200 [0.06, 127.0.0.1:50476]
+HTTP GET /travel-packages/1/ 200 [0.04, 127.0.0.1:50475]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:50475]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:50475]
+HTTP OPTIONS /create-booking/ 200 [0.01, 127.0.0.1:50475]
+HTTP POST /create-booking/ 201 [0.05, 127.0.0.1:50475]
+HTTP GET /travel-packages/ 200 [0.03, 127.0.0.1:50475]
+HTTP GET /customerBookings/?user_id=9 200 [0.06, 127.0.0.1:50562]
+HTTP GET / 200 [0.31, 127.0.0.1:50982]
+HTTP GET /notification 200 [0.02, 127.0.0.1:50982]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:51012]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:51012]
+HTTP GET /test/ 200 [0.02, 127.0.0.1:51045]
+HTTP GET /test/ 200 [0.02, 127.0.0.1:51087]
+HTTP GET /admin 301 [0.03, 127.0.0.1:51087]
+HTTP GET /admin/ 200 [0.12, 127.0.0.1:51087]
+HTTP GET /static/admin/css/dashboard.css 200 [0.08, 127.0.0.1:51087]
+HTTP GET /static/admin/img/icon-changelink.svg 200 [0.01, 127.0.0.1:51087]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.09, 127.0.0.1:51087]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:51087]
+HTTP GET /admin/notification_app/broadcastnotification/3/change/ 200 [0.10, 127.0.0.1:51104]
+HTTP GET /static/admin/css/forms.css 200 [0.02, 127.0.0.1:51104]
+HTTP GET /static/admin/js/prepopulate_init.js 200 [0.02, 127.0.0.1:51111]
+HTTP GET /static/admin/css/widgets.css 200 [0.01, 127.0.0.1:51104]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:51112]
+HTTP GET /static/admin/js/admin/DateTimeShortcuts.js 200 [0.08, 127.0.0.1:51110]
+HTTP GET /static/admin/js/calendar.js 200 [0.09, 127.0.0.1:51108]
+HTTP GET /static/admin/js/change_form.js 200 [0.01, 127.0.0.1:51108]
+HTTP GET /static/admin/img/icon-calendar.svg 200 [0.03, 127.0.0.1:51108]
+HTTP GET /static/admin/img/icon-clock.svg 200 [0.03, 127.0.0.1:51110]
+HTTP POST /admin/notification_app/broadcastnotification/3/change/ 302 [0.04, 127.0.0.1:51110]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.05, 127.0.0.1:51110]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:51110]
+HTTP GET /static/admin/img/icon-yes.svg 200 [0.02, 127.0.0.1:51110]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.10, 127.0.0.1:51143]
+HTTP GET /static/admin/img/search.svg 200 [0.02, 127.0.0.1:51143]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:51145]
+HTTP GET /static/admin/img/icon-no.svg 200 [0.05, 127.0.0.1:51144]
+HTTP GET /admin/django_celery_beat/periodictask/5/change/ 200 [0.25, 127.0.0.1:51144]
+HTTP GET /static/admin/js/collapse.js 200 [0.03, 127.0.0.1:51144]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:51145]
+HTTP GET /admin/django_celery_beat/periodictask/5/delete/ 200 [0.10, 127.0.0.1:51145]
+HTTP GET /static/admin/js/cancel.js 200 [0.03, 127.0.0.1:51145]
+HTTP POST /admin/django_celery_beat/periodictask/5/delete/ 302 [0.03, 127.0.0.1:51145]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.05, 127.0.0.1:51145]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:51145]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.05, 127.0.0.1:51145]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:51145]
+HTTP GET /admin/notification_app/broadcastnotification/3/change/ 200 [0.05, 127.0.0.1:51145]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:51145]
+HTTP POST /admin/notification_app/broadcastnotification/3/change/ 302 [0.04, 127.0.0.1:51175]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.04, 127.0.0.1:51175]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:51175]
+Watching for file changes with StatReloader
+HTTP OPTIONS /create-user/login/ 200 [0.03, 127.0.0.1:54255]
+HTTP POST /create-user/login/ 200 [0.50, 127.0.0.1:54255]
+HTTP OPTIONS /customerBookings/?user_id=9 200 [0.01, 127.0.0.1:54255]
+HTTP GET /customerBookings/?user_id=9 200 [0.06, 127.0.0.1:54255]
+HTTP OPTIONS /travel-packages/ 200 [0.01, 127.0.0.1:54277]
+HTTP GET /travel-packages/ 200 [0.03, 127.0.0.1:54277]
+HTTP GET /customerBookings/?user_id=9 200 [0.05, 127.0.0.1:54277]
+HTTP GET /travel-packages/ 200 [0.04, 127.0.0.1:54277]
+HTTP GET /customerBookings/?user_id=9 200 [0.06, 127.0.0.1:54277]
+HTTP GET /travel-packages/ 200 [0.03, 127.0.0.1:54277]
+HTTP OPTIONS /travel-packages/1/ 200 [0.02, 127.0.0.1:54286]
+HTTP OPTIONS /travel-packages/1/ 200 [0.02, 127.0.0.1:54287]
+HTTP GET /travel-packages/1/ 200 [0.06, 127.0.0.1:54286]
+HTTP GET /customerBookings/?user_id=9 200 [0.09, 127.0.0.1:54289]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:54286]
+HTTP GET /travel-packages/ 200 [0.03, 127.0.0.1:54286]
+HTTP GET /customerBookings/?user_id=9 200 [0.05, 127.0.0.1:54286]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\asgi.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\asgi.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\asgi.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.56, 127.0.0.1:55356]
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+HTTP GET /api-auth/logout/?next=/ 405 [0.01, 127.0.0.1:55356]
+HTTP GET /admin/ 200 [0.07, 127.0.0.1:55356]
+HTTP GET /static/admin/img/icon-deletelink.svg 200 [0.06, 127.0.0.1:55356]
+HTTP GET /notification 200 [0.01, 127.0.0.1:55356]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:55372]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:55372]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:55372]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.18, 127.0.0.1:56254]
+HTTP GET /notification 200 [0.01, 127.0.0.1:56254]
+HTTP GET /admin/ 200 [0.06, 127.0.0.1:56254]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.06, 127.0.0.1:56266]
+HTTP GET /admin/jsi18n/ 200 [0.08, 127.0.0.1:56266]
+HTTP GET /admin/notification_app/broadcastnotification/3/change/ 200 [0.05, 127.0.0.1:56266]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:56273]
+HTTP GET /static/admin/js/calendar.js 200 [0.15, 127.0.0.1:56266]
+HTTP GET /static/admin/js/admin/DateTimeShortcuts.js 200 [0.16, 127.0.0.1:56267]
+HTTP GET /static/admin/img/icon-clock.svg 200 [0.01, 127.0.0.1:56266]
+HTTP GET /static/admin/img/icon-calendar.svg 200 [0.01, 127.0.0.1:56267]
+HTTP GET /admin/notification_app/broadcastnotification/3/delete/ 200 [0.03, 127.0.0.1:56267]
+HTTP GET /static/admin/js/cancel.js 200 [0.02, 127.0.0.1:56267]
+HTTP POST /admin/notification_app/broadcastnotification/3/delete/ 302 [0.02, 127.0.0.1:56267]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.02, 127.0.0.1:56267]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:56267]
+HTTP GET /admin/notification_app/broadcastnotification/add/ 200 [0.02, 127.0.0.1:56278]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:56278]
+HTTP POST /admin/notification_app/broadcastnotification/add/ 302 [0.10, 127.0.0.1:56294]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.03, 127.0.0.1:56294]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:56294]
+HTTP GET / 200 [0.03, 127.0.0.1:56301]
+HTTP GET /notification 200 [0.01, 127.0.0.1:56301]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:56315]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:56315]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:56315]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.06, 127.0.0.1:56353]
+HTTP GET /static/admin/img/icon-no.svg 200 [0.01, 127.0.0.1:56353]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:56354]
+HTTP GET /admin/django_celery_beat/periodictask/6/change/ 200 [0.10, 127.0.0.1:56354]
+HTTP GET /static/admin/js/collapse.js 200 [0.01, 127.0.0.1:56354]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:56353]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.03, 127.0.0.1:56358]
+HTTP GET /admin/django_celery_beat/periodictask/6/change/ 200 [0.04, 127.0.0.1:56374]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:56374]
+HTTP GET /notification 200 [0.01, 127.0.0.1:56379]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:56382]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:56382]
+HTTP GET /test/ 200 [0.01, 127.0.0.1:56395]
+HTTP GET /notification 200 [0.01, 127.0.0.1:56737]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:56382]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:56740]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:56740]
+HTTP GET /test/ 200 [0.01, 127.0.0.1:56749]
+HTTP GET /test/ 200 [0.01, 127.0.0.1:56808]
+HTTP GET /notification 200 [0.01, 127.0.0.1:56808]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:56740]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:56816]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:56816]
+HTTP GET /test/ 200 [0.02, 127.0.0.1:56808]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\tasks.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.19, 127.0.0.1:57431]
+HTTP GET / 200 [0.04, 127.0.0.1:57431]
+HTTP GET /notification 200 [0.01, 127.0.0.1:57431]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:57459]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:57459]
+HTTP GET /notification 200 [0.01, 127.0.0.1:57626]
+HTTP GET /test/ 200 [0.01, 127.0.0.1:57626]
+HTTP GET /admin/ 200 [0.06, 127.0.0.1:57635]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.10, 127.0.0.1:57635]
+HTTP GET /admin/jsi18n/ 200 [0.14, 127.0.0.1:57635]
+HTTP GET /admin/notification_app/broadcastnotification/add/ 200 [0.09, 127.0.0.1:57657]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:57657]
+HTTP POST /admin/notification_app/broadcastnotification/add/ 302 [0.12, 127.0.0.1:57680]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.04, 127.0.0.1:57680]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:57680]
+HTTP GET /admin/django_celery_results/taskresult/ 200 [0.09, 127.0.0.1:57716]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:57716]
+HTTP GET /static/admin/img/sorting-icons.svg 200 [0.13, 127.0.0.1:57716]
+HTTP GET /admin/django_celery_results/taskresult/34/change/ 200 [0.06, 127.0.0.1:57716]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:57716]
+HTTP GET /admin/django_celery_results/taskresult/ 200 [0.10, 127.0.0.1:57728]
+Watching for file changes with StatReloader
+HTTP GET /notification 200 [0.03, 127.0.0.1:57867]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:57870]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:57870]
+HTTP GET /admin/django_celery_results/taskresult/ 200 [0.22, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:57867]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.06, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:57867]
+HTTP GET /admin/notification_app/broadcastnotification/4/change/ 200 [0.07, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.09, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/periodictask/7/change/ 200 [0.15, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.07, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/periodictask/?o=1 200 [0.07, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/periodictask/?o=-1 200 [0.05, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/periodictask/7/change/?_changelist_filters=o%3D-1 200 [0.08, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/periodictask/?o=-1 200 [0.06, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/periodictask/7/change/?_changelist_filters=o%3D-1 200 [0.09, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:57867]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.04, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:57867]
+HTTP GET /admin/notification_app/broadcastnotification/5/change/ 200 [0.04, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:57867]
+HTTP POST /admin/notification_app/broadcastnotification/5/change/ 302 [0.04, 127.0.0.1:57867]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.05, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:57867]
+HTTP GET /admin/django_celery_beat/crontabschedule/ 200 [0.06, 127.0.0.1:57867]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:57867]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.21, 127.0.0.1:59187]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:59187]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.10, 127.0.0.1:59197]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:59197]
+HTTP GET /admin/django_celery_beat/periodictask/7/change/ 200 [0.15, 127.0.0.1:59197]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:59197]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.04, 127.0.0.1:59466]
+HTTP GET /admin/django_celery_results/taskresult/ 200 [0.15, 127.0.0.1:59466]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:59466]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.08, 127.0.0.1:59466]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:59466]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.05, 127.0.0.1:59466]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:59466]
+HTTP GET /admin/notification_app/broadcastnotification/5/change/ 200 [0.06, 127.0.0.1:59583]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:59583]
+HTTP POST /admin/notification_app/broadcastnotification/5/change/ 302 [0.06, 127.0.0.1:59589]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.03, 127.0.0.1:59589]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:59589]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:57870]
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\settings.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.28, 127.0.0.1:51960]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.10, 127.0.0.1:51960]
+HTTP GET /notification 200 [0.01, 127.0.0.1:51960]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:51981]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:51981]
+HTTP GET / 200 [0.04, 127.0.0.1:52015]
+HTTP GET /admin/ 200 [0.10, 127.0.0.1:52015]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.13, 127.0.0.1:52028]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:52028]
+HTTP GET /admin/notification_app/broadcastnotification/5/change/ 200 [0.09, 127.0.0.1:52028]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52028]
+HTTP POST /admin/notification_app/broadcastnotification/5/change/ 302 [0.03, 127.0.0.1:52045]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.03, 127.0.0.1:52045]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52045]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.27, 127.0.0.1:52541]
+HTTP GET /travel-packages/ 200 [0.12, 127.0.0.1:52541]
+HTTP GET /notification 200 [0.02, 127.0.0.1:52541]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.20, 127.0.0.1:52541]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:52541]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:52569]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:52569]
+HTTP GET /test/ 200 [0.01, 127.0.0.1:52608]
+HTTP GET /admin/notification_app/broadcastnotification/5/change/ 200 [0.19, 127.0.0.1:52608]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52608]
+HTTP POST /admin/notification_app/broadcastnotification/5/change/ 302 [0.04, 127.0.0.1:52608]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.05, 127.0.0.1:52608]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52608]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.11, 127.0.0.1:52608]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52608]
+HTTP GET /admin/django_celery_beat/periodictask/7/change/ 200 [0.21, 127.0.0.1:52608]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52608]
+HTTP POST /admin/django_celery_beat/periodictask/7/change/ 302 [0.06, 127.0.0.1:52608]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.06, 127.0.0.1:52608]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52608]
+HTTP POST /admin/django_celery_beat/periodictask/ 302 [0.07, 127.0.0.1:52608]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.21, 127.0.0.1:52608]
+HTTP GET /admin/jsi18n/ 200 [0.07, 127.0.0.1:52608]
+HTTP GET /static/admin/img/icon-alert.svg 200 [0.11, 127.0.0.1:52608]
+HTTP POST /admin/django_celery_beat/periodictask/ 302 [0.05, 127.0.0.1:52608]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.07, 127.0.0.1:52608]
+HTTP GET /admin/jsi18n/ 200 [0.08, 127.0.0.1:52608]
+HTTP GET /notification 200 [0.01, 127.0.0.1:52919]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:52569]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:52921]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:52921]
+HTTP GET /admin/django_celery_results/groupresult/ 200 [0.03, 127.0.0.1:52919]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52919]
+HTTP GET /admin/django_celery_results/taskresult/ 200 [0.06, 127.0.0.1:52919]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52919]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.02, 127.0.0.1:52919]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52919]
+HTTP GET /admin/notification_app/broadcastnotification/add/ 200 [0.02, 127.0.0.1:52919]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52919]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.03, 127.0.0.1:52919]
+HTTP GET /admin/notification_app/broadcastnotification/5/change/ 200 [0.02, 127.0.0.1:52919]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52919]
+HTTP POST /admin/notification_app/broadcastnotification/5/change/ 302 [0.03, 127.0.0.1:52919]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.03, 127.0.0.1:52919]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52919]
+HTTP GET /admin/django_celery_results/groupresult/ 200 [0.05, 127.0.0.1:53152]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53152]
+HTTP GET /admin/django_celery_results/groupresult/add/ 200 [0.05, 127.0.0.1:53152]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:53152]
+HTTP GET /admin/auth/group/ 200 [0.05, 127.0.0.1:53152]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:53152]
+HTTP GET /admin/authtoken/tokenproxy/ 200 [0.05, 127.0.0.1:53152]
+HTTP GET /admin/django_celery_beat/intervalschedule/ 200 [0.05, 127.0.0.1:53152]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53152]
+HTTP GET /admin/django_celery_beat/clockedschedule/ 200 [0.05, 127.0.0.1:53152]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:53152]
+HTTP GET /admin/django_celery_beat/crontabschedule/ 200 [0.06, 127.0.0.1:53152]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:53152]
+HTTP GET /admin/django_celery_beat/solarschedule/ 200 [0.06, 127.0.0.1:53152]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:53152]
+HTTP GET /admin/travelAgencyApi/notification/ 200 [0.05, 127.0.0.1:53152]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53152]
+HTTP GET /notification 200 [0.01, 127.0.0.1:53152]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:52921]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53186]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53186]
+Internal Server Error: /notification
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: mainapp/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py", line 202, in notificationhome
+    return render(request, 'index.html', {
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: mainapp/base.html
+HTTP GET /notification 500 [0.28, 127.0.0.1:53281]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53186]
+HTTP GET /notification 200 [0.02, 127.0.0.1:53310]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53314]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53314]
+HTTP GET /test/ 200 [0.02, 127.0.0.1:53324]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.09, 127.0.0.1:53324]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53324]
+HTTP GET /admin/notification_app/broadcastnotification/4/change/ 200 [0.05, 127.0.0.1:53324]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:53324]
+HTTP POST /admin/notification_app/broadcastnotification/4/change/ 302 [0.03, 127.0.0.1:53344]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.05, 127.0.0.1:53344]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53344]
+HTTP GET /notification 200 [0.01, 127.0.0.1:53356]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53314]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53358]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53358]
+HTTP GET /notification? 200 [0.01, 127.0.0.1:53379]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53358]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53387]
+HTTP GET /notification? 200 [0.01, 127.0.0.1:53379]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53387]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53393]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53393]
+HTTP GET /notification? 200 [0.01, 127.0.0.1:53379]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53393]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53402]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53402]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53402]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53405]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53405]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53407]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53407]
+HTTP GET /notification 200 [0.01, 127.0.0.1:53379]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53407]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53410]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53410]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53410]
+HTTP GET /notification 200 [0.01, 127.0.0.1:53379]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53434]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53434]
+HTTP GET /notification 200 [0.01, 127.0.0.1:53379]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53434]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53446]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53446]
+HTTP GET /test/ 200 [0.01, 127.0.0.1:53379]
+HTTP POST /admin/notification_app/broadcastnotification/ 200 [0.11, 127.0.0.1:53379]
+HTTP POST /admin/notification_app/broadcastnotification/ 302 [0.05, 127.0.0.1:53379]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.03, 127.0.0.1:53379]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:53379]
+HTTP GET /notification 200 [0.01, 127.0.0.1:53869]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53446]
+WebSocket CONNECT  [127.0.0.1:53872]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:53872]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.39, 127.0.0.1:51305]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.13, 127.0.0.1:51305]
+HTTP GET /travel-packages/ 200 [0.18, 127.0.0.1:51325]
+HTTP GET /notification 200 [0.02, 127.0.0.1:51340]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:51346]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:51346]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:51570]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:51570]
+HTTP GET /notification 200 [0.02, 127.0.0.1:51583]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:51346]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:51586]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:51586]
+HTTP GET /test/ 200 [0.02, 127.0.0.1:51607]
+HTTP GET / 200 [0.05, 127.0.0.1:51639]
+HTTP GET /admin/ 200 [0.25, 127.0.0.1:51639]
+HTTP GET /static/admin/css/base.css 304 [0.01, 127.0.0.1:51639]
+HTTP GET /static/admin/css/dark_mode.css 304 [0.01, 127.0.0.1:51641]
+HTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:51642]
+HTTP GET /static/admin/css/dashboard.css 304 [0.01, 127.0.0.1:51642]
+HTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:51639]
+HTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:51641]
+HTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:51639]
+HTTP GET /static/admin/img/icon-addlink.svg 304 [0.01, 127.0.0.1:51639]
+HTTP GET /static/admin/img/icon-changelink.svg 304 [0.01, 127.0.0.1:51641]
+HTTP GET /static/admin/img/icon-deletelink.svg 304 [0.01, 127.0.0.1:51642]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.10, 127.0.0.1:51662]
+HTTP GET /static/admin/css/changelists.css 304 [0.02, 127.0.0.1:51662]
+HTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.01, 127.0.0.1:51663]
+HTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.01, 127.0.0.1:51666]
+HTTP GET /static/admin/js/core.js 304 [0.01, 127.0.0.1:51665]
+HTTP GET /static/admin/js/jquery.init.js 304 [0.01, 127.0.0.1:51664]
+HTTP GET /static/admin/js/actions.js 304 [0.01, 127.0.0.1:51667]
+HTTP GET /static/admin/js/urlify.js 304 [0.01, 127.0.0.1:51662]
+HTTP GET /static/admin/js/prepopulate.js 304 [0.01, 127.0.0.1:51666]
+HTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.01, 127.0.0.1:51663]
+HTTP GET /static/admin/js/filters.js 304 [0.00, 127.0.0.1:51663]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:51665]
+HTTP GET /static/admin/img/tooltag-add.svg 304 [0.00, 127.0.0.1:51665]
+HTTP GET /admin/notification_app/broadcastnotification/add/ 200 [0.13, 127.0.0.1:51665]
+HTTP GET /static/admin/css/forms.css 304 [0.02, 127.0.0.1:51665]
+HTTP GET /static/admin/js/calendar.js 304 [0.02, 127.0.0.1:51666]
+HTTP GET /static/admin/js/admin/DateTimeShortcuts.js 304 [0.01, 127.0.0.1:51667]
+HTTP GET /static/admin/js/prepopulate_init.js 304 [0.01, 127.0.0.1:51662]
+HTTP GET /static/admin/css/widgets.css 304 [0.01, 127.0.0.1:51667]
+HTTP GET /static/admin/js/change_form.js 304 [0.01, 127.0.0.1:51667]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:51663]
+HTTP GET /static/admin/img/icon-calendar.svg 304 [0.01, 127.0.0.1:51663]
+HTTP GET /static/admin/img/icon-clock.svg 304 [0.01, 127.0.0.1:51667]
+HTTP POST /admin/notification_app/broadcastnotification/add/ 302 [0.11, 127.0.0.1:51682]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.06, 127.0.0.1:51682]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:51682]
+HTTP GET /static/admin/img/icon-yes.svg 304 [0.00, 127.0.0.1:51685]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\consumers.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\consumers.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\consumers.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /admin/notification_app/broadcastnotification/6/change/ 200 [0.24, 127.0.0.1:51920]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:51920]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\models.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP POST /admin/notification_app/broadcastnotification/6/change/ 302 [0.14, 127.0.0.1:51989]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.12, 127.0.0.1:51989]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:51989]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:52016]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:52016]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\settings.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.20, 127.0.0.1:52104]
+HTTP GET /notification 200 [0.02, 127.0.0.1:52104]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:52121]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:52121]
+HTTP GET /admin/notification_app/broadcastnotification/6/change/ 200 [0.15, 127.0.0.1:52104]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:52104]
+HTTP POST /admin/notification_app/broadcastnotification/6/change/ 302 [0.06, 127.0.0.1:52104]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.07, 127.0.0.1:52104]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:52104]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:52149]
+WebSocket DISCONNECT /ws/notification/broadcast/ [127.0.0.1:52149]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\settings.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /notification 200 [0.02, 127.0.0.1:52242]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:52245]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:52245]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:52270]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:52270]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.18, 127.0.0.1:52585]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:52585]
+HTTP GET /admin/notification_app/broadcastnotification/6/change/ 200 [0.10, 127.0.0.1:52657]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52657]
+HTTP POST /admin/notification_app/broadcastnotification/6/change/ 302 [0.06, 127.0.0.1:52672]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.11, 127.0.0.1:52672]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:52672]
+HTTP GET /admin/notification_app/broadcastnotification/6/change/ 200 [0.03, 127.0.0.1:52702]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52702]
+HTTP GET /admin/notification_app/broadcastnotification/6/change/ 200 [0.04, 127.0.0.1:52766]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52766]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\models.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /notification 200 [0.03, 127.0.0.1:53239]
+WebSocket HANDSHAKING /ws/notification/broadcast/ [127.0.0.1:53242]
+WebSocket CONNECT /ws/notification/broadcast/ [127.0.0.1:53242]
+HTTP GET /admin/notification_app/broadcastnotification/6/change/ 200 [0.19, 127.0.0.1:53239]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:53239]
+HTTP POST /admin/notification_app/broadcastnotification/6/change/ 302 [0.06, 127.0.0.1:53239]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.08, 127.0.0.1:53239]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53239]
+HTTP GET /admin/notification_app/broadcastnotification/6/change/ 200 [0.05, 127.0.0.1:53356]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53356]
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.05, 127.0.0.1:53356]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\models.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /admin/notification_app/broadcastnotification/ 200 [0.12, 127.0.0.1:53464]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53464]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.10, 127.0.0.1:53464]
+HTTP GET /static/admin/img/search.svg 304 [0.01, 127.0.0.1:53465]
+HTTP GET /static/admin/img/icon-no.svg 304 [0.01, 127.0.0.1:53465]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:53464]
+HTTP GET /static/admin/img/icon-viewlink.svg 304 [0.00, 127.0.0.1:53464]
+HTTP GET /admin/django_celery_beat/periodictask/9/change/ 200 [0.27, 127.0.0.1:53464]
+HTTP GET /static/admin/js/collapse.js 304 [0.01, 127.0.0.1:53465]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:53464]
+HTTP POST /admin/django_celery_beat/periodictask/9/change/ 302 [0.14, 127.0.0.1:53464]
+HTTP GET /admin/django_celery_beat/periodictask/ 200 [0.06, 127.0.0.1:53464]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:53464]
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 11106
+"GET /admin/ HTTP/1.1" 200 13614
+"GET /admin/authenticationBackend/user/ HTTP/1.1" 200 15695
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+"GET /admin/ HTTP/1.1" 200 13614
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 12042
+"GET /admin/ HTTP/1.1" 200 13614
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.26, 127.0.0.1:55381]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.16, 127.0.0.1:55652]
+HTTP GET / 200 [0.03, 127.0.0.1:55695]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:55695]
+Internal Server Error: /admin/notification_app/notification/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: notification_app_notification
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 1985, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 864, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\views\main.py", line 145, in __init__
+    self.get_results(request)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\views\main.py", line 312, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 629, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 615, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: notification_app_notification
+HTTP GET /admin/notification_app/notification/ 500 [0.32, 127.0.0.1:55695]
+Internal Server Error: /admin/notification_app/notification/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: notification_app_notification
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 1985, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 864, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\views\main.py", line 145, in __init__
+    self.get_results(request)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\views\main.py", line 312, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 629, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 615, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: notification_app_notification
+HTTP GET /admin/notification_app/notification/ 500 [0.11, 127.0.0.1:55716]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:55716]
+HTTP POST /admin/logout/ 200 [0.04, 127.0.0.1:55743]
+HTTP GET /admin/ 302 [0.01, 127.0.0.1:55743]
+HTTP GET /admin/login/?next=/admin/ 200 [0.05, 127.0.0.1:55743]
+HTTP GET /static/admin/css/login.css 200 [0.10, 127.0.0.1:55743]
+HTTP POST /admin/login/?next=/admin/ 302 [0.58, 127.0.0.1:55752]
+HTTP GET /admin/ 200 [0.03, 127.0.0.1:55752]
+Internal Server Error: /admin/notification_app/notification/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: notification_app_notification
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 1985, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 864, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\views\main.py", line 145, in __init__
+    self.get_results(request)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\views\main.py", line 312, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 629, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 615, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: notification_app_notification
+HTTP GET /admin/notification_app/notification/ 500 [0.15, 127.0.0.1:55752]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.14, 127.0.0.1:55823]
+HTTP GET /admin/ 200 [0.04, 127.0.0.1:55849]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.11, 127.0.0.1:55849]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:55849]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:55849]
+Internal Server Error: /admin/notification_app/notification/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: notification_app_notification
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 716, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 1985, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\options.py", line 864, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\views\main.py", line 145, in __init__
+    self.get_results(request)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\views\main.py", line 312, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 629, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\query.py", line 615, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: notification_app_notification
+HTTP GET /admin/notification_app/notification/ 500 [0.13, 127.0.0.1:55849]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\signals.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.17, 127.0.0.1:59875]
+HTTP GET / 200 [0.02, 127.0.0.1:59875]
+Not Found: /notification
+HTTP GET /notification 404 [0.05, 127.0.0.1:59875]
+Not Found: /notification
+HTTP GET /notification 404 [0.03, 127.0.0.1:59875]
+HTTP GET /notify 301 [0.03, 127.0.0.1:59875]
+Internal Server Error: /notify/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\views.py", line 5, in index
+    return render(request, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+HTTP GET /notify/ 500 [0.14, 127.0.0.1:59875]
+HTTP GET / 200 [0.02, 127.0.0.1:59875]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:59875]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:59875]
+HTTP GET /admin/notification_app/notification/ 200 [0.07, 127.0.0.1:59875]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:59875]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.04, 127.0.0.1:59875]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:59875]
+HTTP GET /admin/travelAgencyApi/bookingagent/ 200 [0.04, 127.0.0.1:59875]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:59875]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.09, 127.0.0.1:59875]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:59875]
+HTTP GET /admin/travelAgencyApi/bookingagent/ 200 [0.05, 127.0.0.1:59875]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:59875]
+HTTP GET /admin/travelAgencyApi/bookingagent/4/change/ 200 [0.21, 127.0.0.1:59875]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:59875]
+HTTP GET /admin/travelAgencyApi/bookingagent/ 200 [0.05, 127.0.0.1:59875]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.05, 127.0.0.1:59875]
+HTTP GET /admin/travelAgencyApi/hotel/ 200 [0.07, 127.0.0.1:59875]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:59875]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.07, 127.0.0.1:59875]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\urls.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.31, 127.0.0.1:60002]
+Not Found: /notification
+HTTP GET /notification 404 [0.02, 127.0.0.1:60002]
+Internal Server Error: /notify/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\views.py", line 5, in index
+    return render(request, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+HTTP GET /notify/ 500 [0.11, 127.0.0.1:60002]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\urls.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.22, 127.0.0.1:60024]
+HTTP GET / 200 [0.01, 127.0.0.1:60024]
+HTTP GET / 200 [0.01, 127.0.0.1:60024]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:60024]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:60024]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.03, 127.0.0.1:60024]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:60024]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.03, 127.0.0.1:60024]
+HTTP GET /admin/notification_app/notification/ 200 [0.05, 127.0.0.1:60024]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:60024]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\urls.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.28, 127.0.0.1:60314]
+HTTP GET / 200 [0.03, 127.0.0.1:60344]
+Not Found: /notification
+HTTP GET /notification 404 [0.02, 127.0.0.1:60370]
+Not Found: /notify/
+HTTP GET /notify/ 404 [0.02, 127.0.0.1:60370]
+Not Found: /notify/
+HTTP GET /notify/ 404 [0.01, 127.0.0.1:60375]
+Not Found: /notify/
+HTTP GET /notify/ 404 [0.03, 127.0.0.1:60375]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\urls.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /notify/ 200 [0.03, 127.0.0.1:60389]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:60394]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:60394]
+HTTP GET /admin/notification_app/notification/1/change/ 200 [0.15, 127.0.0.1:60406]
+HTTP GET /admin/jsi18n/ 200 [0.07, 127.0.0.1:60406]
+HTTP POST /admin/notification_app/notification/1/change/ 302 [0.04, 127.0.0.1:60406]
+HTTP GET /admin/notification_app/notification/ 200 [0.10, 127.0.0.1:60406]
+HTTP GET /admin/jsi18n/ 200 [0.11, 127.0.0.1:60406]
+HTTP POST /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:60416]
+HTTP GET /static/admin/js/cancel.js 304 [0.00, 127.0.0.1:60416]
+HTTP POST /admin/notification_app/notification/ 302 [0.05, 127.0.0.1:60416]
+HTTP GET /admin/notification_app/notification/ 200 [0.03, 127.0.0.1:60416]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:60416]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.04, 127.0.0.1:60416]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:60416]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.03, 127.0.0.1:60427]
+HTTP GET /admin/notification_app/notification/ 200 [0.04, 127.0.0.1:60427]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:60427]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.03, 127.0.0.1:60511]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:60511]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.03, 127.0.0.1:60513]
+HTTP GET /admin/notification_app/notification/ 200 [0.05, 127.0.0.1:60513]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:60513]
+Internal Server Error: /notify/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\views.py", line 5, in index
+    return render(request, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'localhost' not found. 'localhost' is not a valid view function or pattern name.
+HTTP GET /notify/ 500 [0.11, 127.0.0.1:60666]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:60394]
+Internal Server Error: /notify/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\views.py", line 5, in index
+    return render(request, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for '' not found. '' is not a valid view function or pattern name.
+HTTP GET /notify/ 500 [0.05, 127.0.0.1:60682]
+Internal Server Error: /notify/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'http'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\latest\CodingDirections\notification_app\views.py", line 5, in index
+    return render(request, 'index.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\defaulttags.py", line 479, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'http' is not a registered namespace
+HTTP GET /notify/ 500 [0.05, 127.0.0.1:60696]
+HTTP GET /notify/ 200 [0.02, 127.0.0.1:60712]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:60713]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:60713]
+Not Found: /notify/{'http://127.0.0.1:8000/'}
+HTTP GET /notify/%7B'http://127.0.0.1:8000/'%7D 404 [0.02, 127.0.0.1:60712]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:60713]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:60726]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:60726]
+HTTP GET /notify/ 200 [0.01, 127.0.0.1:60746]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:60726]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:60748]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:60748]
+HTTP GET /notify/ 200 [0.01, 127.0.0.1:60772]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:60748]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:60774]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:60774]
+HTTP GET /admin/notification_app/notification/2/change/ 200 [0.09, 127.0.0.1:60772]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:60772]
+HTTP POST /admin/notification_app/notification/2/change/ 302 [0.03, 127.0.0.1:60772]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:60772]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:60772]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.04, 127.0.0.1:60782]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:60782]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.03, 127.0.0.1:60782]
+HTTP GET /admin/notification_app/notification/ 200 [0.08, 127.0.0.1:60782]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:60782]
+HTTP GET /notify/ 200 [0.01, 127.0.0.1:60810]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:60774]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:60812]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:60812]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.52, 127.0.0.1:62517]
+HTTP GET / 200 [0.04, 127.0.0.1:62551]
+HTTP GET /admin/ 200 [0.14, 127.0.0.1:62551]
+HTTP GET /admin/notification_app/notification/ 200 [0.14, 127.0.0.1:62551]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:62551]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62595]
+WebSocket REJECT /ws/notify/ [127.0.0.1:62595]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62595]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62597]
+WebSocket REJECT /ws/notify/ [127.0.0.1:62597]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62597]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62599]
+WebSocket REJECT /ws/notify/ [127.0.0.1:62599]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62599]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62612]
+WebSocket REJECT /ws/notify/ [127.0.0.1:62612]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62612]
+Not Found: /notification
+HTTP GET /notification 404 [0.05, 127.0.0.1:62625]
+HTTP GET /notify/ 200 [0.02, 127.0.0.1:62625]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62627]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:62627]
+HTTP GET /notify/ 200 [0.01, 127.0.0.1:62631]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62627]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62634]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:62634]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62661]
+WebSocket REJECT /ws/notify/ [127.0.0.1:62661]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62661]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62690]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:62690]
+HTTP OPTIONS /create-user/login/ 200 [0.01, 127.0.0.1:62724]
+HTTP POST /create-user/login/ 200 [0.69, 127.0.0.1:62724]
+HTTP OPTIONS /customerBookings/?user_id=9 200 [0.01, 127.0.0.1:62738]
+HTTP GET /customerBookings/?user_id=9 200 [0.05, 127.0.0.1:62738]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.06, 127.0.0.1:62750]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:62750]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.04, 127.0.0.1:62758]
+HTTP GET /admin/notification_app/notification/ 200 [0.05, 127.0.0.1:62758]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:62758]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:62837]
+WebSocket REJECT /ws/notify/ [127.0.0.1:62837]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62837]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62690]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:63031]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:63031]
+HTTP GET /customerBookings/?user_id=9 200 [0.06, 127.0.0.1:63035]
+HTTP GET /customerBookings/?user_id=9 200 [0.08, 127.0.0.1:63042]
+HTTP OPTIONS /travel-packages/ 200 [0.01, 127.0.0.1:63289]
+HTTP GET /travel-packages/ 200 [0.06, 127.0.0.1:63289]
+HTTP GET /customerBookings/?user_id=9 200 [0.09, 127.0.0.1:63289]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:63031]
+HTTP GET /customerBookings/?user_id=9 200 [0.05, 127.0.0.1:63360]
+HTTP GET /travel-packages/ 200 [0.09, 127.0.0.1:63373]
+HTTP GET /travel-packages/ 200 [0.03, 127.0.0.1:63621]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:63658]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:63658]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:63658]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:63704]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:63704]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:63704]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:63727]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:63727]
+HTTP POST /admin/notification_app/notification/ 200 [0.14, 127.0.0.1:63743]
+HTTP POST /admin/notification_app/notification/ 302 [0.08, 127.0.0.1:63743]
+HTTP GET /admin/notification_app/notification/ 200 [0.12, 127.0.0.1:63743]
+HTTP GET /admin/jsi18n/ 200 [0.07, 127.0.0.1:63743]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.06, 127.0.0.1:63743]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:63743]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.05, 127.0.0.1:63753]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:63753]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:63753]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:63727]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:63826]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:63826]
+HTTP POST /admin/notification_app/notification/ 200 [0.05, 127.0.0.1:63845]
+HTTP POST /admin/notification_app/notification/ 302 [0.06, 127.0.0.1:63845]
+HTTP GET /admin/notification_app/notification/ 200 [0.04, 127.0.0.1:63845]
+HTTP GET /admin/jsi18n/ 200 [0.13, 127.0.0.1:63845]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.05, 127.0.0.1:63857]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:63857]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.04, 127.0.0.1:63868]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:63868]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:63868]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:63826]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:63937]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:63937]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.05, 127.0.0.1:63950]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:63950]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.04, 127.0.0.1:63950]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:63950]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:63950]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:63937]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:64016]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:64016]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:64016]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:64024]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:64024]
+HTTP GET /notify/ 200 [0.02, 127.0.0.1:64039]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:62634]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:64041]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:64041]
+HTTP GET /admin/notification_app/notification/8/change/ 200 [0.06, 127.0.0.1:64043]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:64043]
+HTTP POST /admin/notification_app/notification/8/change/ 302 [0.06, 127.0.0.1:64043]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:64043]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:64043]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.05, 127.0.0.1:64043]
+HTTP GET /admin/jsi18n/ 200 [0.07, 127.0.0.1:64043]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.04, 127.0.0.1:64043]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:64043]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:64043]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:64024]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:64240]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:64240]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.06, 127.0.0.1:64243]
+HTTP GET /admin/jsi18n/ 200 [0.07, 127.0.0.1:64243]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.04, 127.0.0.1:64249]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:64249]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:64249]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:64240]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:64313]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:64313]
+HTTP POST /admin/notification_app/notification/ 200 [0.05, 127.0.0.1:64328]
+HTTP POST /admin/notification_app/notification/ 302 [0.08, 127.0.0.1:64328]
+HTTP GET /admin/notification_app/notification/ 200 [0.05, 127.0.0.1:64328]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:64328]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.05, 127.0.0.1:64328]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:64328]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.04, 127.0.0.1:64340]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:64340]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:64340]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:64313]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:64407]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:64407]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.05, 127.0.0.1:64428]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:64428]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.04, 127.0.0.1:64428]
+HTTP GET /admin/notification_app/notification/ 200 [0.06, 127.0.0.1:64428]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:64428]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.48, 127.0.0.1:64463]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:64463]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.04, 127.0.0.1:64466]
+HTTP GET /admin/notification_app/notification/ 200 [0.07, 127.0.0.1:64466]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:64466]
+HTTP POST /admin/notification_app/notification/ 200 [0.07, 127.0.0.1:64501]
+HTTP POST /admin/notification_app/notification/ 302 [0.07, 127.0.0.1:64501]
+HTTP GET /admin/notification_app/notification/ 200 [0.05, 127.0.0.1:64501]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:64501]
+Watching for file changes with StatReloader
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:50388]
+WebSocket REJECT /ws/notify/ [127.0.0.1:50388]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:50388]
+HTTP GET / 200 [1.19, 127.0.0.1:50398]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:50421]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:50421]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:50421]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:50519]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:50519]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:50519]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:50665]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:50665]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:50665]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51122]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51122]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51122]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51141]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51141]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51141]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51266]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51266]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51266]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51350]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51350]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51350]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51568]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51568]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51568]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51649]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51649]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51649]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51664]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51664]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51664]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51696]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51696]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51696]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51704]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51704]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51704]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51724]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51724]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51724]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51791]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51791]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51791]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51806]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51806]
+HTTP GET /customerBookings/?user_id=9 200 [0.17, 127.0.0.1:51834]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51806]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51887]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51887]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51887]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52056]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52056]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52056]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52103]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52103]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52103]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52170]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52170]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52170]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52182]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52182]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52182]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52207]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52207]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52207]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52216]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52216]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52216]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52282]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52282]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52282]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52357]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52357]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52357]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52628]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52628]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52628]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52649]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52649]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:52649]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:53043]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:53043]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:53043]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:53456]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:53456]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:53456]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:53511]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:53511]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:53511]
+HTTP GET / 200 [0.24, 127.0.0.1:54917]
+HTTP OPTIONS /customerBookings/?user_id=9 200 [0.02, 127.0.0.1:55014]
+HTTP GET /customerBookings/?user_id=9 200 [0.12, 127.0.0.1:55014]
+HTTP OPTIONS /travel-packages/ 200 [0.01, 127.0.0.1:55014]
+HTTP GET /travel-packages/ 200 [0.05, 127.0.0.1:55014]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:55031]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:55031]
+HTTP GET / 200 [0.07, 127.0.0.1:55062]
+HTTP GET /admin/ 200 [0.16, 127.0.0.1:55080]
+HTTP GET /admin/notification_app/notification/ 200 [0.13, 127.0.0.1:55080]
+HTTP GET /admin/jsi18n/ 200 [0.06, 127.0.0.1:55080]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.10, 127.0.0.1:55080]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:55080]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.05, 127.0.0.1:55093]
+HTTP GET /admin/notification_app/notification/ 200 [0.05, 127.0.0.1:55093]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:55093]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:55031]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:55116]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:55116]
+HTTP OPTIONS /create-user/login/ 200 [0.01, 127.0.0.1:55152]
+HTTP POST /create-user/login/ 200 [0.69, 127.0.0.1:55152]
+HTTP GET /customerBookings/?user_id=9 200 [0.05, 127.0.0.1:55152]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:55116]
+HTTP GET /customerBookings/?user_id=9 200 [0.15, 127.0.0.1:55811]
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\urls.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.48, 127.0.0.1:51097]
+HTTP GET /reports 301 [0.11, 127.0.0.1:51097]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:51097]
+HTTP GET / 200 [0.71, 127.0.0.1:55313]
+HTTP GET /booking-details/ 200 [0.41, 127.0.0.1:55313]
+HTTP GET /admin/ 200 [0.18, 127.0.0.1:55313]
+HTTP GET /static/admin/css/base.css 304 [0.02, 127.0.0.1:55313]
+HTTP GET /static/admin/css/dark_mode.css 304 [0.02, 127.0.0.1:55314]
+HTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:55325]
+HTTP GET /static/admin/css/dashboard.css 304 [0.01, 127.0.0.1:55325]
+HTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:55313]
+HTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:55314]
+HTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:55314]
+HTTP GET /static/admin/img/icon-changelink.svg 304 [0.01, 127.0.0.1:55313]
+HTTP GET /static/admin/img/icon-addlink.svg 304 [0.01, 127.0.0.1:55314]
+HTTP GET /static/admin/img/icon-deletelink.svg 304 [0.01, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.20, 127.0.0.1:55325]
+HTTP GET /static/admin/css/changelists.css 304 [0.03, 127.0.0.1:55325]
+HTTP GET /static/admin/js/actions.js 304 [0.02, 127.0.0.1:55328]
+HTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.02, 127.0.0.1:55314]
+HTTP GET /static/admin/js/jquery.init.js 304 [0.02, 127.0.0.1:55327]
+HTTP GET /static/admin/js/urlify.js 304 [0.02, 127.0.0.1:55329]
+HTTP GET /static/admin/js/core.js 304 [0.02, 127.0.0.1:55327]
+HTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.01, 127.0.0.1:55325]
+HTTP GET /static/admin/js/prepopulate.js 304 [0.02, 127.0.0.1:55314]
+HTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.01, 127.0.0.1:55328]
+HTTP GET /static/admin/js/filters.js 304 [0.00, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.12, 127.0.0.1:55313]
+HTTP GET /static/admin/img/tooltag-add.svg 304 [0.00, 127.0.0.1:55313]
+HTTP GET /admin/travelAgencyApi/bookingdetails/14/change/ 200 [0.15, 127.0.0.1:55313]
+HTTP GET /static/admin/css/forms.css 304 [0.02, 127.0.0.1:55313]
+HTTP GET /static/admin/js/prepopulate_init.js 304 [0.01, 127.0.0.1:55314]
+HTTP GET /static/admin/css/widgets.css 304 [0.01, 127.0.0.1:55314]
+HTTP GET /static/admin/img/icon-viewlink.svg 304 [0.01, 127.0.0.1:55314]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:55325]
+HTTP GET /static/admin/js/change_form.js 304 [0.00, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.05, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/13/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.05, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/7/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.05, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/2/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/12/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.05, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/9/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/2/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/5/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/6/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/7/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/8/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/10/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/11/change/ 200 [0.04, 127.0.0.1:55325]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:55325]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.05, 127.0.0.1:55325]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.32, 127.0.0.1:55369]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55369]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55369]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.30, 127.0.0.1:55386]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55386]
+HTTP GET /reports/ 200 [0.04, 127.0.0.1:55386]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55386]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55386]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55386]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55386]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55386]
+HTTP GET /reports/ 200 [0.03, 127.0.0.1:55386]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.26, 127.0.0.1:55406]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.33, 127.0.0.1:55439]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.29, 127.0.0.1:55624]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.27, 127.0.0.1:55653]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /reports/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py", line 196, in get
+    name = TravelPackage.objects.get(pk=id)['name']
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: 'TravelPackage' object is not subscriptable
+HTTP GET /reports/ 500 [0.24, 127.0.0.1:55738]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.28, 127.0.0.1:55756]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.37, 127.0.0.1:55790]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /reports/ 200 [0.25, 127.0.0.1:55844]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /test/
+HTTP GET /test/ 404 [0.12, 127.0.0.1:56283]
+HTTP GET /tpvscount 301 [0.04, 127.0.0.1:56283]
+HTTP GET /tpvscount/ 200 [0.69, 127.0.0.1:56283]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\CodingDirections\urls.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /tpvscount/ 200 [0.26, 127.0.0.1:56302]
+HTTP OPTIONS /tpvscount/ 200 [0.07, 127.0.0.1:56853]
+HTTP GET /tpvscount/ 200 [0.09, 127.0.0.1:56853]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:56870]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:56870]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:56874]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:56870]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:56930]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:56957]
+HTTP GET /tpvscount/ 200 [0.11, 127.0.0.1:57614]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:57647]
+HTTP GET /tpvscount/ 200 [0.21, 127.0.0.1:57706]
+HTTP GET /tpvscount/ 200 [0.04, 127.0.0.1:57706]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:57861]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:57861]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58063]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58087]
+HTTP OPTIONS /create-user/login/ 200 [0.01, 127.0.0.1:58245]
+HTTP POST /create-user/login/ 200 [1.05, 127.0.0.1:58245]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58245]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58368]
+HTTP GET /tpvscount/ 200 [0.01, 127.0.0.1:58393]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58411]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58433]
+HTTP GET /tpvscount/ 200 [0.04, 127.0.0.1:58451]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58514]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58514]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58644]
+HTTP GET /tpvscount/ 200 [0.04, 127.0.0.1:58657]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58666]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:58666]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:58666]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58666]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:58666]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58819]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58830]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58849]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58864]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58890]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:58914]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:58914]
+HTTP GET /tpvscount/ 200 [0.21, 127.0.0.1:59485]
+HTTP GET /tpvscount/ 200 [0.01, 127.0.0.1:59607]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:59648]
+HTTP GET /tpvscount/ 200 [0.04, 127.0.0.1:59676]
+HTTP GET /tpvscount/ 200 [0.14, 127.0.0.1:60915]
+HTTP GET /tpvscount/ 200 [0.14, 127.0.0.1:61373]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:61498]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:61553]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:61553]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:61553]
+HTTP OPTIONS /tpvscount/ 200 [0.07, 127.0.0.1:63593]
+HTTP GET /tpvscount/ 200 [0.06, 127.0.0.1:63593]
+HTTP GET /tpvscount/ 200 [0.14, 127.0.0.1:64229]
+HTTP GET /tpvscount/ 200 [0.04, 127.0.0.1:64263]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:64294]
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.41, 127.0.0.1:49697]
+Not Found: /test/
+HTTP GET /test/ 404 [0.09, 127.0.0.1:49749]
+HTTP GET /tpvscount/ 200 [0.05, 127.0.0.1:49749]
+HTTP GET /revenue/ 200 [0.04, 127.0.0.1:49761]
+HTTP GET / 200 [0.02, 127.0.0.1:49961]
+HTTP GET /admin/ 200 [0.10, 127.0.0.1:49961]
+HTTP GET /admin/travelAgencyApi/travelpackage/ 200 [0.17, 127.0.0.1:49987]
+HTTP GET /admin/jsi18n/ 200 [0.05, 127.0.0.1:49987]
+HTTP GET /admin/travelAgencyApi/travelpackage/1/change/ 200 [0.18, 127.0.0.1:49987]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:49987]
+HTTP POST /admin/travelAgencyApi/travelpackage/1/change/ 302 [0.07, 127.0.0.1:49987]
+HTTP GET /admin/travelAgencyApi/travelpackage/ 200 [0.05, 127.0.0.1:49987]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:49987]
+HTTP GET /static/admin/img/icon-yes.svg 304 [0.01, 127.0.0.1:49987]
+HTTP GET /admin/travelAgencyApi/travelpackage/2/change/ 200 [0.06, 127.0.0.1:49987]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:49987]
+HTTP POST /admin/travelAgencyApi/travelpackage/2/change/ 302 [0.05, 127.0.0.1:49987]
+HTTP GET /admin/travelAgencyApi/travelpackage/ 200 [0.05, 127.0.0.1:49987]
+HTTP GET /admin/jsi18n/ 200 [0.12, 127.0.0.1:49987]
+HTTP GET /revenue/ 200 [0.03, 127.0.0.1:49987]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:50119]
+HTTP GET /tpvscount/ 200 [0.02, 127.0.0.1:50160]
+HTTP GET /tpvscount/ 200 [0.01, 127.0.0.1:50423]
+HTTP GET /tpvscount/ 200 [0.01, 127.0.0.1:50433]
+HTTP GET /tpvscount/ 200 [0.01, 127.0.0.1:50443]
+HTTP GET /tpvscount/ 200 [0.01, 127.0.0.1:50475]

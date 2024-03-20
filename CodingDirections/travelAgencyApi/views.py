@@ -1,3 +1,4 @@
+from django.db.models import Count
 from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import viewsets,status
@@ -183,6 +184,40 @@ class CustomerBookingsViewSet(APIView):
         booking = self.get_single_object(pk)
         booking.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+#for travelpackage vs booking count report
+class TravelPackageVsBookingCountReportViewData(APIView):
+    def get(self,request):
+        # get data for each travel package how many bookings were done
+        booking_counts = BookingDetails.objects.values('travel_package').annotate(booking_count=Count('customer'))
+
+        # #if we want to get travel package name from booking then
+        # for entry in booking_counts:
+        #     id = entry['travel_package']
+        #     name = TravelPackage.objects.get(pk=id).name
+        #     print(name)
+
+        #we will pass id,travelpackage name and total count of ooking ,so this is report for package Vs Booking count
+        data = [{'travel_package_id':entry['travel_package'] ,'travel_package_name':TravelPackage.objects.get(pk=entry['travel_package']).name, 'booking_count':entry['booking_count']} for entry in booking_counts]
+        return Response(data)
+
+#for Revenue Report Chart
+class RevenueReportViewData(APIView):
+    def get(self,request):
+        # get data for each travel package how many bookings were done
+        booking_counts = BookingDetails.objects.values('travel_package').annotate(booking_count=Count('customer'))
+
+        # we want travel package name and its revenue generated so will loop through above query data and calculate revenue for each package
+        # we will pass Each Travel Package object and its booking count to calculateRevenuePerPackage function
+        data = [{'travel_package_name':TravelPackage.objects.get(pk=entry['travel_package']).name,
+                 'revenue':calculateRevenuePerPackage(TravelPackage.objects.get(pk=entry['travel_package']),entry['booking_count'])} for entry in booking_counts]
+        return Response(data)
+
+#it will take Travel Package,and how many times it was booked and calculate Revenue for that package
+def calculateRevenuePerPackage(TravelPackage,bookingCount):
+    revenuePerPackage = TravelPackage.price * bookingCount
+    return revenuePerPackage
+
 
 
 # class NotificationViewSet(viewsets.ModelViewSet):

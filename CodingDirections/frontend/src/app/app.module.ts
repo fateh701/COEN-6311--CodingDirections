@@ -27,6 +27,7 @@ import {AuthenticationModule} from "./authentication/authentication.module";
 import {tokenInterceptor } from "./token.interceptor";
 import { BookingsAllComponent } from './bookings/bookings-all/bookings-all.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { ReportsComponent } from './reports/reports.component';
 
 // @ts-ignore
 @NgModule({
@@ -48,6 +49,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     HeaderComponent,
     BookingsAllComponent,
     NotificationsComponent,
+    ReportsComponent,
   ],
   imports: [
     BrowserModule,
