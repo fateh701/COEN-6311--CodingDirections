@@ -1,0 +1,182 @@
+Watching for file changes with StatReloader
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /travel-packages/ HTTP/1.1" 200 2415
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+- Broken pipe from ('127.0.0.1', 51866)
+- Broken pipe from ('127.0.0.1', 51867)
+"GET /travel-packages/ HTTP/1.1" 200 2415
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Internal Server Error: /current-user-info/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+"GET /current-user-info/ HTTP/1.1" 500 69648
+Internal Server Error: /current-user-info/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+"GET /current-user-info/ HTTP/1.1" 500 70887
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /travel-packages/ HTTP/1.1" 200 2415
+"OPTIONS /travel-packages/1/ HTTP/1.1" 200 0
+"OPTIONS /travel-packages/1/ HTTP/1.1" 200 0
+"GET /travel-packages/1/ HTTP/1.1" 200 747
+"GET /travel-packages/1/ HTTP/1.1" 200 747
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/1/ HTTP/1.1" 200 747
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/1/ HTTP/1.1" 200 747
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+Watching for file changes with StatReloader
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /travel-packages/ HTTP/1.1" 200 2415
+"OPTIONS /travel-packages/3/ HTTP/1.1" 200 0
+"OPTIONS /travel-packages/3/ HTTP/1.1" 200 0
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10854
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+"GET /api-auth/logout/?next=/create-booking/ HTTP/1.1" 405 0
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+"GET /api-auth/logout/?next=/create-booking/ HTTP/1.1" 405 0
+"GET / HTTP/1.1" 200 10950
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+"GET /api-auth/logout/?next=/ HTTP/1.1" 405 0
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+"GET /api-auth/logout/?next=/ HTTP/1.1" 405 0
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 10950
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 11814
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+"GET /admin/auth/group/ HTTP/1.1" 200 9445
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /admin/ HTTP/1.1" 200 11814
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET / HTTP/1.1" 200 10950
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10854
+Not Found: /create-user-info/
+"GET /create-user-info/ HTTP/1.1" 404 7098
+"GET /current-user-info/ HTTP/1.1" 200 31
+"GET /current-user-info/ HTTP/1.1" 200 31
+"GET /current-user-info/ HTTP/1.1" 200 31
+"GET /current-user-info/ HTTP/1.1" 200 31
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"OPTIONS /create-booking/ HTTP/1.1" 200 0
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+C:\Users\strokey\Desktop\CODING2\CodingDirections\travelAgencyApi\admin.py changed, reloading.
+Watching for file changes with StatReloader
