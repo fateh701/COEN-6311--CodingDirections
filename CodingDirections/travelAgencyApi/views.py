@@ -13,6 +13,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 import logging
 from rest_framework.views import APIView
+from django.http import HttpResponseBadRequest
+from django.views.decorators.http import require_POST
 from channels.layers import get_channel_layer
 import json
 from django.template import RequestContext
@@ -249,4 +251,18 @@ def calculateRevenuePerPackage(TravelPackage,bookingCount):
 #         }
 #     )
 #     return HttpResponse("Notification  sent successfully")
+# views.py
+@require_POST
+def my_view(request):
+    # View logic here
+    return HttpResponseBadRequest('Only POST requests are allowed')
+# @require_POST
+def delete_booking(request):
+    booking_id = request.POST.get('booking_id')
+    try:
+        booking = BookingDetails.objects.get(id=booking_id)
+        booking.delete()
+        return JsonResponse({'message': 'Booking deleted'})
+    except BookingDetails.DoesNotExist:
+        return JsonResponse({'message': 'Not Found'})
 

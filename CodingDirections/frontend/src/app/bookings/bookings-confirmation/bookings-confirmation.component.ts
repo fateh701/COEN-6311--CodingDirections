@@ -5,7 +5,8 @@ import { AuthenticationService } from '../../authentication/authentication.servi
 // Import AuthService to get current user information
 import { AuthService } from '../../auth.service';
 import {AuthResData} from "../../authentication/authentication.model";
-
+import { Component } from '@angular/core';
+import { ApiService } from './api.service';
 @Component({
   selector: 'app-bookings-confirmation',
   templateUrl: './bookings-confirmation.component.html',
@@ -95,3 +96,35 @@ export class BookingsConfirmationComponent {
 
 
 }
+
+
+@Component({
+  selector: 'app-booking-details',
+  templateUrl: './booking-details.component.html',
+  styleUrls: ['./booking-details.component.css']
+})
+export class BookingDetailsComponent {
+  bookingDetails: any;
+  Confirmation = false;
+
+  constructor(private apiService: ApiService) {}
+
+  showConfirmationDialog() {
+    this.Confirmation = true;
+  }
+
+  deleteBooking() {
+    this.apiService.deleteBooking(bookingId).subscribe(
+      () => {
+        console.log('Booking deleted');
+      },
+      (error) => {
+        console.error('Error:', error);
+      }
+    );
+  }
+  cancelDelete() {
+    this.Confirmation = false;
+  }
+}
+

@@ -2,3 +2,13 @@
 <p>Username: {{user?.username}}</p>
 <p>Email: {{user?.email}}</p>
 <app-bookings-review></app-bookings-review>
+<div>
+  <p>Booking Details:</p>
+  <p>{{ bookingDetails }}</p>
+  <button (click)="Confirmation()">Delete Booking</button>
+</div>
+<div *ngIf="Confirmation">
+  <p>You want to delete this booking?</p>
+  <button (click)="delete()">Yes, Delete</button>
+  <button (click)="cancel()">Cancel</button>
+</div>

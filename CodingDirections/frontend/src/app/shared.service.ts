@@ -74,7 +74,9 @@ export class SharedService {
   getAllBookingsByID(userid:any):Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/customerBookings/?user_id='+userid,{headers:this.httpHeaders});
   }
-
+  deleteBookingsbyTD(userid:any, bookingid:any):Observable<any[]>{
+    return this.http.delete<any[]>(this.baseAPIUrl + '/customerBookings/?user_id='+userid+"/"+bookingid,{headers:this.httpHeaders});
+  }
   getNotifications():Observable<any[]>{
     return this.webSocketSubject.asObservable();
   }
@@ -87,4 +89,18 @@ export class SharedService {
     return this.http.get<any[]>(this.baseAPIUrl+'/revenue/',{headers:this.httpHeaders});
   }
 
+}
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ApiService {
+  private apiUrl = '"http://127.0.0.1:8000"';
+
+  constructor(private http: HttpClient) {}
+
+  deleteBooking(bookingId: number) {
+    return this.http.delete(`${this.apiUrl}/bookings/${bookingId}`);
+  }
 }
