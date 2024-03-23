@@ -8,7 +8,9 @@
   border-radius: 5px;
   background-color: #f9f9f9;
 }
-
+.example-card {
+  max-width: 400px;
+}
 .bookings-heading {
   font-size: 24px;
   color: #333;
