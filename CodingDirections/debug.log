@@ -1,0 +1,309 @@
+Watching for file changes with StatReloader
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /travel-packages/ HTTP/1.1" 200 2415
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+- Broken pipe from ('127.0.0.1', 51866)
+- Broken pipe from ('127.0.0.1', 51867)
+"GET /travel-packages/ HTTP/1.1" 200 2415
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+Internal Server Error: /current-user-info/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+"GET /current-user-info/ HTTP/1.1" 500 69648
+Internal Server Error: /current-user-info/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+AssertionError: .accepted_renderer not set on Response
+"GET /current-user-info/ HTTP/1.1" 500 70887
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/4/ HTTP/1.1" 200 746
+"GET /travel-packages/ HTTP/1.1" 200 2415
+"OPTIONS /travel-packages/1/ HTTP/1.1" 200 0
+"OPTIONS /travel-packages/1/ HTTP/1.1" 200 0
+"GET /travel-packages/1/ HTTP/1.1" 200 747
+"GET /travel-packages/1/ HTTP/1.1" 200 747
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/1/ HTTP/1.1" 200 747
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/1/ HTTP/1.1" 200 747
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+Watching for file changes with StatReloader
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /travel-packages/ HTTP/1.1" 200 2415
+"OPTIONS /travel-packages/3/ HTTP/1.1" 200 0
+"OPTIONS /travel-packages/3/ HTTP/1.1" 200 0
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10854
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+"GET /api-auth/logout/?next=/create-booking/ HTTP/1.1" 405 0
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+"GET /api-auth/logout/?next=/create-booking/ HTTP/1.1" 405 0
+"GET / HTTP/1.1" 200 10950
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+"GET /api-auth/logout/?next=/ HTTP/1.1" 405 0
+Method Not Allowed (GET): /api-auth/logout/
+Method Not Allowed: /api-auth/logout/
+"GET /api-auth/logout/?next=/ HTTP/1.1" 405 0
+C:\Users\p3pio\PycharmProjects\latest\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 10950
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 11814
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+"GET /admin/auth/group/ HTTP/1.1" 200 9445
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /admin/ HTTP/1.1" 200 11814
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"GET / HTTP/1.1" 200 10950
+Method Not Allowed: /create-booking/
+"GET /create-booking/ HTTP/1.1" 405 10854
+Not Found: /create-user-info/
+"GET /create-user-info/ HTTP/1.1" 404 7098
+"GET /current-user-info/ HTTP/1.1" 200 31
+"GET /current-user-info/ HTTP/1.1" 200 31
+"GET /current-user-info/ HTTP/1.1" 200 31
+"GET /current-user-info/ HTTP/1.1" 200 31
+"GET /current-user-info/ HTTP/1.1" 200 28
+"GET /travel-packages/3/ HTTP/1.1" 200 486
+"OPTIONS /create-booking/ HTTP/1.1" 200 0
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+Bad Request: /create-booking/
+"POST /create-booking/ HTTP/1.1" 400 24
+C:\Users\strokey\Desktop\CODING2\CodingDirections\travelAgencyApi\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\strokey\Desktop\CODING2\CodingDirections\CodingDirections\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\strokey\Desktop\CODING2\CodingDirections\CodingDirections\__init__.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\strokey\Desktop\CODING2\CodingDirections\travelAgencyApi\admin.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\strokey\Desktop\CODING2\CodingDirections\travelAgencyApi\apps.py changed, reloading.
+Watching for file changes with StatReloader
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:61800]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:61800]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:61800]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:61803]
+HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:61804]
+HTTP GET /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:61804]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:61804]
+HTTP GET /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:61804]
+HTTP GET /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:61811]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:61827]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:61827]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:61828]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:61829]
+HTTP GET /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:61829]
+HTTP OPTIONS /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62108]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62108]
+HTTP OPTIONS /travel-packages/ 200 [0.01, 127.0.0.1:62108]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:62108]
+HTTP OPTIONS /travel-packages/1/ 200 [0.01, 127.0.0.1:62109]
+HTTP OPTIONS /travel-packages/1/ 200 [0.01, 127.0.0.1:62110]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:62108]
+HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:62109]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62108]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62108]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:62108]
+HTTP GET /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:62108]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:62108]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62108]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:62108]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62109]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62108]
+HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:62109]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62109]
+HTTP OPTIONS /create-booking/ 200 [0.01, 127.0.0.1:62109]
+HTTP POST /create-booking/ 201 [0.02, 127.0.0.1:62109]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62109]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:62109]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62108]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62109]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62108]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62108]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:62108]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62108]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62109]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62110]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62110]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:62122]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62122]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:62123]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62124]
+HTTP GET /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:62124]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:62124]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62124]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:62124]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62124]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:62123]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62122]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:62122]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62122]
+HTTP GET /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:62122]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:62187]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62187]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:62191]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:62192]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62192]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62191]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:62192]
+HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:62191]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:62191]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.08, 127.0.0.1:64662]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.07, 127.0.0.1:64662]
+HTTP GET /api-auth/login/?next=/ 200 [0.02, 127.0.0.1:64662]
+HTTP POST /api-auth/login/ 302 [0.62, 127.0.0.1:64662]
+HTTP GET / 200 [0.01, 127.0.0.1:64662]
+HTTP GET /admin/ 200 [0.08, 127.0.0.1:64662]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.12, 127.0.0.1:64662]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:64662]
+HTTP GET /admin/ 200 [0.02, 127.0.0.1:64662]
+HTTP GET /admin/travelAgencyApi/flight/ 200 [0.02, 127.0.0.1:64662]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:64662]
+HTTP GET /admin/ 200 [0.02, 127.0.0.1:64662]
+HTTP GET /admin/travelAgencyApi/travelpackage/ 200 [0.02, 127.0.0.1:64662]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:64662]
+HTTP GET /admin/travelAgencyApi/travelpackage/1/change/ 200 [0.08, 127.0.0.1:64662]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:64662]
+HTTP OPTIONS /travel-packages/ 200 [0.00, 127.0.0.1:64664]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:64664]
+HTTP OPTIONS /travel-packages/1/ 200 [0.01, 127.0.0.1:64664]
+HTTP OPTIONS /travel-packages/1/ 200 [0.01, 127.0.0.1:64665]
+HTTP OPTIONS /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:64666]
+HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:64665]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:64666]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:64664]
+HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:64664]
+HTTP OPTIONS /create-booking/ 200 [0.00, 127.0.0.1:64664]
+HTTP POST /create-booking/ 201 [0.02, 127.0.0.1:64664]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:64664]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:64664]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:64666]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:64665]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:64665]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.08, 127.0.0.1:64768]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:64768]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:64768]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:64768]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.03, 127.0.0.1:64768]
+HTTP GET /admin/jsi18n/ 200 [0.06, 127.0.0.1:64768]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:64776]
+HTTP GET /customerBookings/?user_id=2 200 [0.04, 127.0.0.1:64777]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:64778]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:64778]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:64778]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:64778]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:64777]
+HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:64776]
+HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:64776]
