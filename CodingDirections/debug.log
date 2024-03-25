@@ -307,3 +307,439 @@ HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:64778]
 HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:64777]
 HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:64776]
 HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:64776]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.61, 127.0.0.1:50683]
+HTTP GET / 200 [0.17, 127.0.0.1:50683]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 200 [0.56, 127.0.0.1:50683]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 200 [0.53, 127.0.0.1:50693]
+HTTP GET /static/rest_framework/js/csrf.js 200 [0.03, 127.0.0.1:50683]
+HTTP GET /static/rest_framework/css/default.css 200 [0.58, 127.0.0.1:50697]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 200 [0.08, 127.0.0.1:50693]
+HTTP GET /static/rest_framework/js/prettify-min.js 200 [0.07, 127.0.0.1:50683]
+HTTP GET /static/rest_framework/js/jquery-3.5.1.min.js 200 [0.61, 127.0.0.1:50698]
+HTTP GET /static/rest_framework/js/default.js 200 [0.04, 127.0.0.1:50697]
+HTTP GET /static/rest_framework/css/prettify.css 200 [0.66, 127.0.0.1:50696]
+HTTP GET /static/rest_framework/js/ajax-form.js 200 [0.53, 127.0.0.1:50699]
+HTTP GET /static/rest_framework/img/grid.png 200 [0.03, 127.0.0.1:50699]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.20, 127.0.0.1:50714]
+HTTP GET /admin 301 [0.03, 127.0.0.1:50761]
+HTTP GET /admin/ 200 [0.19, 127.0.0.1:50761]
+HTTP GET /static/admin/css/base.css 200 [0.02, 127.0.0.1:50761]
+HTTP GET /static/admin/css/dark_mode.css 200 [0.02, 127.0.0.1:50762]
+HTTP GET /static/admin/css/dashboard.css 200 [0.02, 127.0.0.1:50764]
+HTTP GET /static/admin/css/nav_sidebar.css 200 [0.02, 127.0.0.1:50763]
+HTTP GET /static/admin/css/responsive.css 200 [0.02, 127.0.0.1:50765]
+HTTP GET /static/admin/js/nav_sidebar.js 200 [0.03, 127.0.0.1:50764]
+HTTP GET /static/admin/img/icon-changelink.svg 200 [0.02, 127.0.0.1:50762]
+HTTP GET /static/admin/js/theme.js 200 [0.04, 127.0.0.1:50765]
+HTTP GET /static/admin/img/icon-addlink.svg 200 [0.03, 127.0.0.1:50763]
+HTTP GET /admin/notification_app/notification/ 200 [0.17, 127.0.0.1:50763]
+HTTP GET /static/admin/js/core.js 200 [0.12, 127.0.0.1:50761]
+HTTP GET /static/admin/js/jquery.init.js 200 [0.14, 127.0.0.1:50764]
+HTTP GET /admin/jsi18n/ 200 [0.17, 127.0.0.1:50765]
+HTTP GET /static/admin/css/changelists.css 200 [0.18, 127.0.0.1:50763]
+HTTP GET /static/admin/js/admin/RelatedObjectLookups.js 200 [0.17, 127.0.0.1:50799]
+HTTP GET /static/admin/js/actions.js 200 [0.12, 127.0.0.1:50761]
+HTTP GET /static/admin/js/vendor/jquery/jquery.js 200 [0.28, 127.0.0.1:50762]
+HTTP GET /static/admin/js/urlify.js 200 [0.11, 127.0.0.1:50764]
+HTTP GET /static/admin/js/prepopulate.js 200 [0.12, 127.0.0.1:50765]
+HTTP GET /static/admin/js/filters.js 200 [0.03, 127.0.0.1:50765]
+HTTP GET /static/admin/js/vendor/xregexp/xregexp.js 200 [0.30, 127.0.0.1:50799]
+HTTP GET /static/admin/img/tooltag-add.svg 200 [0.02, 127.0.0.1:50799]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.18, 127.0.0.1:50799]
+HTTP GET /static/admin/css/forms.css 200 [0.03, 127.0.0.1:50799]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:50762]
+HTTP GET /static/admin/js/prepopulate_init.js 200 [0.04, 127.0.0.1:50765]
+HTTP GET /static/admin/css/widgets.css 200 [0.02, 127.0.0.1:50765]
+HTTP GET /static/admin/js/change_form.js 200 [0.03, 127.0.0.1:50762]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:50835]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:50835]
+HTTP OPTIONS /travel-packages/ 200 [0.01, 127.0.0.1:50836]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50836]
+HTTP OPTIONS /travel-packages/1/ 200 [0.01, 127.0.0.1:50836]
+HTTP OPTIONS /customerBookings/?user_id=2 200 [0.01, 127.0.0.1:50839]
+HTTP OPTIONS /travel-packages/1/ 200 [0.01, 127.0.0.1:50838]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:50839]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:50838]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:50836]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/notification_app/notification/ 200 [0.04, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /static/admin/img/icon-yes.svg 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50842]
+HTTP POST /admin/notification_app/notification/add/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.00, 127.0.0.1:50842]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50842]
+HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:50836]
+HTTP GET /admin/notification_app/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.03, 127.0.0.1:50842]
+HTTP GET /static/admin/img/search.svg 200 [0.01, 127.0.0.1:50847]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /static/admin/img/icon-viewlink.svg 200 [0.01, 127.0.0.1:50847]
+HTTP GET /static/admin/img/sorting-icons.svg 200 [0.01, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/add/ 200 [0.04, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/add/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/?is_active__exact=1 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/? 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/add/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:50842]
+HTTP GET /admin/authenticationBackend/user/1/change/ 200 [0.04, 127.0.0.1:50842]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:50842]
+HTTP GET /static/admin/js/calendar.js 200 [0.04, 127.0.0.1:50852]
+HTTP GET /static/admin/js/admin/DateTimeShortcuts.js 200 [0.03, 127.0.0.1:50853]
+HTTP GET /static/admin/img/icon-calendar.svg 200 [0.02, 127.0.0.1:50853]
+HTTP GET /static/admin/img/icon-clock.svg 200 [0.02, 127.0.0.1:50852]
+HTTP OPTIONS /create-user/signup/ 200 [0.00, 127.0.0.1:50869]
+HTTP POST /create-user/signup/ 201 [0.60, 127.0.0.1:50869]
+HTTP OPTIONS /create-user/login/ 200 [0.01, 127.0.0.1:50869]
+HTTP POST /create-user/login/ 200 [0.60, 127.0.0.1:50869]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.02, 127.0.0.1:50871]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:50871]
+HTTP GET /admin/authenticationBackend/user/3/change/ 200 [0.02, 127.0.0.1:50871]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:50871]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.02, 127.0.0.1:50871]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50871]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:50835]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.05, 127.0.0.1:50949]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:50949]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.03, 127.0.0.1:50949]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:50949]
+HTTP GET /admin/authenticationBackend/user/add/ 200 [0.06, 127.0.0.1:50949]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:50949]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:50952]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:50952]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:50953]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:50962]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50962]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:50952]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50962]
+HTTP OPTIONS /customerBookings/?user_id=undefined 200 [0.01, 127.0.0.1:50969]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:50962]
+HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:50970]
+Internal Server Error: /customerBookings/
+Traceback (most recent call last):
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\fields\__init__.py", line 2112, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'undefined'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\Desktop\CODING2\CodingDirections\travelAgencyApi\views.py", line 169, in get
+    bookings = BookingDetails.objects.filter(customer=user_id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1602, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1634, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1548, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1378, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\fields\related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\fields\__init__.py", line 2114, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'undefined'.
+HTTP GET /customerBookings/?user_id=undefined 500 [0.14, 127.0.0.1:50969]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50969]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:50972]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:50972]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50969]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:50972]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50969]
+HTTP GET / 200 [0.03, 127.0.0.1:50985]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:50969]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:50969]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:50962]
+Internal Server Error: /customerBookings/
+Traceback (most recent call last):
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\fields\__init__.py", line 2112, in get_prep_value
+    return int(value)
+           ^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'undefined'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\Desktop\CODING2\CodingDirections\travelAgencyApi\views.py", line 169, in get
+    bookings = BookingDetails.objects.filter(customer=user_id)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1602, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1634, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1548, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\query.py", line 1378, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\fields\related_lookups.py", line 156, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\strokey\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\fields\__init__.py", line 2114, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got 'undefined'.
+HTTP GET /customerBookings/?user_id=undefined 500 [0.06, 127.0.0.1:50970]
+HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:50970]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50970]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50970]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51001]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51001]
+HTTP OPTIONS /tpvscount/ 200 [0.01, 127.0.0.1:50970]
+HTTP OPTIONS /revenue/ 200 [0.01, 127.0.0.1:50962]
+HTTP GET /tpvscount/ 200 [0.01, 127.0.0.1:50962]
+HTTP GET /revenue/ 200 [0.01, 127.0.0.1:50970]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50970]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:51001]
+HTTP POST /create-user/signup/ 201 [0.59, 127.0.0.1:50970]
+HTTP POST /create-user/login/ 200 [0.57, 127.0.0.1:50970]
+HTTP GET /admin/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:51010]
+HTTP GET /admin/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:51010]
+HTTP GET /admin/notification_app/notification/1/change/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:51010]
+HTTP POST /admin/notification_app/notification/1/change/ 302 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:51010]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:51012]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:51012]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:51010]
+HTTP GET /admin/notification_app/notification/1/change/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:51010]
+HTTP POST /admin/notification_app/notification/1/change/ 302 [0.01, 127.0.0.1:51010]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:51010]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:51010]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:51010]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:51010]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:50970]
+Watching for file changes with StatReloader
+HTTP GET /admin/notification_app/notification/ 200 [0.88, 127.0.0.1:49908]
+HTTP GET /admin/jsi18n/ 200 [0.21, 127.0.0.1:49915]
+HTTP GET /static/admin/css/dark_mode.css 200 [0.25, 127.0.0.1:49911]
+HTTP GET /static/admin/css/changelists.css 200 [0.34, 127.0.0.1:49913]
+HTTP GET /static/admin/js/jquery.init.js 200 [0.10, 127.0.0.1:49911]
+HTTP GET /static/admin/js/vendor/jquery/jquery.js 200 [0.13, 127.0.0.1:49915]
+HTTP GET /static/admin/css/base.css 200 [0.43, 127.0.0.1:49908]
+HTTP GET /static/admin/css/nav_sidebar.css 200 [0.43, 127.0.0.1:49914]
+HTTP GET /static/admin/js/admin/RelatedObjectLookups.js 200 [0.05, 127.0.0.1:49911]
+HTTP GET /static/admin/css/responsive.css 200 [0.47, 127.0.0.1:49912]
+HTTP GET /static/admin/js/core.js 200 [0.08, 127.0.0.1:49913]
+HTTP GET /static/admin/js/urlify.js 200 [0.06, 127.0.0.1:49915]
+HTTP GET /static/admin/js/actions.js 200 [0.07, 127.0.0.1:49908]
+HTTP GET /static/admin/js/prepopulate.js 200 [0.04, 127.0.0.1:49914]
+HTTP GET /static/admin/js/theme.js 200 [0.10, 127.0.0.1:49914]
+HTTP GET /static/admin/js/nav_sidebar.js 200 [0.04, 127.0.0.1:49914]
+HTTP GET /static/admin/js/filters.js 200 [0.05, 127.0.0.1:49914]
+HTTP GET /static/admin/js/vendor/xregexp/xregexp.js 200 [0.30, 127.0.0.1:49911]
+HTTP GET /static/admin/img/icon-addlink.svg 200 [0.03, 127.0.0.1:49911]
+HTTP GET /static/admin/img/tooltag-add.svg 200 [0.03, 127.0.0.1:49914]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.22, 127.0.0.1:49914]
+HTTP OPTIONS /travel-packages/ 200 [0.01, 127.0.0.1:49925]
+HTTP GET /travel-packages/ 200 [0.02, 127.0.0.1:49925]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:49987]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:49987]
+HTTP GET /admin/notification_app/notification/3/change/ 200 [0.10, 127.0.0.1:49988]
+HTTP GET /static/admin/css/forms.css 200 [0.01, 127.0.0.1:49988]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:49989]
+HTTP GET /static/admin/js/prepopulate_init.js 200 [0.02, 127.0.0.1:49990]
+HTTP GET /static/admin/css/widgets.css 200 [0.01, 127.0.0.1:49990]
+HTTP GET /static/admin/js/change_form.js 200 [0.02, 127.0.0.1:49990]
+HTTP POST /admin/notification_app/notification/3/change/ 302 [0.02, 127.0.0.1:49990]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:49990]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:49990]
+HTTP GET /static/admin/img/icon-yes.svg 200 [0.01, 127.0.0.1:49990]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.02, 127.0.0.1:49990]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:49990]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.01, 127.0.0.1:49990]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:49990]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:49990]
+HTTP GET /travel-packages/ 200 [0.01, 127.0.0.1:50007]
+WebSocket DISCONNECT /ws/notify/ [127.0.0.1:49987]
+HTTP OPTIONS /travel-packages/ 200 [0.03, 127.0.0.1:52562]
+HTTP GET /travel-packages/ 200 [0.06, 127.0.0.1:52562]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.14, 127.0.0.1:52920]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 200 [0.36, 127.0.0.1:52922]
+HTTP GET /static/rest_framework/css/prettify.css 200 [0.39, 127.0.0.1:52923]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 200 [0.40, 127.0.0.1:52920]
+HTTP GET /static/rest_framework/css/default.css 200 [0.45, 127.0.0.1:52924]
+HTTP GET /static/rest_framework/js/ajax-form.js 200 [0.46, 127.0.0.1:52926]
+HTTP GET /static/rest_framework/js/csrf.js 200 [0.09, 127.0.0.1:52922]
+HTTP GET /static/rest_framework/js/prettify-min.js 200 [0.07, 127.0.0.1:52920]
+HTTP GET /static/rest_framework/js/default.js 200 [0.08, 127.0.0.1:52924]
+HTTP GET /static/rest_framework/js/jquery-3.5.1.min.js 200 [0.55, 127.0.0.1:52925]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 200 [0.17, 127.0.0.1:52923]
+HTTP GET /static/rest_framework/img/grid.png 200 [0.02, 127.0.0.1:52924]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.16, 127.0.0.1:52924]
+HTTP GET /admin 301 [0.02, 127.0.0.1:52924]
+HTTP GET /admin/ 200 [0.14, 127.0.0.1:52924]
+HTTP GET /static/admin/css/dashboard.css 200 [0.02, 127.0.0.1:52924]
+HTTP GET /static/admin/img/icon-changelink.svg 200 [0.01, 127.0.0.1:52924]
+HTTP OPTIONS /create-user/signup/ 200 [0.01, 127.0.0.1:52947]
+HTTP POST /create-user/signup/ 201 [0.61, 127.0.0.1:52947]
+HTTP OPTIONS /create-user/login/ 200 [0.01, 127.0.0.1:52947]
+HTTP POST /create-user/login/ 200 [0.59, 127.0.0.1:52947]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:52954]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:52954]
+HTTP GET /admin/notification_app/notification/ 200 [0.12, 127.0.0.1:52955]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:52955]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.06, 127.0.0.1:52955]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52955]
+HTTP GET /static/admin/js/prepopulate_init.js 200 [0.02, 127.0.0.1:52956]
+HTTP GET /static/admin/css/widgets.css 200 [0.02, 127.0.0.1:52957]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.02, 127.0.0.1:52957]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:52957]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:52957]
+HTTP GET /static/admin/img/icon-yes.svg 200 [0.01, 127.0.0.1:52957]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.02, 127.0.0.1:52957]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52957]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.02, 127.0.0.1:52957]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:52957]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52957]
+HTTP GET /admin/notification_app/notification/add/ 200 [0.02, 127.0.0.1:52957]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52957]
+HTTP POST /admin/notification_app/notification/add/ 302 [0.01, 127.0.0.1:52957]
+HTTP GET /admin/notification_app/notification/ 200 [0.02, 127.0.0.1:52957]
+HTTP GET /admin/jsi18n/ 200 [0.01, 127.0.0.1:52957]
+C:\Users\strokey\Desktop\CODING2\CodingDirections\authenticationBackend\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\strokey\Desktop\CODING2\CodingDirections\authenticationBackend\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\strokey\Desktop\CODING2\CodingDirections\authenticationBackend\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\strokey\Desktop\CODING2\CodingDirections\authenticationBackend\models.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\strokey\Desktop\CODING2\CodingDirections\notification_app\models.py changed, reloading.
+Watching for file changes with StatReloader
