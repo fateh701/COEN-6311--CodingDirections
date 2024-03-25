@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FlightsComponent } from "./flights/flights.component";
+import { FlightFormComponent } from './flights/flight-form/flight-form.component';
 import { TravelpackagesComponent } from "./travelpackages/travelpackages.component";
 import { HotelsComponent } from "./hotels/hotels.component";
 import { ActivitiesComponent } from "./activities/activities.component";
@@ -20,6 +21,8 @@ import { NotificationsComponent} from "./notifications/notifications.component";
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'flights/:id', component:FlightsComponent},
+  {path: 'flights/new', component: FlightFormComponent }, // Route for adding a new flight
+  {path: 'flights/:id/edit', component: FlightFormComponent },
                          {path : 'travelpackages', component : TravelpackagesComponent},
                          {path : 'travelpackages/:id', component : ViewTravelPackagesComponent},
                          {path : 'hotels', component : HotelsComponent},

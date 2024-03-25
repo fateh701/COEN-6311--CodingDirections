@@ -307,3 +307,8 @@ HTTP GET /travel-packages/1/ 200 [0.02, 127.0.0.1:64778]
 HTTP GET /customerBookings/?user_id=2 200 [0.03, 127.0.0.1:64777]
 HTTP GET /travel-packages/1/ 200 [0.01, 127.0.0.1:64776]
 HTTP GET /customerBookings/?user_id=2 200 [0.02, 127.0.0.1:64776]
+Watching for file changes with StatReloader
+C:\Users\ASUS\Desktop\Concordia\Semester 1 (Winter 24)\COEN 6311\COEN-6311--CodingDirections\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\ASUS\Desktop\Concordia\Semester 1 (Winter 24)\COEN 6311\COEN-6311--CodingDirections\CodingDirections\travelAgencyApi\views.py changed, reloading.
+Watching for file changes with StatReloader
