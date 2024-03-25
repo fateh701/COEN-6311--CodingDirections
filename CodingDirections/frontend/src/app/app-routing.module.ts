@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FlightsComponent } from "./flights/flights.component";
-import { FlightFormComponent } from './flights/flight-form/flight-form.component';
 import { TravelpackagesComponent } from "./travelpackages/travelpackages.component";
 import { HotelsComponent } from "./hotels/hotels.component";
+import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
 import { ActivitiesComponent } from "./activities/activities.component";
 import { ViewTravelPackagesComponent } from "./travelpackages/view-travel-packages/view-travel-packages.component";
 import { BookingsComponent} from "./bookings/bookings.component";
@@ -17,6 +17,8 @@ import { HeaderComponent } from "./header/header.component";
 import { AccountComponent } from "./account/account.component";
 import { AuthenticationComponent } from "./authentication/authentication.component";
 import { NotificationsComponent} from "./notifications/notifications.component";
+import { FlightFormComponent } from './flights/flight-form/flight-form.component';
+import {ActivityFormComponent} from "./activities/activity-form/activity-form.component";
 
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
@@ -27,8 +29,12 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path : 'travelpackages/:id', component : ViewTravelPackagesComponent},
                          {path : 'hotels', component : HotelsComponent},
                          {path:'hotels/:id', component:HotelsComponent},
+  {path: 'hotels/new', component: HotelFormComponent },
+  {path: 'hotels/:id/edit', component: HotelFormComponent },
                          {path : 'activities', component : ActivitiesComponent},
                          {path:'activities/:id', component:ActivitiesComponent},
+  {path: 'activities/new', component: ActivityFormComponent },
+  {path: 'activities/:id/edit', component: ActivityFormComponent },
                          {path:'booking-review',component:BookingsReviewComponent},
                          {path:'booking-review/:id',component:BookingsReviewComponent},
                          {path:'bookings-confirmation',component:BookingsConfirmationComponent},

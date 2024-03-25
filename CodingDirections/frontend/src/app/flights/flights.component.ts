@@ -9,8 +9,8 @@ import {SharedService} from "../shared.service";
 })
 export class FlightsComponent {
   flightsList: any = [];
-  filteredFlightsList: any = [];  // This is the list that will be used to store the searched query travel packages
-  searchQuery: string = '';  // This is the variable that will be used to store the search query
+  filteredFlightsList: any = [];
+  searchQuery: string = '';
   selectedFlight: any;
   showFlightForm: boolean = false;
 

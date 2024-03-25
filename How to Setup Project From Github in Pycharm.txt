@@ -1,0 +1,34 @@
+> How to Setup Project From Github in Pycharm
+----PUJAN PATEL-----------
+
+
+1) Update the project
+   - First select the master branch from top (you can do by select the master and then select checkout)
+   - then update Project option will update the latest files from master branch
+
+2) Install packages
+   - Like we did in mini project,install django,djangorestframework,django-cors-headers,npm,npm-register-cli,npm-package-validator
+   
+3) Run backend (must be running before proceding to frontend)
+   - cd CodingDirections
+   - python manage.py makemigrations
+   - python manage.py migrate
+   - python manage.py runserver
+   
+   (let the server running,dont close it)
+
+4) Install Angular (need to do this for first time only when you import the project for first time in pycharm)
+   - first install node.js (https://youtu.be/__7eOCxJyow)
+   
+   Do below steps in project terminal
+   
+   open new terminal by clicking on plus button beside existing terminal in pycharm
+   - cd CodingDirections/frontend
+   - Install the angular here by command : npm install -g @angular/cli
+	 (https://angular.io/guide/setup-local)
+   - After its build install ng using npm : npm install ng
+   - after that do: ng serve
+   
+   Above command will build the frontend and push it to server ,so you can access frontend from that link which its provide and communicate with backend.
+	
+	

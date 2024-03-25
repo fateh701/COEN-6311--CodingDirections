@@ -29,6 +29,8 @@ import { BookingsAllComponent } from './bookings/bookings-all/bookings-all.compo
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ReportsComponent } from './reports/reports.component';
 import { FlightFormComponent } from './flights/flight-form/flight-form.component';
+import { ActivityFormComponent } from './activities/activity-form/activity-form.component';
+import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
 
 // @ts-ignore
 @NgModule({
@@ -52,6 +54,8 @@ import { FlightFormComponent } from './flights/flight-form/flight-form.component
     NotificationsComponent,
     ReportsComponent,
     FlightFormComponent,
+    ActivityFormComponent,
+    HotelFormComponent,
   ],
   imports: [
     BrowserModule,
