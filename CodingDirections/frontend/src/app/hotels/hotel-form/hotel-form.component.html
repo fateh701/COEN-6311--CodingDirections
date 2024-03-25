@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()" #hotelForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="hotel.name" required>
+  </div>
+  <div>
+    <label for="checkinDate">Check In Date:</label>
+    <input type="datetime-local" id="checkinDate" name="checkinDate" [(ngModel)]="hotel.checkinDate" required>
+  </div>
+  <div>
+    <label for="checkoutDate">Check Out Date:</label>
+    <input type="datetime-local" id="checkoutDate" name="checkoutDate" [(ngModel)]="hotel.checkoutDate" required>
+  </div>
+  <div>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" [(ngModel)]="hotel.location" required>
+  </div>
+  <div>
+    <label for="occupancy">Occupancy:</label>
+    <input type="number" id="occupancy" name="occupancy" [(ngModel)]="hotel.occupancy" required>
+  </div>
+  <div>
+    <label for="price_per_night">Price Per Night:</label>
+    <input type="number" id="price_per_night" name="price_per_night" [(ngModel)]="hotel.price_per_night" required>
+  </div>
+  <button type="submit">{{ editing ? 'Update' : 'Add' }} Flight</button>
+</form>

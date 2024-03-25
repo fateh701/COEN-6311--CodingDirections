@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {SharedService} from "../../shared.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 
 @Component({
@@ -11,7 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 export class ViewHotelsComponent {
   selectedHotel: any = [];
 
-  constructor(private route: ActivatedRoute, private service: SharedService) {
+  constructor(private route: ActivatedRoute, private service: SharedService, private router: Router) {
     this.getSelectedHotel();
   }
 
@@ -25,6 +25,24 @@ export class ViewHotelsComponent {
         console.log(error);
       },
     );
+  }
+
+  editHotel(id: number) {
+    this.router.navigate(['/hotels', id, 'edit']);
+  }
+
+  deleteHotel(id: number) {
+    if (confirm("Are you sure you want to delete this Hotel?")) {
+      this.service.deleteHotel(id).subscribe(
+        () => {
+          // Optionally, you can redirect the user to another page after deletion
+          this.router.navigate(['/hotels']);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    }
   }
 
 }
