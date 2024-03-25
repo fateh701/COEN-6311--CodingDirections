@@ -24,8 +24,16 @@ export class SharedService {
     return this.http.get<any[]>(this.baseAPIUrl + '/flights/',{headers:this.httpHeaders});
   }
 
-  addFlight(val:any){
-    return this.http.post(this.baseAPIUrl + '/flights/',val,{headers:this.httpHeaders});
+  editFlight(id: number, data: any) {
+  return this.http.put<any>(`${this.baseAPIUrl}/flights/${id}/`, data, { headers: this.httpHeaders });
+}
+
+  deleteFlight(id: number) {
+    return this.http.delete<any>(`${this.baseAPIUrl}/flights/${id}/`, { headers: this.httpHeaders });
+  }
+
+  addFlight(data: any) {
+    return this.http.post<any>(`${this.baseAPIUrl}/flights/`, data, { headers: this.httpHeaders });
   }
 
   getSelectedFlight(id:any):Observable<any[]>{

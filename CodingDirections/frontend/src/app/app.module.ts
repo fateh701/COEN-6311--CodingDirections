@@ -28,6 +28,7 @@ import {tokenInterceptor } from "./token.interceptor";
 import { BookingsAllComponent } from './bookings/bookings-all/bookings-all.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ReportsComponent } from './reports/reports.component';
+import { FlightFormComponent } from './flights/flight-form/flight-form.component';
 
 // @ts-ignore
 @NgModule({
@@ -50,6 +51,7 @@ import { ReportsComponent } from './reports/reports.component';
     BookingsAllComponent,
     NotificationsComponent,
     ReportsComponent,
+    FlightFormComponent,
   ],
   imports: [
     BrowserModule,
