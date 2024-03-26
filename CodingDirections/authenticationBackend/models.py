@@ -30,11 +30,15 @@ class CustomUserManager(BaseUserManager):
         return user
 
 class User(AbstractBaseUser,PermissionsMixin):
+    class UserType(models.TextChoices):
+        ADMIN = "Admin"
+        AGENT = "Agent"
+        USER = "User"
     email = models.EmailField(unique=True)
     username = models.CharField(max_length=200,unique=True)  #username should be unique,so only account per username
     first_name = models.CharField(max_length=200,blank=True)
     last_name = models.CharField(max_length=200,blank=True)
-
+    user_type = models.CharField(max_length=5, choices=UserType.choices,default=UserType.USER)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     objects = CustomUserManager()
@@ -43,5 +47,4 @@ class User(AbstractBaseUser,PermissionsMixin):
 
     def __str__(self):
         return self.email
-
 # Create your models here.

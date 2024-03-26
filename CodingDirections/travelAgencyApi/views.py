@@ -221,7 +221,6 @@ def calculateRevenuePerPackage(TravelPackage,bookingCount):
     return revenuePerPackage
 
 
-
 # class NotificationViewSet(viewsets.ModelViewSet):
 #     notificationlist = Notification.objects.all()
 

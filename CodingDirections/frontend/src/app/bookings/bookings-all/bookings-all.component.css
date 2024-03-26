@@ -1,0 +1,50 @@
+/* bookings-all.component.css */
+.bookings-list {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.example-card {
+  max-width: 400px;
+}
+.bookings-heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.total-bookings {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.no-bookings {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.package-info {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.package-name {
+  font-weight: bold;
+}
+
+.payment-status {
+  color: #007bff;
+}
+
+.package-details {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}

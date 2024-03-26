@@ -1,4 +1,5 @@
-<p>Your Bookings List</p>
+<h2>Your Bookings List</h2>
+<div class="bookings-list">
 <h3>Total Booking Made By You : {{allbookingsbyID.length}}</h3>
 <div *ngIf="allbookingsbyID.length === 0">
   <p>No bookings found</p>
@@ -7,10 +8,19 @@
 <div *ngFor="let booking of allbookingsbyID">
   <div *ngFor = "let package of booking.travel_package">
 <!--    <a routerLink="/travelpackages/{{ package.id }}">{{package.name }}</a>-->
-    <li>Travel Package: {{package.name}}, payment_status_flag: {{booking.payment_status_flag}}</li>
+    <div>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{package.name}}</mat-card-title>
+          <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions align="end">
+          <button routerLink="/travelpackages/{{ package.id }}" class="m-1 btn btn-light btn-outline-primary">View Details</button>
+        </mat-card-actions>
+      </mat-card>
+      <br>
+    </div>
   </div>
 </div>
-
-
-
+  </div>
 
