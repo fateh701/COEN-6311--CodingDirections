@@ -1601,3 +1601,476 @@ Method Not Allowed (GET): /delete-booking/
 /Users/prinkaldeepkaur/PycharmProjects/Sprint2/CodingDirections/travelAgencyApi/views.py changed, reloading.
 Watching for file changes with StatReloader
 [mHTTP GET /delete-booking/ 200 [0.02, 127.0.0.1:54449][0m
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.46, 127.0.0.1:56328]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.18, 127.0.0.1:56328]
+HTTP GET /admin/ 302 [0.05, 127.0.0.1:56351]
+HTTP GET /admin/login/?next=/admin/ 200 [0.18, 127.0.0.1:56351]
+HTTP GET /static/admin/css/dark_mode.css 304 [0.01, 127.0.0.1:56351]
+HTTP GET /static/admin/css/nav_sidebar.css 304 [0.01, 127.0.0.1:56353]
+HTTP GET /static/admin/css/base.css 304 [0.01, 127.0.0.1:56354]
+HTTP GET /static/admin/css/responsive.css 304 [0.01, 127.0.0.1:56353]
+HTTP GET /static/admin/js/theme.js 304 [0.01, 127.0.0.1:56351]
+HTTP GET /static/admin/js/nav_sidebar.js 304 [0.00, 127.0.0.1:56351]
+HTTP GET /static/admin/css/login.css 200 [0.10, 127.0.0.1:56354]
+Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: authenticationBackend_user.user_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\admin\sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\views.py", line 88, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\generic\edit.py", line 150, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\forms\forms.py", line 328, in full_clean
+    self._clean_form()
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\forms\forms.py", line 349, in _clean_form
+    cleaned_data = self.clean()
+                   ^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\forms.py", line 250, in clean
+    self.user_cache = authenticate(
+                      ^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\__init__.py", line 79, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\backends.py", line 42, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\contrib\auth\base_user.py", line 56, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: authenticationBackend_user.user_type
+HTTP POST /admin/login/?next=/admin/ 500 [0.56, 127.0.0.1:56354]
+HTTP GET /admin/login/?next=/admin/ 200 [0.03, 127.0.0.1:56377]
+HTTP OPTIONS /customerBookings/?user_id=9 200 [0.01, 127.0.0.1:56566]
+HTTP GET /customerBookings/?user_id=9 200 [0.02, 127.0.0.1:56566]
+HTTP OPTIONS /travel-packages/ 200 [0.01, 127.0.0.1:56566]
+HTTP GET /travel-packages/ 200 [0.05, 127.0.0.1:56566]
+HTTP GET /travel-packages/ 200 [0.04, 127.0.0.1:56575]
+HTTP GET /customerBookings/?user_id=9 200 [0.03, 127.0.0.1:56575]
+WebSocket HANDSHAKING /ws/notify/ [127.0.0.1:56578]
+WebSocket CONNECT /ws/notify/ [127.0.0.1:56578]
+HTTP GET /customerBookings/?user_id=9 200 [0.02, 127.0.0.1:56579]
+HTTP GET /travel-packages/ 200 [0.04, 127.0.0.1:56579]
+HTTP OPTIONS /travel-packages/1/ 200 [0.02, 127.0.0.1:56579]
+HTTP OPTIONS /travel-packages/1/ 200 [0.03, 127.0.0.1:56584]
+HTTP GET /customerBookings/?user_id=9 200 [0.05, 127.0.0.1:56585]
+HTTP GET /travel-packages/1/ 200 [0.05, 127.0.0.1:56579]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:56579]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:56579]
+HTTP OPTIONS /create-booking/ 200 [0.01, 127.0.0.1:56592]
+Internal Server Error: /create-booking/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: authenticationBackend_user.user_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\pullingFromMaster\CodingDirections\travelAgencyApi\views.py", line 119, in create_booking
+    user = User.objects.get(pk=request.data.get('user_id'))  #18-3
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: authenticationBackend_user.user_type
+HTTP POST /create-booking/ 500 [0.21, 127.0.0.1:56592]
+HTTP GET /customerBookings/?user_id=9 200 [0.02, 127.0.0.1:56606]
+HTTP GET /travel-packages/ 200 [0.04, 127.0.0.1:56606]
+HTTP GET /travel-packages/1/ 200 [0.04, 127.0.0.1:56618]
+HTTP GET /customerBookings/?user_id=9 200 [0.04, 127.0.0.1:56620]
+HTTP GET /travel-packages/1/ 200 [0.04, 127.0.0.1:56618]
+HTTP GET /travel-packages/ 200 [0.04, 127.0.0.1:56634]
+HTTP GET /travel-packages/1/ 200 [0.04, 127.0.0.1:56634]
+HTTP GET /customerBookings/?user_id=9 200 [0.04, 127.0.0.1:56640]
+HTTP GET /travel-packages/1/ 200 [0.04, 127.0.0.1:56634]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:56634]
+Internal Server Error: /create-booking/
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: authenticationBackend_user.user_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\exception.py", line 42, in inner
+    response = await get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 534, in thread_handler
+    raise exc_info[1]
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\core\handlers\base.py", line 253, in _get_response_async
+    response = await wrapped_callback(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 479, in __call__
+    ret: _R = await loop.run_in_executor(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\asgiref\sync.py", line 538, in thread_handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\PycharmProjects\pullingFromMaster\CodingDirections\travelAgencyApi\views.py", line 119, in create_booking
+    user = User.objects.get(pk=request.data.get('user_id'))  #18-3
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 645, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 382, in __len__
+    self._fetch_all()
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\p3pio\AppData\Roaming\Python\Python311\site-packages\django\db\backends\sqlite3\base.py", line 329, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: authenticationBackend_user.user_type
+HTTP POST /create-booking/ 500 [0.12, 127.0.0.1:56634]
+HTTP GET / 200 [0.04, 127.0.0.1:56721]
+HTTP GET /api-auth/login/?next=/ 200 [0.06, 127.0.0.1:56721]
+Watching for file changes with StatReloader
+HTTP GET / 200 [0.47, 127.0.0.1:56804]
+HTTP GET /api-auth/login/?next=/ 200 [0.04, 127.0.0.1:56804]
+HTTP POST /api-auth/login/ 302 [1.96, 127.0.0.1:56836]
+HTTP GET / 200 [0.04, 127.0.0.1:56836]
+HTTP GET /admin/ 200 [0.13, 127.0.0.1:56836]
+HTTP GET /static/admin/css/dashboard.css 304 [0.01, 127.0.0.1:56855]
+HTTP GET /static/admin/img/icon-changelink.svg 304 [0.01, 127.0.0.1:56856]
+HTTP GET /static/admin/img/icon-addlink.svg 304 [0.01, 127.0.0.1:56855]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.28, 127.0.0.1:56855]
+HTTP GET /static/admin/css/changelists.css 304 [0.02, 127.0.0.1:56855]
+HTTP GET /static/admin/js/core.js 304 [0.02, 127.0.0.1:56867]
+HTTP GET /static/admin/js/vendor/jquery/jquery.js 304 [0.02, 127.0.0.1:56866]
+HTTP GET /static/admin/js/admin/RelatedObjectLookups.js 304 [0.02, 127.0.0.1:56868]
+HTTP GET /static/admin/js/actions.js 304 [0.02, 127.0.0.1:56869]
+HTTP GET /static/admin/js/urlify.js 304 [0.02, 127.0.0.1:56855]
+HTTP GET /static/admin/js/prepopulate.js 304 [0.03, 127.0.0.1:56867]
+HTTP GET /static/admin/js/jquery.init.js 304 [0.02, 127.0.0.1:56869]
+HTTP GET /static/admin/js/vendor/xregexp/xregexp.js 304 [0.03, 127.0.0.1:56866]
+HTTP GET /static/admin/img/search.svg 304 [0.02, 127.0.0.1:56868]
+HTTP GET /static/admin/js/filters.js 304 [0.00, 127.0.0.1:56868]
+HTTP GET /admin/jsi18n/ 200 [0.12, 127.0.0.1:56856]
+HTTP GET /static/admin/img/tooltag-add.svg 304 [0.01, 127.0.0.1:56856]
+HTTP GET /static/admin/img/icon-viewlink.svg 304 [0.01, 127.0.0.1:56866]
+HTTP GET /static/admin/img/sorting-icons.svg 200 [0.14, 127.0.0.1:56868]
+HTTP GET /admin/authenticationBackend/user/1/change/ 200 [0.20, 127.0.0.1:56868]
+HTTP GET /static/admin/js/calendar.js 304 [0.01, 127.0.0.1:56869]
+HTTP GET /static/admin/js/prepopulate_init.js 304 [0.01, 127.0.0.1:56866]
+HTTP GET /static/admin/css/forms.css 304 [0.01, 127.0.0.1:56856]
+HTTP GET /static/admin/js/admin/DateTimeShortcuts.js 304 [0.01, 127.0.0.1:56867]
+HTTP GET /admin/jsi18n/ 200 [0.04, 127.0.0.1:56868]
+HTTP GET /static/admin/css/widgets.css 304 [0.01, 127.0.0.1:56867]
+HTTP GET /static/admin/js/change_form.js 304 [0.01, 127.0.0.1:56868]
+HTTP GET /static/admin/img/icon-clock.svg 304 [0.01, 127.0.0.1:56867]
+HTTP GET /static/admin/img/icon-calendar.svg 304 [0.01, 127.0.0.1:56868]
+HTTP GET /admin/authenticationBackend/user/ 200 [0.07, 127.0.0.1:56877]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:56877]
+HTTP GET /admin/travelAgencyApi/bookingdetails/ 200 [0.06, 127.0.0.1:56877]
+HTTP GET /admin/jsi18n/ 200 [0.03, 127.0.0.1:56877]
+HTTP GET /admin/ 200 [0.05, 127.0.0.1:56877]
+HTTP GET /admin/travelAgencyApi/flight/ 200 [0.05, 127.0.0.1:56889]
+HTTP GET /admin/jsi18n/ 200 [0.02, 127.0.0.1:56889]
+HTTP GET /travel-packages/1/ 200 [0.04, 127.0.0.1:56921]
+HTTP GET /travel-packages/ 200 [0.07, 127.0.0.1:56925]
+HTTP GET /customerBookings/?user_id=9 200 [0.04, 127.0.0.1:56931]
+HTTP GET /travel-packages/1/ 200 [0.07, 127.0.0.1:56925]
+HTTP GET /travel-packages/1/ 200 [0.05, 127.0.0.1:56925]
+HTTP OPTIONS /flights/1/ 200 [0.08, 127.0.0.1:56931]
+HTTP OPTIONS /flights/ 200 [0.08, 127.0.0.1:56925]
+HTTP GET /flights/ 200 [0.03, 127.0.0.1:56931]
+HTTP GET /flights/1/ 200 [0.04, 127.0.0.1:56925]
+HTTP GET /flights/1/ 200 [0.02, 127.0.0.1:56947]
+HTTP PUT /flights/1/ 200 [0.03, 127.0.0.1:56947]
+HTTP OPTIONS /flights/null/ 200 [0.01, 127.0.0.1:56947]
+Not Found: /flights/null/
+HTTP GET /flights/null/ 404 [0.02, 127.0.0.1:56947]
+HTTP GET /flights/ 200 [0.04, 127.0.0.1:56960]
+HTTP GET /flights/1/ 200 [0.10, 127.0.0.1:56960]
+HTTP GET /flights/ 200 [0.10, 127.0.0.1:56947]
+HTTP GET /flights/1/ 200 [0.02, 127.0.0.1:56988]
+HTTP PUT /flights/1/ 200 [0.03, 127.0.0.1:57003]
+Not Found: /flights/null/
+HTTP GET /flights/null/ 404 [0.03, 127.0.0.1:57004]
+HTTP GET /flights/ 200 [0.03, 127.0.0.1:57003]
+HTTP OPTIONS /flights/2/ 200 [0.02, 127.0.0.1:57019]
+HTTP GET /flights/ 200 [0.03, 127.0.0.1:57020]
+HTTP GET /flights/2/ 200 [0.03, 127.0.0.1:57019]
+HTTP GET /flights/2/ 200 [0.03, 127.0.0.1:57019]
+HTTP PUT /flights/2/ 200 [0.04, 127.0.0.1:57044]
+HTTP GET /flights/ 200 [0.03, 127.0.0.1:57044]
+Not Found: /flights/null/
+HTTP GET /flights/null/ 404 [0.04, 127.0.0.1:57045]
+HTTP GET /customerBookings/?user_id=9 200 [0.03, 127.0.0.1:57054]
+HTTP GET /travel-packages/ 200 [0.05, 127.0.0.1:57054]
+HTTP GET /travel-packages/1/ 200 [0.07, 127.0.0.1:57054]
+HTTP GET /customerBookings/?user_id=9 200 [0.07, 127.0.0.1:57063]
+HTTP GET /travel-packages/1/ 200 [0.04, 127.0.0.1:57054]
+HTTP GET /travel-packages/1/ 200 [0.03, 127.0.0.1:57065]
+Not Found: /create-booking/
+HTTP POST /create-booking/ 404 [0.02, 127.0.0.1:57065]
+HTTP OPTIONS /create-user/login/ 200 [0.01, 127.0.0.1:57113]
+HTTP POST /create-user/login/ 200 [1.12, 127.0.0.1:57113]
+HTTP OPTIONS /customerBookings/?user_id=1 200 [0.06, 127.0.0.1:57113]
+HTTP GET /customerBookings/?user_id=1 200 [0.05, 127.0.0.1:57113]
+HTTP GET /travel-packages/ 200 [0.04, 127.0.0.1:57127]
+HTTP GET /travel-packages/1/ 200 [0.05, 127.0.0.1:57127]
+HTTP GET /customerBookings/?user_id=1 200 [0.06, 127.0.0.1:57134]
+HTTP GET /travel-packages/1/ 200 [0.05, 127.0.0.1:57127]
+HTTP OPTIONS /hotels/1/ 200 [0.04, 127.0.0.1:57143]
+HTTP OPTIONS /hotels/ 200 [0.05, 127.0.0.1:57142]
+HTTP GET /hotels/1/ 200 [0.05, 127.0.0.1:57142]
+HTTP GET /hotels/ 200 [0.05, 127.0.0.1:57143]
+HTTP OPTIONS /hotels/null/ 200 [0.05, 127.0.0.1:57143]
+HTTP GET /hotels/ 200 [0.06, 127.0.0.1:57142]
+Not Found: /hotels/null/
+HTTP GET /hotels/null/ 404 [0.02, 127.0.0.1:57143]
+HTTP POST /hotels/ 201 [0.03, 127.0.0.1:57172]
+HTTP GET /hotels/ 200 [0.03, 127.0.0.1:57172]
+Not Found: /hotels/null/
+HTTP GET /hotels/null/ 404 [0.02, 127.0.0.1:57180]
+HTTP GET /customerBookings/?user_id=1 200 [0.05, 127.0.0.1:57187]
+HTTP OPTIONS /travel-packages/2/ 200 [0.06, 127.0.0.1:57187]
+HTTP OPTIONS /travel-packages/2/ 200 [0.04, 127.0.0.1:57196]
+HTTP GET /customerBookings/?user_id=1 200 [0.06, 127.0.0.1:57197]
+HTTP GET /travel-packages/2/ 200 [0.03, 127.0.0.1:57196]
+HTTP GET /travel-packages/2/ 200 [0.03, 127.0.0.1:57196]
+HTTP GET /customerBookings/?user_id=1 200 [0.04, 127.0.0.1:57196]
+HTTP OPTIONS /tpvscount/ 200 [0.02, 127.0.0.1:57196]
+HTTP OPTIONS /revenue/ 200 [0.03, 127.0.0.1:57197]
+HTTP GET /tpvscount/ 200 [0.03, 127.0.0.1:57196]
+HTTP GET /revenue/ 200 [0.03, 127.0.0.1:57197]
+HTTP GET /travel-packages/ 200 [0.04, 127.0.0.1:57204]
