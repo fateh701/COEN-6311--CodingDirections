@@ -1,27 +1,26 @@
-<nav class="navbar navbar-expand-lg bg-light navbar-dark">
-<div class="navbar navbar-default">
-    <div class="container-fluid">
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-gradient navbar-text">
+      <div class="navbar-header">
+            <a href="#" class="navbar-brand">Coding Directions</a>
+      </div>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <button routerLink="/profile" class="m-1 btn btn-light btn-outline-primary">Profile</button>
+            <button routerLink="/authentication" *ngIf="!isAuthenticated" class="m-1 btn btn-light btn-outline-primary">Login</button>
+            <button (click)="onLogout()" *ngIf="isAuthenticated"  class="m-1 btn btn-light btn-outline-primary">Logout</button>
+            <button routerLink="travelpackages" class="m-1 btn btn-light btn-outline-primary">Browse Travel Packages</button>
+            <button routerLink="bookings" class ="m-1 btn btn-light btn-outline-primary">My Bookings</button>
+            <button routerLink="addtravelpackage" class="m-1 btn btn-light btn-outline-primary">Create a Custom Package</button>
+           <button routerLink="notifications" class="m-1 btn btn-light btn-outline-primary">Notifications</button>
+            <button routerLink="reports" class="m-1 btn btn-light btn-outline-primary">Reports Dashboard</button>
+<!--            <app-reports></app-reports>-->
+<!--      <p> notifications count: {{notif.notificationsCount}}-->
+    </ul>
 
-        <div class="navbar-header">
-            <a href="#" class="navbar-brand">Navigation Bar</a>
-        </div>
-<!--        <button type="button" class="notification-button">-->
-<!--          <span class="material-icons">notifications</span>-->
-<!--          <span class="icon-button__badge" id="notificationCount">0</span>-->
-<!--        </button>-->
-        <div class="collapse.show navbar-collapse">
-
-            <ul class="navbar-nav">
-                <li routerLinkActive="active"><a style="cursor: pointer;" routerLink="/profile">Profile</a></li>
-            </ul>
-            <ul class="navbar-nav navbar-right">
-                <li routerLinkActive><a style="cursor: pointer;" routerLink="/authentication" *ngIf="!isAuthenticated">Login</a></li>
-                <li style="cursor: pointer;" *ngIf="isAuthenticated" (click)="onLogout()"><a>Logout</a></li>
-            </ul>
-        </div>
+    </nav>
 
 
-    </div>
+
+
 </div>
-</nav>
-
+<!--<app-notifications></app-notifications>-->
