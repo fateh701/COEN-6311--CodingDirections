@@ -13,6 +13,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 import logging
 from rest_framework.views import APIView
+from django.http import HttpResponseBadRequest
+from django.views.decorators.http import require_POST
 from channels.layers import get_channel_layer
 import json
 from django.template import RequestContext
@@ -188,8 +190,13 @@ class CustomerBookingsViewSet(APIView):
 #for travelpackage vs booking count report
 class TravelPackageVsBookingCountReportViewData(APIView):
     def get(self,request):
-        # get data for each travel package how many bookings were done
-        booking_counts = BookingDetails.objects.values('travel_package').annotate(booking_count=Count('customer'))
+        start_date = request.query_params.get('startDate')
+        end_date = request.query_params.get('endDate')
+        if start_date is None or end_date is None:
+            booking_counts = BookingDetails.objects.values('travel_package','created_date').annotate(booking_count=Count('customer'))
+        else:
+            booking_counts = BookingDetails.objects.filter(created_date__range=[start_date, end_date]).values(
+                'travel_package', 'created_date').annotate(booking_count=Count('customer'))
 
         # #if we want to get travel package name from booking then
         # for entry in booking_counts:
@@ -198,18 +205,27 @@ class TravelPackageVsBookingCountReportViewData(APIView):
         #     print(name)
 
         #we will pass id,travelpackage name and total count of ooking ,so this is report for package Vs Booking count
-        data = [{'travel_package_id':entry['travel_package'] ,'travel_package_name':TravelPackage.objects.get(pk=entry['travel_package']).name, 'booking_count':entry['booking_count']} for entry in booking_counts]
+        data = [{'travel_package_id':entry['travel_package'] ,
+                 'created_date':entry['created_date'], #for date of booking
+                 'travel_package_name':TravelPackage.objects.get(pk=entry['travel_package']).name, 'booking_count':entry['booking_count']} for entry in booking_counts]
         return Response(data)
 
 #for Revenue Report Chart
 class RevenueReportViewData(APIView):
     def get(self,request):
-        # get data for each travel package how many bookings were done
-        booking_counts = BookingDetails.objects.values('travel_package').annotate(booking_count=Count('customer'))
+        start_date = request.query_params.get('startDate')
+        end_date = request.query_params.get('endDate')
+        if start_date is None or end_date is None:
+            booking_counts = BookingDetails.objects.values('travel_package', 'created_date').annotate(
+                booking_count=Count('customer'))
+        else:
+            booking_counts = BookingDetails.objects.filter(created_date__range=[start_date, end_date]).values(
+                'travel_package', 'created_date').annotate(booking_count=Count('customer'))
 
         # we want travel package name and its revenue generated so will loop through above query data and calculate revenue for each package
         # we will pass Each Travel Package object and its booking count to calculateRevenuePerPackage function
         data = [{'travel_package_name':TravelPackage.objects.get(pk=entry['travel_package']).name,
+                 'created_date':entry['created_date'], #for date of booking
                  'revenue':calculateRevenuePerPackage(TravelPackage.objects.get(pk=entry['travel_package']),entry['booking_count'])} for entry in booking_counts]
         return Response(data)
 
@@ -248,4 +264,18 @@ def calculateRevenuePerPackage(TravelPackage,bookingCount):
 #         }
 #     )
 #     return HttpResponse("Notification  sent successfully")
+# views.py
+#@require_POST
+# def my_view(request):
+#     # View logic here
+#     return HttpResponseBadRequest('Only POST requests are allowed')
+# # @require_POST
+# def delete_booking(request):
+#     booking_id = request.POST.get('booking_id')
+#     try:
+#         booking = BookingDetails.objects.get(id=booking_id)
+#         booking.delete()
+#         return JsonResponse({'message': 'Booking deleted'})
+#     except BookingDetails.DoesNotExist:
+#         return JsonResponse({'message': 'Not Found'})
 
