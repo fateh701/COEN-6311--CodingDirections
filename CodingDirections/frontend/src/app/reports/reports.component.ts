@@ -12,6 +12,12 @@ export class ReportsComponent {
   chart:any;
   revenueChart:any;
   totalRevenue: number = 0;
+  // startDate: Date | undefined; // Variable to store the start date
+  // endDate: Date | undefined;   // Variable to store the end date
+  startDate: string=''; // Variable to store the start date
+  endDate: string='';   // Variable to store the end date
+  revStartDate: string=''; // Variable to store the start date
+  revEndDate: string='';   // Variable to store the end date
   colors: string[] = []; // Array to store dynamically generated colors
   searchPackage: string = ''; // Variable to store the search package name
   originalData: any[] = []; // Original chart data
@@ -24,7 +30,15 @@ export class ReportsComponent {
 
   //This is the main method
   getTravelPackageVsBookingCountReport= () => {
-    this.service.getTravelPackageVsBookingCountData().subscribe(
+    // Convert string dates to Date objects
+    const formattedStartDate = this.startDate ? new Date(this.startDate) : null;
+    const formattedEndDate = this.endDate ? new Date(this.endDate) : null;
+
+    // Format dates to ISO string format (yyyy-MM-dd) before passing to backend
+    const isoFormattedStartDate = formattedStartDate ? formattedStartDate.toISOString().split('T')[0] : null;
+    const isoFormattedEndDate = formattedEndDate ? formattedEndDate.toISOString().split('T')[0] : null;
+
+    this.service.getTravelPackageVsBookingCountData(isoFormattedStartDate,isoFormattedEndDate).subscribe(
       data => {
         this.filteredData= data;
         this.originalData =data;
@@ -75,6 +89,23 @@ export class ReportsComponent {
     }
 
   }
+
+  // Modify the method signature to accept a Date object
+// onDateFilterChange(event: Event): void {
+//   let date: Date;
+//   // @ts-ignore
+//   date = (event.target as HTMLInputElement).valueAsDate;
+//   this.selectedDate = date.toISOString().split('T')[0];
+//   this.getTravelPackageVsBookingCountReport();
+// }
+//
+//   // Function to format date in 'YYYY-MM-DD' format
+//   formatDate(date: Date): string {
+//     const year = date.getFullYear();
+//     const month = date.getMonth() + 1;
+//     const day = date.getDate();
+//     return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+//   }
 
   //for exporting chart data into csv format,NOTE :- dont use comma in travel package name,other wise while exporting to csv it will parse automatically into new column
   exportData() {
@@ -157,7 +188,16 @@ export class ReportsComponent {
 
 
   getRevenuePerPackageReport(){
-    this.service.getRevenuePerPackageData().subscribe(
+    //Convert string dates to Date objects
+    const formattedStartDate = this.revStartDate ? new Date(this.revStartDate) : null;
+    const formattedEndDate = this.revEndDate ? new Date(this.revEndDate) : null;
+
+    // Format dates to ISO string format (yyyy-MM-dd) before passing to backend
+    const isoFormattedStartDate = formattedStartDate ? formattedStartDate.toISOString().split('T')[0] : null;
+    const isoFormattedEndDate = formattedEndDate ? formattedEndDate.toISOString().split('T')[0] : null;
+
+    //Not working for date conditions
+    this.service.getRevenuePerPackageData(isoFormattedStartDate,isoFormattedEndDate).subscribe(
       data => {
         const labels = data.map(entry => entry.travel_package_name)
         const counts = data.map(entry => entry.revenue)
@@ -196,6 +236,7 @@ export class ReportsComponent {
       },
     );
   }
+
 
 
 }

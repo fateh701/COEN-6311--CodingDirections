@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {AuthService} from "./auth.service";
 import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
@@ -113,26 +113,50 @@ export class SharedService {
     return this.webSocketSubject.asObservable();
   }
 
-  getTravelPackageVsBookingCountData():Observable<any[]>{
-    return this.http.get<any[]>(this.baseAPIUrl+'/tpvscount/',{headers:this.httpHeaders});
+  getTravelPackageVsBookingCountData(startDate: string | null, endDate: string | null):Observable<any[]>{
+    if ((startDate=='' && endDate=='') || (startDate==null && endDate==null)){
+      return this.http.get<any[]>(this.baseAPIUrl+'/tpvscount/',{headers:this.httpHeaders});
+    }
+    else {
+      let params = new HttpParams()
+      if (startDate){
+        params = params.append('startDate',startDate)
+      }
+      if (endDate){
+        params = params.append('endDate',endDate)
+      }
+      return this.http.get<any[]>(this.baseAPIUrl+'/tpvscount/',{headers:this.httpHeaders,params:params});
+    }
   }
 
-  getRevenuePerPackageData():Observable<any[]>{
-    return this.http.get<any[]>(this.baseAPIUrl+'/revenue/',{headers:this.httpHeaders});
+  getRevenuePerPackageData(startDate: string | null, endDate: string | null):Observable<any[]>{
+    if ((startDate=='' && endDate=='') || (startDate==null && endDate==null)){
+      return this.http.get<any[]>(this.baseAPIUrl+'/revenue/',{headers:this.httpHeaders});
+    }
+    else {
+      let params = new HttpParams()
+      if (startDate){
+        params = params.append('startDate',startDate)
+      }
+      if (endDate){
+        params = params.append('endDate',endDate)
+      }
+      return this.http.get<any[]>(this.baseAPIUrl+'/revenue/',{headers:this.httpHeaders,params:params});
+    }
   }
 
 }
 
 
-@Injectable({
-  providedIn: 'root'
-})
-export class ApiService {
-  private apiUrl = '"http://127.0.0.1:8000"';
-
-  constructor(private http: HttpClient) {}
-
-  deleteBooking(bookingId: number) {
-    return this.http.delete(`${this.apiUrl}/bookings/${bookingId}`);
-  }
-}
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class ApiService {
+//   private apiUrl = '"http://127.0.0.1:8000"';
+//
+//   constructor(private http: HttpClient) {}
+//
+//   deleteBooking(bookingId: number) {
+//     return this.http.delete(`${this.apiUrl}/bookings/${bookingId}`);
+//   }
+// }
