@@ -50,3 +50,21 @@ export class BookingsAllComponent {
   }
 
 }
+editBooking(booking: any) {
+  // You can implement edit functionality here, such as routing to an edit page.
+  console.log('Editing booking:', booking);
+  }
+  deleteBooking(bookingId: number) {
+    if (confirm('Are you sure you want to delete this booking?')) {
+      this.service.deleteBooking(bookingId).subscribe(
+        () => {
+          // Remove the deleted booking from the list
+          this.allbookingsbyID = this.allbookingsbyID.filter(booking => booking.id !== bookingId);
+          console.log('Booking deleted successfully');
+        },
+        error => {
+          console.error('Error deleting booking:', error);
+        }
+      );
+    }
+  }

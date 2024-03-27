@@ -16,6 +16,8 @@
         </mat-card-header>
         <mat-card-actions align="end">
           <button routerLink="/travelpackages/{{ package.id }}" class="m-1 btn btn-light btn-outline-primary">View Details</button>
+          <button (click)="editBooking(booking)" class="m-1 btn btn-light btn-outline-primary">Edit</button>
+          <button (click)="deleteBooking(booking.id)" class="m-1 btn btn-light btn-outline-danger">Delete</button>
         </mat-card-actions>
       </mat-card>
       <br>
