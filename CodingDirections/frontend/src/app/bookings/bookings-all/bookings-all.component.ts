@@ -49,11 +49,11 @@ export class BookingsAllComponent {
     this.selectedBooking = booking;
   }
 
-}
-editBooking(booking: any) {
-  // You can implement edit functionality here, such as routing to an edit page.
-  console.log('Editing booking:', booking);
+  editBooking(booking: any) {
+    // You can implement edit functionality here, such as routing to an edit page.
+    console.log('Editing booking:', booking);
   }
+
   deleteBooking(bookingId: number) {
     if (confirm('Are you sure you want to delete this booking?')) {
       this.service.deleteBooking(bookingId).subscribe(
@@ -68,3 +68,5 @@ editBooking(booking: any) {
       );
     }
   }
+}
+
