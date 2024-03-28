@@ -7,7 +7,9 @@
     </div>
 
   <div class="col-xs-12 col-md-6 col-md-offset-3" *ngIf="!isLoginMode">
+
     <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+
       <div class="form-group">
         <label for="first_name">FirstName</label>
         <input
@@ -18,6 +20,7 @@
           name="first_name">
         <span class="help-block" style="color: red;" *ngIf="!signupForm.get('first_name')?.value && signupForm.get('first_name')?.touched">First Name is required</span>
       </div>
+
       <div class="form-group">
         <label for="last_name">LastName</label>
         <input
@@ -28,17 +31,7 @@
           name="last_name">
         <span class="help-block" style="color: red;" *ngIf="!signupForm.get('last_name')?.value && signupForm.get('last_name')?.touched">Last Name is required</span>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          formControlName="email"
-          name="email">
-        <span class="help-block" style="color: red;" *ngIf="!signupForm.get('email')?.value && signupForm.get('email')?.touched">Email is Required</span>
 
-      </div>
       <div class="form-group">
         <label for="username">Username</label>
         <input
@@ -49,6 +42,27 @@
           name="username">
         <span class="help-block" style="color: red;" *ngIf="!signupForm.get('username')?.value && signupForm.get('username')?.touched">Username is Required</span>
       </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          formControlName="email"
+          name="email">
+        <span class="help-block" style="color: red;" *ngIf="!signupForm.get('email')?.value && signupForm.get('email')?.touched">Email is Required</span>
+      </div>
+
+      <div class="form-group">
+        <label for="user_type">User Type</label>
+        <select class="form-control" id="user_type" formControlName="user_type">
+          <option *ngFor="let userType of userTypes" [value]="userType">{{ userType }}</option>
+        </select>
+        <span class="help-block" style="color: red;" *ngIf="!signupForm.get('user_type')?.value && signupForm.get('user_type')?.touched">User Type is Required</span>
+      </div>
+
+
       <div formGroupName="passwords">
         <div class="form-group">
           <label for="password">Password</label>
