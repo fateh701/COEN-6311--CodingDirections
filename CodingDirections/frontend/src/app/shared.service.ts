@@ -106,7 +106,7 @@ export class SharedService {
   getAllBookingsByID(userid:any):Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/customerBookings/?user_id='+userid,{headers:this.httpHeaders});
   }
- deleteBooking(bookingId: number) {
+  deleteBooking(bookingId: number) {
   return this.http.delete(`${this.baseAPIUrl}/booking-details/${bookingId}`);
   }
   getNotifications():Observable<any[]>{
