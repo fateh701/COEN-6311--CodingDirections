@@ -130,3 +130,37 @@ th, td {
 }
 
 tr:hover {background-color: #f5f5f5;}
+
+.item-container {
+  width: 18%; /* Adjust as needed */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Container background color */
+  border: 1px solid #ddd; /* Container border */
+  border-radius: 5px; /* Container border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Container box shadow */
+  text-align: center; /* Center align the contents */
+}
+
+.view-button {
+  display: inline-block; /* Ensure buttons are displayed in a row */
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #068aaf; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Button border radius */
+}
+label {
+  text-align: center; /* Center align the label */
+  margin-left: 715px;
+  margin-bottom: 5px; /* Add margin at the bottom */
+}
+
+.labelheader {
+  display: flex;
+  justify-content: center; /* Center align horizontally */
+  margin-bottom: 20px; /* Add margin at the bottom */
+  color: #8c5151
+}
