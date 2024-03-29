@@ -2,3 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-typography {
+  background-image: url("assets/bokeh.jpg");
+  background-size: cover;
+  background-position: center;
+}
+label{
+  color: #8c5151; /* Replace #yourColor with the color you want */
+}

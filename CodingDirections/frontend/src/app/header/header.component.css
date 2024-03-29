@@ -9,7 +9,7 @@ body {
   justify-content: center;
   width: 50px;
   height: 50px;
-  color: #333333;
+  color: #cd1414;
   background: #dddddd;
   border: none;
   outline: none;
@@ -77,4 +77,26 @@ body {
 .dropdown-content a {
   position: relative;
   top: -20px;
+}
+.navbar {
+  background-color: rgb(0, 59, 75);
+  backdrop-filter: blur(5px);
+  color: #fff; /* Text color */
+}
+
+.navbar-brand {
+  color: #fff; /* Coding Directions Color */
+}
+
+.navbar-nav .nav-item .btn {
+  color: #016f8c; /* Button text color */
+}
+
+.navbar-nav .nav-item .btn:hover {
+  background-color: #068aaf;
+  color: #fff;
+}
+
+.navbar-text {
+  color: #fff; /* Text color */
 }

@@ -1,0 +1,24 @@
+.view-hotels {
+  width: 80%; /* Adjust as needed */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Container background color */
+  border: 1px solid #ddd; /* Container border */
+  border-radius: 5px; /* Container border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Container box shadow */
+}
+
+.view-hotels h5 {
+  margin-bottom: 10px;
+}
+
+.view-hotels button {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #068aaf; /* Button background color */
+  color: #fff; /* Button text color */
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Button border radius */
+}
