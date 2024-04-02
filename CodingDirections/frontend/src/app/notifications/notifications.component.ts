@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, Injectable} from '@angular/core';
 import {SharedService} from "../shared.service";
+
+@Injectable(
+    {providedIn: 'root'}
+)
 @Component({
   selector: 'app-notifications',
   templateUrl: './notifications.component.html',

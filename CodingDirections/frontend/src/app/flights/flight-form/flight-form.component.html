@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()" #flightForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="flight.name" required>
+  </div>
+  <div>
+    <label for="departure_city">Departure City:</label>
+    <input type="text" id="departure_city" name="departure_city" [(ngModel)]="flight.departure_city" required>
+  </div>
+  <div>
+    <label for="arrival_city">Arrival City:</label>
+    <input type="text" id="arrival_city" name="arrival_city" [(ngModel)]="flight.arrival_city" required>
+  </div>
+  <div>
+    <label for="departure_time">Departure Time:</label>
+    <input type="datetime-local" id="departure_time" name="departure_time" [(ngModel)]="flight.departure_time" required>
+  </div>
+  <div>
+    <label for="arrival_time">Arrival Time:</label>
+    <input type="datetime-local" id="arrival_time" name="arrival_time" [(ngModel)]="flight.arrival_time" required>
+  </div>
+  <div>
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" [(ngModel)]="flight.price" required>
+  </div>
+  <button type="submit">{{ editing ? 'Update' : 'Add' }} Flight</button>
+</form>

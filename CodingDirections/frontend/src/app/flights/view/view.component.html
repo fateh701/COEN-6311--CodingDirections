@@ -1,8 +1,11 @@
-<div *ngIf="selectedFlight">
+<div *ngIf="selectedFlight" class="view-flights">
+  <h4>Flight Details</h4>
   <h5>Name: {{selectedFlight.name}} </h5>
   <h5>Departure City: {{ selectedFlight.departure_city }} </h5>
   <h5>Arrival City: {{ selectedFlight.arrival_city }} </h5>
   <h5>Departure Time: {{ selectedFlight.departure_time }} </h5>
   <h5>Arrival Time: {{ selectedFlight.arrival_time }} </h5>
   <h5>Price: {{ selectedFlight.price }} </h5>
+  <button (click)="editFlight(selectedFlight.id)">Edit</button>
+  <button (click)="deleteFlight(selectedFlight.id)">Delete</button>
 </div>

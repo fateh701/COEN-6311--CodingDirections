@@ -1,6 +1,11 @@
 <div>
   <p>Report 1: Travel Package Vs Booking Count</p>
-
+<!--  <input type="date" [(ngModel)]="selectedDate" (change)="onDateFilterChange($event)" placeholder="Select Date">-->
+  <label>Start Date:</label>
+  <input type="date" [(ngModel)]="startDate" (input)="getTravelPackageVsBookingCountReport()" placeholder="Start Date">
+  <label>End Date:</label>
+  <input type="date" [(ngModel)]="endDate" (input)="getTravelPackageVsBookingCountReport()" placeholder="End Date">
+  <label>Search By Package Name:</label>
   <input type="text" [(ngModel)]="searchPackage" (input)="applyFilter()" placeholder="Search by Package name">
   <button (click)="exportData()">Export Data As CSV</button>
   <canvas id="travelPackageVsBookingCountChart" style="position: relative" width="100" height="100"></canvas>
@@ -10,6 +15,10 @@
 
 <div>
   <p>Report 2: Revenue Per Package</p>
+<!--  <label>Start Date:</label>-->
+<!--  <input type="date" [(ngModel)]="revStartDate" (input)="getRevenuePerPackageReport()" placeholder="Start Date">-->
+<!--  <label>End Date:</label>-->
+<!--  <input type="date" [(ngModel)]="revEndDate" (input)="getRevenuePerPackageReport()" placeholder="End Date">-->
   <button (click)="exportRevenueData()">Export Data As CSV</button>
   <canvas id="revenuePerPackageChart" style="position: relative" width="100" height="100"></canvas>
   <div>Total Revenue : {{totalRevenue}}</div>

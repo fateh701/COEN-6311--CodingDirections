@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {SharedService} from "../../shared.service";
 
 @Component({
@@ -10,7 +10,7 @@ import {SharedService} from "../../shared.service";
 export class ViewActivitiesComponent {
   selectedActivity: any = [];
 
-  constructor(private route: ActivatedRoute, private service: SharedService) {
+  constructor(private route: ActivatedRoute, private service: SharedService, private router: Router) {
     this.getSelectedActivity();
   }
 
@@ -24,6 +24,24 @@ export class ViewActivitiesComponent {
         console.log(error);
       },
     );
+  }
+
+  editActivity(id: number) {
+    this.router.navigate(['/activities', id, 'edit']);
+  }
+
+  deleteActivity(id: number) {
+    if (confirm("Are you sure you want to delete this Activity?")) {
+      this.service.deleteActivity(id).subscribe(
+        () => {
+          // Optionally, you can redirect the user to another page after deletion
+          this.router.navigate(['/activities']);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    }
   }
 
 }

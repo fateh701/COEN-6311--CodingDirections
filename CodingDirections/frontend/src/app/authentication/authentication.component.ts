@@ -19,12 +19,15 @@ export class AuthenticationComponent{
   error: string = ''; //This variable will be used to store any error messages that are returned from the server
   token: string | undefined; //This variable will be used to store the token that is returned from the server
   success:string=''; //This variable will be used to store any success messages that are returned from the server
+  userTypes: string[] = ['Admin', 'Agent', 'User'];
+
   constructor(private authenticationService: AuthenticationService, private router: Router) {
     this.signupForm = new FormGroup({
       'first_name': new FormControl(null,Validators.required),
       'last_name': new FormControl(null,Validators.required),
       'username': new FormControl(null,Validators.required),
       'email': new FormControl(null,[Validators.required,Validators.email]),
+      'user_type': new FormControl(null,Validators.required),
       'passwords': new FormGroup({
           'password': new FormControl(null, [Validators.required, Validators.minLength(8)]),
           'confirmpassword': new FormControl(null, Validators.required)

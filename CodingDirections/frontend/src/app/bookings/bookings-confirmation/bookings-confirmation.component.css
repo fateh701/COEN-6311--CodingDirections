@@ -1,0 +1,45 @@
+p {
+  text-align: center;
+  color: #333; /* Text color */
+}
+
+div {
+  width: 80%; /* Adjust as needed */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Container background color */
+  border: 1px solid #ddd; /* Container border */
+  border-radius: 5px; /* Container border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Container box shadow */
+}
+
+h2, h3, h4 {
+  margin-left: 20px;
+  color: #068aaf; /* Heading color */
+}
+
+button {
+  margin-left: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #068aaf; /* Button background color */
+  color: #fff; /* Button text color */
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px; /* Button border radius */
+}
+
+.confirm-booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelheader {
+  display: flex;
+  justify-content: center; /* Center align horizontally */
+  margin-bottom: 20px; /* Add margin at the bottom */
+  color: #8c5151
+}

@@ -28,6 +28,9 @@ import {tokenInterceptor } from "./token.interceptor";
 import { BookingsAllComponent } from './bookings/bookings-all/bookings-all.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ReportsComponent } from './reports/reports.component';
+import { FlightFormComponent } from './flights/flight-form/flight-form.component';
+import { ActivityFormComponent } from './activities/activity-form/activity-form.component';
+import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
 
 // @ts-ignore
 @NgModule({
@@ -50,6 +53,9 @@ import { ReportsComponent } from './reports/reports.component';
     BookingsAllComponent,
     NotificationsComponent,
     ReportsComponent,
+    FlightFormComponent,
+    ActivityFormComponent,
+    HotelFormComponent,
   ],
   imports: [
     BrowserModule,

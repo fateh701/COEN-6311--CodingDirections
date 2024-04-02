@@ -90,6 +90,7 @@ class BookingDetails(models.Model):
     travel_package = models.ManyToManyField(TravelPackage)
     payment_status_flag = models.BooleanField(default=False)
     agent = models.ForeignKey(BookingAgent, on_delete=models.SET_NULL, null=True)
+    created_date = models.DateTimeField(default=timezone.now()) #prinkal
 
     def __str__(self):
         return self.customer.username + " " + str(self.payment_status_flag)

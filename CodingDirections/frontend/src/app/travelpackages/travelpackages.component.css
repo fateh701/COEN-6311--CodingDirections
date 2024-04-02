@@ -1,0 +1,47 @@
+.search-bar {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Container-like structure for travel packages */
+.travel-package-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card-like container for each travel package */
+.travel-package-card {
+  background-color: #f9f9f9; /* Background color of each package container */
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Adjust the width as needed */
+}
+
+.travel-package-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.travel-package-card-image img {
+  width: 100%; /* Make image responsive within the container */
+  border-radius: 8px;
+}
+
+.view-button {
+  background-color: #025067;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background-color: #068aaf;
+}

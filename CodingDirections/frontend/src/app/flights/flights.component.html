@@ -1,1 +1,22 @@
+<div>
+  <!--For Search bar ,for filtering travel packages -->
+  <input type="text" [(ngModel)]="searchQuery" (input)="getFilteredFlightsList()" placeholder="Search by name">
+  <h2 (click)="navFlights()">Flights</h2>
+  <ul>
+    <li *ngFor="let flight of filteredFlightsList">
+      <a routerLink="/flights/{{ flight.id }}">{{ flight.name }}</a>
+    </li>
+  </ul>
+<!--  <div class="flight-container" *ngFor="let flight of filteredFlightsList">-->
+<!--    <p>{{ flight.name }}</p>-->
+<!--    <button class="view-button" routerLink="/flights/{{ flight.id }}">View</button>-->
+<!--  </div>-->
+
+  <button (click)="addNewFlight()">Add New Flight</button>
+
+</div>
+<br>
 <app-view></app-view>
+<app-view *ngIf="selectedFlight"></app-view>
+
+<app-flight-form *ngIf="showFlightForm" (cancel)="cancelAddNewFlight()"></app-flight-form>
