@@ -1,0 +1,12 @@
+<div class="dropdown">
+  <button type="button" class="icon-button">
+    <span class="material-icons">notifications</span>
+    <span class="icon-button__badge">{{notificationsCount}}</span>
+  </button>
+  <div class="dropdown-content">
+    <!-- Notification messages go here -->
+    <div *ngFor="let notification of notifications" class="notification">
+      {{ notification }}
+    </div>
+  </div>
+</div>

@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { AuthenticationService } from './authentication/authentication.service';
+import { Router } from '@angular/router';
+// import { notificationsService } from './notifications/notifications.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
+
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'frontend';
+  constructor(private authenticationService: AuthenticationService, private router: Router) {
+    //this.authenticationService.autoLogin();
+  }
+
+  ngOnInit(){
+    this.authenticationService.autoLogin();
+  }
 }

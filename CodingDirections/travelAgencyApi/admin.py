@@ -1,4 +1,4 @@
-from .models import Flight, Hotel, Activity, TravelPackage
+from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent
 from django.contrib import admin
 from django.apps import AppConfig
 
@@ -11,3 +11,6 @@ admin.site.register(Flight)
 admin.site.register(Hotel)
 admin.site.register(Activity)
 admin.site.register(TravelPackage)
+# admin.site.register(Notification)
+admin.site.register(BookingDetails)
+admin.site.register(BookingAgent)

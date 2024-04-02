@@ -16,30 +16,34 @@ Including another URLconf
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 import travelAgencyApi.views as views
+# import notification_app.urls as no_urls
+
 from django.contrib import admin
-from django.urls import path
-from . import views
-from django.core.mail import send_mail
-from django.conf import settings
-from django.shortcuts import render
-from django.http import HttpResponse
 
 router = DefaultRouter()
 router.register(r'flights', views.FlightViewSet)
 router.register(r'hotels', views.HotelViewSet)
 router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
-router.register(r'modification', views.ModificationViewSet)
+router.register(r'booking-details', views.BookingDetailsViewSet) #get all the bookings made till now
+router.register(r'booking-agent', views.BookingAgentViewSet)
+#add url for create_booking method
+
 urlpatterns = [
     path('', include(router.urls)),
+    path('',include('notification_app.urls')), #for notification
     path('admin/', admin.site.urls),
+    path('create-user/',include('tokenizationBackend.urls')), #for signup
+    path('customerBookings/',views.CustomerBookingsViewSet.as_view(),name='customerBookings'), #for customer booking details
+    path('customerBookings/<int:pk>/',views.CustomerBookingsViewSet.as_view(),name='customerBookingsCURD'), #for customer booking details
+    path(r'create-booking/',views.create_booking,name='create-booking'), #add booking detail in form of json,mainly used for frontend,dont remove
+    #path(r'current-user-info/',views.current_user_info,name='current-user-info'), #for current user info
+    path(r'profile/',views.profile_view,name='profile'), #for current user info
+    path(r'tpvscount/',views.TravelPackageVsBookingCountReportViewData.as_view(),name='reports'),
+    path(r'revenue/',views.RevenueReportViewData.as_view(),name='revenue'),
+    # path(r'notification',views.notificationhome,name='notification'), #for notification
+    # path(r'test/',views.testnotification,name='test'), #for testing notification
+    #path(r'home/',views.notificationhome,name='home'), #for notification
+    #path(r'celery/',views.celerytest,name='celery'), #for testing celery
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page
-    path('', include(router.urls)),
-    path('travelAgencyApi/', include('travelAgencyApi.urls')),
-    path('search/', views.flight, name='flight'),
-    path('send_confirmation_email/', views.send_confirmation_email, name='send_confirmation_email'),
-    path('bookings/<int:booking_id>/cancel', views.cancel booking, name='cancel booking'),
-    path('bookings/<int:booking_id>/update', views.update booking, name='update booking'),
-    path('booking/', views.booking_view, name='booking'),
 ]
-

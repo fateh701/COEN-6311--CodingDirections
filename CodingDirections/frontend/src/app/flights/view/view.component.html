@@ -1,1 +1,8 @@
-<p>view works!</p>
+<div *ngIf="selectedFlight">
+  <h5>Name: {{selectedFlight.name}} </h5>
+  <h5>Departure City: {{ selectedFlight.departure_city }} </h5>
+  <h5>Arrival City: {{ selectedFlight.arrival_city }} </h5>
+  <h5>Departure Time: {{ selectedFlight.departure_time }} </h5>
+  <h5>Arrival Time: {{ selectedFlight.arrival_time }} </h5>
+  <h5>Price: {{ selectedFlight.price }} </h5>
+</div>

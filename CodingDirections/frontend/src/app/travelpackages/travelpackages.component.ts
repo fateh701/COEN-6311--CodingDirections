@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SharedService} from "../shared.service";
 
 @Component({
   selector: 'app-travelpackages',
@@ -6,94 +7,35 @@ import { Component } from '@angular/core';
   styleUrl: './travelpackages.component.css'
 })
 export class TravelpackagesComponent {
-}
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const server = http.createServer((req, res) => {
-    let filePath = '.' + req.url;
-    if (filePath === './') {
-        filePath = './index.html';
-    }
-    const extname = path.extname(filePath);
-    let contentType = 'text/html';
-    if (extname === '.css') {
-        contentType = 'text/css';
-    }
-    fs.readFile(filePath, (err, content) => {
-        if (err) {
-            res.writeHead(404);
-            res.end('404 Not Found');
-        } else {
-            res.writeHead(200, { 'Content-Type': contentType });
-            res.end(content, 'utf-8');
-        }
-    });
-});
+  travelPackagesList: any = [];
+  filteredTravelPackagesList: any = [];  // This is the list that will be used to store the searched query travel packages
+  searchQuery: string = '';  // This is the variable that will be used to store the search query
 
-const port = 3000;
-server.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
 
-const cancelTravelPackage = async (TravelPackage_name) => {
-  try {
-    const response = await fetch(`/TravelPackage/${TravelPackage_name}/cancel`, {
-      method: 'PUT'
-    });
-    if (response.ok) {
-      console.log('canceled');
-    } else {
-      console.error('Failed to cancel');
-    }
-  } catch (error) {
-    console.error('Error:', error);
+  constructor(private service: SharedService) {
+    this.getTravelpackagesList();
   }
-};
-const updateTravelPackage = async (TravelPackage_name, newData) => {
-  try {
-    const response = await fetch(`/TravelPackage/${TravelPackage_name}/update`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
+
+  getTravelpackagesList = () => {
+    this.service.getTravelpackagesList().subscribe(
+      data => {
+        this.travelPackagesList = data;
+        this.filteredTravelPackagesList = data;  // Initially the filtered list will be the same as the original list
       },
-      body: JSON.stringify(newData)
-    });
-    if (response.ok) {
-      console.log('updated');
-    } else {
-      console.error('Failed to update');
-    }
-  } catch (error) {
-    console.error('Error:', error);
+      error => {
+        console.log(error);
+      },
+    );
   }
-};
-const express = require('express');
-const app = express();
-const port = 3000;
-let TravelPackage = [
-    { name: ‘’, date: '', flights: '', hotels: ‘’, activities:’’},
-app.set('view engine', 'ejs');
-app.use(express.urlencoded({ extended: true }));
-app.get('/', (req, res) => {
-    res.render(‘TravelPacakage, {TravelPackage });
-});
 
-app.post('/update Travel’Package, (req, res) => {
-    const {  name, flights, hotels, activities } = req.body;
-    const TravelPackage = TravelPackage.find(TravelPackage => TravelPackage.name == name);
-    if (TravelPackage) {
-     TravelPackage.flights = flights;
-      TravelPackage.hotels = hotels;
-        TravelPackage.activities = activities;
-        res.redirect('/');
+  // This function will be used to filter the travel packages list based on the search query entered by the user -Patch by Pujan 20/2/2024
+  getFilteredTravelpackagesList() {
+    if (this.searchQuery.trim()==='') {
+      this.filteredTravelPackagesList = this.travelPackagesList;  // If the search query is empty, then the filtered list will be the same as the original list
     } else {
-        res.status(404).send(‘not found');
+      this.filteredTravelPackagesList = this.travelPackagesList.filter((packageItem: any) =>
+          packageItem.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
     }
-});
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
-
-
-
+    }
+}
