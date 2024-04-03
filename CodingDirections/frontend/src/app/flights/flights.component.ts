@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from "@angular/router";
 import {SharedService} from "../shared.service";
+import { AuthenticationService } from '../authentication/authentication.service';
+// import { AuthenticationComponent } from '../authentication/authentication.component';
+
 
 @Component({
   selector: 'app-flights',
@@ -13,19 +16,26 @@ export class FlightsComponent {
   searchQuery: string = '';
   selectedFlight: any;
   showFlightForm: boolean = false;
+  isAdmin: boolean = false;
 
-  constructor(private router: Router, private service: SharedService) {
+  constructor(private router: Router, private service: SharedService, private authService: AuthenticationService)  {//, private authComponent: AuthenticationComponent) {
     this.getFlightsList();
+    this.authService.user.subscribe(user => {
+      this.isAdmin = user?.user_type === 'Admin'; // Check if user is admin
+      console.log('Is Admin:', this.isAdmin);
+    });
   }
-
-  // addNewFlight() {
-  //   this.router.navigate(['/flights']);
-  // }
 
   navFlights() {
     this.router.navigate(['/flights']);
   }
   addNewFlight() {
+    if (!this.isAdmin) {
+      // Optionally, you can display a message or handle the action for non-admin users
+      console.log(this.isAdmin);
+      alert("Only admins can add new flights.");
+      return;
+    }
     this.router.navigate(['/flights']);
     this.showFlightForm = true;
   }
