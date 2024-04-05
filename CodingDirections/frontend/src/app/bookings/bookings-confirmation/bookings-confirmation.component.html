@@ -1,9 +1,10 @@
-<p> Booking Confirmation Page for : {{userinfo}}</p>
+<h3 class="labelheader"> Booking Confirmation Page for : {{userinfo}}</h3>
+
+
 
 <div *ngIf="selectedBooking">
-  <h2>Review Your package here</h2>
+  <h2>You are about to book a TravelPackage:</h2>
   <h3>{{ selectedBooking.name }}</h3>
   <h4></h4>
-  <button (click)="confirmBooking()">Confirm Booking</button>
-  <h4>done</h4>
+  <button class="confirm-booking" (click)="confirmBooking()">Confirm Booking</button>
 </div>
