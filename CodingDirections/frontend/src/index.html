@@ -7,75 +7,11 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://js.stripe.com/v3/"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body class="mat-typography">
   <app-root></app-root>
-</body>
-</html>
-
-<!doctype html>
-<html>
-<head>
-    <title>TravelPackage Form</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>TravelPackage Form</h1>
-    <form>
-        <label for=“location”>Location:</label>
-        <input type="text" id=“location” name=“location”>
-        <br><br>
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date">
-        <br><br>
-        <label for="priceRange">pricerange:</label>
-        <select id="pricerange" name="pricerange">
-            <option value=“1000-2000">$1000 - $2000</option>
-            <option value=“3000-4000">$3000 - $4000</option>
-            <option value=“5000-6000">$5000 - $6000</option>
-            <option value=“6000+">$6000+</option>
-        </select>
-        <br><br>
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Modify TravelPackage</title>
-    <style>
-    </style>
-</head>
-<body>
-    <h1>Modify TravelPackage</h1>
-    <table>
-        <tr>
-            <th>name</th>
-            <th>flights</th>
-             <th>hotels</th>
-            <th>activities</th>
-        </tr>
-        <% TravelPackage.forEach(TravelPackage => { %>
-        <tr>
-            <td><%= TravelPackage.name %></td>
-            <td><%= TravelPackage.flights %></td>
-            <td><%= TravelPackage.hotels%></td>
-            <td><%= TravelPackage.activities %></td>
-            <td>
-                <form action="/update TravelPackage" method="POST">
-                    <input type="text" name="name" value="<%= TravelPackage.name %>">
-                    <input type=“string” name=“flights” value="<%= TravelPackage.flights %>">
-                    <input type=“string” name=“hotels”value="<%= TravelPackage.hotels %>">
-                    <input type=“activities” name="price" value="<%= TravelPackage.activities %>">
-                    <button type="submit">Update</button>
-                </form>
-            </td>
-        </tr>
-        <% }); %>
-    </table>
 </body>
 </html>
