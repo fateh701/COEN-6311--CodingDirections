@@ -22,11 +22,28 @@ from asgiref.sync import async_to_sync
 #from ..notification_app.tasks import test_func
 from django.core.mail import send_mail
 import sys
+import stripe
+
 sys.path.append("../..")
 
 
 logger = logging.getLogger(__name__) # creating  a logger instance
 
+stripe.api_key = 'sk_test_51P27GmRvQV0xL8xGvRm518DYriB1MfB7QRRORSvZrj6x9LIVugSDjYO2xvUp8pr64oDrDqD2M1gsOAdXp8BrrNiF00LOGn57GN'
+
+def create_payment(request):
+    if request.method == 'POST':
+        token = request.POST.get('token')
+        try:
+            charge = stripe.Charge.create(
+                amount=1000,  # Amount in cents
+                currency='usd',
+                description='Example charge',
+                source=token,
+            )
+            return JsonResponse({'success': True})
+        except stripe.error.CardError as e:
+            return JsonResponse({'success': False,'error':e})
 class FlightViewSet(viewsets.ModelViewSet):
     queryset = Flight.objects.all()
     serializer_class = FlightSerializer

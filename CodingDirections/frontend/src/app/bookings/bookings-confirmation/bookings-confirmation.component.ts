@@ -16,7 +16,6 @@ export class BookingsConfirmationComponent {
   constructor(private route: ActivatedRoute,private router:Router, private service: SharedService, private authenticationService: AuthenticationService, private authService: AuthService) {
     this.getSelectedBooking();
     this.userinfo = this.authService.getUserINFO()?.username;
-
   }
 
   getUserID() {
@@ -54,25 +53,26 @@ export class BookingsConfirmationComponent {
     // ))
 
     confirmBooking(): void {
+      this.router.navigate(['/bookings-payment']);
       //const userToken = this.authService.getUserINFO()?.token;
-      const userID = this.getUserID();
-      //console.log("Userid from user info dict:", userID);
-      if (userID === undefined || userID === null || userID === '' || userID === 0 || isNaN(userID)) {
-        console.log("userID not found in local storage,trace the confirmBooking function");
-      } else {
-        console.log("Userid from user info dict:", userID);
-        // @ts-ignore
-        this.service.postConfirmBooking(this.selectedBooking.id, userID).subscribe(
-          response => {
-            //Handle successful booking confirmation
-            console.log("Booking confirmed")
-            this.router.navigate(['/bookings']);
-          },
-          error => {
-            console.log("Error confirming booking:", error);
-          },
-        )
-      }
+//       const userID = this.getUserID();
+//       //console.log("Userid from user info dict:", userID);
+//       if (userID === undefined || userID === null || userID === '' || userID === 0 || isNaN(userID)) {
+//         console.log("userID not found in local storage,trace the confirmBooking function");
+//       } else {
+//         console.log("Userid from user info dict:", userID);
+//         // @ts-ignore
+//         this.service.postConfirmBooking(this.selectedBooking.id, userID).subscribe(
+//           response => {
+//             //Handle successful booking confirmation
+//             console.log("Booking confirmed")
+//             this.router.navigate(['/bookings']);
+//           },
+//           error => {
+//             console.log("Error confirming booking:", error);
+//           },
+//         )
+//       }
     }
 
 

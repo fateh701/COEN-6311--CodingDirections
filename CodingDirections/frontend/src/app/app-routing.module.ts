@@ -8,6 +8,7 @@ import { ActivitiesComponent } from "./activities/activities.component";
 import { ViewTravelPackagesComponent } from "./travelpackages/view-travel-packages/view-travel-packages.component";
 import { BookingsComponent} from "./bookings/bookings.component";
 import { BookingsReviewComponent} from "./bookings/bookings-review/bookings-review.component";
+import { BookingsPaymentComponent} from "./bookings/bookings-payment/bookings-payment.component";
 import { BookingsConfirmationComponent} from "./bookings/bookings-confirmation/bookings-confirmation.component";
 import { BookingsAllComponent } from "./bookings/bookings-all/bookings-all.component";
 import { ReportsComponent} from "./reports/reports.component";
@@ -38,6 +39,7 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'booking-review',component:BookingsReviewComponent},
                          {path:'booking-review/:id',component:BookingsReviewComponent},
                          {path:'bookings-confirmation',component:BookingsConfirmationComponent},
+                         {path:'bookings-payment',component:BookingsPaymentComponent},
                          {path:'bookings-confirmation/:id',component:BookingsConfirmationComponent},
                          {path:'profile',component:AccountComponent},
                          {path:'authentication',component:AuthenticationComponent},
