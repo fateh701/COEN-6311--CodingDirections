@@ -2,6 +2,7 @@ import {Component, OnDestroy} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {SharedService} from "../../shared.service";
 import { Subscription } from 'rxjs';
+import {AuthenticationService} from "../../authentication/authentication.service";
 
 @Component({
   selector: 'app-view-activities',
@@ -11,11 +12,20 @@ import { Subscription } from 'rxjs';
 export class ViewActivitiesComponent implements OnDestroy {
   selectedActivity: any = [];
   routeParamsSubscription: Subscription;
+  userRole: string | undefined;
 
-  constructor(private route: ActivatedRoute, private service: SharedService, private router: Router) {
+  constructor(private route: ActivatedRoute, private service: SharedService, private router: Router, private authService: AuthenticationService) {
     this.routeParamsSubscription = this.route.paramMap.subscribe(params => {
       this.getSelectedActivity();
     });
+    this.authService.user.subscribe(user => {
+      this.userRole = user?.user_type;
+      // console.log('User Role:', this.userRole);
+    });
+  }
+
+  isAdmin(): boolean {
+    return this.userRole === 'Admin';
   }
 
   ngOnDestroy(): void {

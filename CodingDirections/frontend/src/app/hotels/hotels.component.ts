@@ -13,13 +13,22 @@ export class HotelsComponent {
   filteredHotelsList: any = [];
   searchQuery: string = '';
   showAddHotelButton: boolean = true;
-  isAdmin: boolean = false;
+  userRole: string | undefined;
 
   constructor(private router: Router, private service: SharedService, private authService: AuthenticationService) {
     this.getHotelsList();
     this.authService.user.subscribe(user => {
-      this.isAdmin = user?.user_type === 'Admin'; // Check if user is admin
+      this.userRole = user?.user_type;
+      // console.log('User Role:', this.userRole);
     });
+  }
+
+  isAdmin(): boolean {
+    return this.userRole === 'Admin';
+  }
+
+  isAgent(): boolean {
+    return this.userRole === 'Agent' || this.userRole === 'Admin';
   }
 
   ngOnInit(): void {

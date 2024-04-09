@@ -1,16 +1,18 @@
 <div class="hotels">
+  <h2 (click)="navHotels()">Hotels</h2>
+</div>
+<div class="hotels" *ngIf="isAgent()">
   <!--For Search bar ,for filtering travel packages -->
   <label for="filter">Filter by:  </label>
   <input type="text" id="filter" name="filter" [(ngModel)]="searchQuery" (input)="getFilteredHotelsList()" placeholder="Search by name">
   <br><br>
-  <h2 (click)="navHotels()">Hotels</h2>
   <ul>
     <li *ngFor="let hotel of filteredHotelsList">
       <a routerLink="/hotels/{{ hotel.id }}">{{ hotel.name }}</a>
     </li>
   </ul>
-  <button *ngIf="showAddHotelButton" (click)="navHotels()">Add New Hotel</button>
+  <button *ngIf="showAddHotelButton && isAdmin()" (click)="navHotels()">Add New Hotel</button>
 </div>
 <br>
 <app-view-hotels *ngIf="showAddHotelButton"></app-view-hotels>
-<app-hotel-form></app-hotel-form>
+<app-hotel-form *ngIf="isAdmin()"></app-hotel-form>
