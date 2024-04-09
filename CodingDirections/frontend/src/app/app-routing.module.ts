@@ -23,18 +23,12 @@ import {ActivityFormComponent} from "./activities/activity-form/activity-form.co
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'flights/:id', component:FlightsComponent},
-  {path: 'flights/new', component: FlightFormComponent }, // Route for adding a new flight
-  {path: 'flights/:id/edit', component: FlightFormComponent },
                          {path : 'travelpackages', component : TravelpackagesComponent},
                          {path : 'travelpackages/:id', component : ViewTravelPackagesComponent},
                          {path : 'hotels', component : HotelsComponent},
                          {path:'hotels/:id', component:HotelsComponent},
-  {path: 'hotels/new', component: HotelFormComponent },
-  {path: 'hotels/:id/edit', component: HotelFormComponent },
                          {path : 'activities', component : ActivitiesComponent},
                          {path:'activities/:id', component:ActivitiesComponent},
-  {path: 'activities/new', component: ActivityFormComponent },
-  {path: 'activities/:id/edit', component: ActivityFormComponent },
                          {path:'booking-review',component:BookingsReviewComponent},
                          {path:'booking-review/:id',component:BookingsReviewComponent},
                          {path:'bookings-confirmation',component:BookingsConfirmationComponent},

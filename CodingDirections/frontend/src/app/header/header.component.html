@@ -5,14 +5,18 @@
       </div>
     <ul class="navbar-nav">
         <li class="nav-item">
-            <button routerLink="/profile" class="m-1 btn btn-light btn-outline-primary">Profile</button>
-            <button routerLink="/authentication" *ngIf="!isAuthenticated" class="m-1 btn btn-light btn-outline-primary">Login</button>
-            <button (click)="onLogout()" *ngIf="isAuthenticated"  class="m-1 btn btn-light btn-outline-primary">Logout</button>
-            <button routerLink="travelpackages" class="m-1 btn btn-light btn-outline-primary">Browse Travel Packages</button>
-            <button routerLink="bookings" class ="m-1 btn btn-light btn-outline-primary">My Bookings</button>
-            <button routerLink="addtravelpackage" class="m-1 btn btn-light btn-outline-primary">Create a Custom Package</button>
-           <button routerLink="notifications" class="m-1 btn btn-light btn-outline-primary">Notifications</button>
-            <button routerLink="reports" class="m-1 btn btn-light btn-outline-primary">Reports Dashboard</button>
+          <button routerLink="/profile" class="m-1 btn btn-light btn-outline-primary">Profile</button>
+          <button routerLink="/authentication" *ngIf="!isAuthenticated" class="m-1 btn btn-light btn-outline-primary">Login</button>
+          <button (click)="onLogout()" *ngIf="isAuthenticated"  class="m-1 btn btn-light btn-outline-primary">Logout</button>
+          <button routerLink="travelpackages" class="m-1 btn btn-light btn-outline-primary">Browse Travel Packages</button>
+          <button routerLink="bookings" class ="m-1 btn btn-light btn-outline-primary">My Bookings</button>
+          <button routerLink="addtravelpackage" class="m-1 btn btn-light btn-outline-primary">Create a Custom Package</button>
+          <button routerLink="notifications" class="m-1 btn btn-light btn-outline-primary">Notifications</button>
+          <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="reports">Reports Dashboard</button>
+          <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="flights">Flights</button>
+          <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="hotels">Hotels</button>
+          <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="activities">Activities</button>
+
 <!--            <app-reports></app-reports>-->
 <!--      <p> notifications count: {{notif.notificationsCount}}-->
     </ul>
