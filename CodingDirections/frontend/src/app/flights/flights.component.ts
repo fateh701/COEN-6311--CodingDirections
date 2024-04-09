@@ -14,7 +14,6 @@ export class FlightsComponent {
   flightsList: any = [];
   filteredFlightsList: any = [];
   searchQuery: string = '';
-  selectedFlight: any;
   showAddFlightButton: boolean = true;
   isAdmin: boolean = false;
 

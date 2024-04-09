@@ -1,8 +1,7 @@
-<div *ngIf="selectedActivity" class="view-activity">
+<div *ngIf="selectedActivity" class="view-activities">
   <h4>Activity Details</h4>
   <h5>Name: {{selectedActivity.name}} </h5>
   <h5>Location: {{selectedActivity.location}}</h5>
   <h5>Price: {{selectedActivity.price}}</h5>
-  <button (click)="editActivity(selectedActivity.id)">Edit</button>
   <button (click)="deleteActivity(selectedActivity.id)">Delete</button>
 </div>

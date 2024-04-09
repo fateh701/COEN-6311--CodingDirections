@@ -1,10 +1,12 @@
 <form (ngSubmit)="onSubmit()" #activityForm="ngForm">
+  <h3>{{ editing ? 'Edit Selected' : 'Add New' }} Activity</h3>
+  <button (click)="reloadPage()">↻</button>
   <div>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" [(ngModel)]="activity.name" required>
   </div>
   <div>
-    <label for="location">Departure City:</label>
+    <label for="location">Location:</label>
     <input type="text" id="location" name="location" [(ngModel)]="activity.location" required>
   </div>
   <div>

@@ -1,5 +1,6 @@
 <form (ngSubmit)="onSubmit()" #flightForm="ngForm">
   <h3>{{ editing ? 'Edit Selected' : 'Add New' }} Flight</h3>
+  <button (click)="reloadPage()">↻</button>
   <div>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" [(ngModel)]="flight.name" required>

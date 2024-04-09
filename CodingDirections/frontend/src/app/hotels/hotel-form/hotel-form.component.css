@@ -24,6 +24,10 @@ form input {
   border-radius: 5px;
 }
 
+form h3 {
+  margin-bottom: 10px;
+}
+
 form button {
   padding: 10px;
   background-color: #068aaf; /* Button background color */

@@ -1,16 +1,16 @@
-<div>
+<div class="hotels">
   <!--For Search bar ,for filtering travel packages -->
-  <input type="text" [(ngModel)]="searchQuery" (input)="getFilteredHotelsList()" placeholder="Search by name">
+  <label for="filter">Filter by:  </label>
+  <input type="text" id="filter" name="filter" [(ngModel)]="searchQuery" (input)="getFilteredHotelsList()" placeholder="Search by name">
+  <br><br>
   <h2 (click)="navHotels()">Hotels</h2>
   <ul>
-    <li *ngFor="let package of filteredHotelsList">
-      <a routerLink="/hotels/{{ package.id }}">{{ package.name }}</a>
+    <li *ngFor="let hotel of filteredHotelsList">
+      <a routerLink="/hotels/{{ hotel.id }}">{{ hotel.name }}</a>
     </li>
   </ul>
-  <button (click)="addNewHotel()">Add New Hotel</button>
-
+  <button *ngIf="showAddHotelButton" (click)="navHotels()">Add New Hotel</button>
 </div>
 <br>
-<app-view-hotels></app-view-hotels>
-
-<app-hotel-form *ngIf="showHotelForm" (cancel)="cancelAddNewHotel()"></app-hotel-form>
+<app-view-hotels *ngIf="showAddHotelButton"></app-view-hotels>
+<app-hotel-form></app-hotel-form>

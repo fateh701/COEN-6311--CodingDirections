@@ -39,4 +39,8 @@ export class ActivityFormComponent implements OnInit {
       });
     }
   }
+
+  reloadPage() {
+    window.location.reload();
+  }
 }
