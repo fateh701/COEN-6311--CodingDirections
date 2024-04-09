@@ -20,6 +20,7 @@ import {getSharedCompilationState} from "@angular-devkit/build-angular/src/tools
 import { BookingsComponent } from './bookings/bookings.component';
 import { BookingsReviewComponent } from './bookings/bookings-review/bookings-review.component';
 import { BookingsConfirmationComponent } from './bookings/bookings-confirmation/bookings-confirmation.component';
+import { BookingsPaymentComponent} from "./bookings/bookings-payment/bookings-payment.component";
 //import { AuthenticationComponent } from './authentication/authentication.component';
 import { AccountComponent } from './account/account.component';
 import { HeaderComponent } from './header/header.component';
@@ -47,6 +48,7 @@ import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
     BookingsComponent,
     BookingsReviewComponent,
     BookingsConfirmationComponent,
+    BookingsPaymentComponent,
     //AuthenticationComponent,
     AccountComponent,
     HeaderComponent,
