@@ -25,7 +25,7 @@ import { BookingsPaymentComponent} from "./bookings/bookings-payment/bookings-pa
 import { AccountComponent } from './account/account.component';
 import { HeaderComponent } from './header/header.component';
 import {AuthenticationModule} from "./authentication/authentication.module";
-import {tokenInterceptor } from "./token.interceptor";
+import { tokenInterceptor } from "./token.interceptor";
 import { BookingsAllComponent } from './bookings/bookings-all/bookings-all.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ReportsComponent } from './reports/reports.component';
