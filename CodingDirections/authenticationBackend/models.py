@@ -42,7 +42,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=200, unique=True)  # username should be unique,so only account per username
     first_name = models.CharField(max_length=200, blank=True)
     last_name = models.CharField(max_length=200, blank=True)
-    user_type = models.CharField(max_length=5, choices=UserType.choices, default=UserType.ADMIN)
+    user_type = models.CharField(max_length=5, choices=UserType.choices)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     objects = CustomUserManager()

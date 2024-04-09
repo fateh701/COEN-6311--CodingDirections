@@ -3,7 +3,8 @@ export interface singupModel{
     username: string,
     first_name: string,
     last_name: string,
-    password: string
+    password: string,
+    user_type: string
 }
 
 export interface AuthResData{

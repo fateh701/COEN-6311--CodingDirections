@@ -92,7 +92,7 @@
               <select class="form-control" id="user_type" formControlName="user_type">
                 <option *ngFor="let userType of userTypes" [value]="userType">{{ userType }}</option>
               </select>
-              <span class="help-block" style="color:#cd1414;" *ngIf="!signupForm.get('user_type')?.value && signupForm.get('user_type')?.touched">User Type is Required</span>
+              <span class="help-block" style="color:#cd1414;" *ngIf="signupForm.get('user_type')?.invalid && signupForm.get('user_type')?.touched">User Type is Required</span>
             </div>
 
 
