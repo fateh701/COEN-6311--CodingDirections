@@ -13,9 +13,9 @@
           <button routerLink="addtravelpackage" class="m-1 btn btn-light btn-outline-primary">Create a Custom Package</button>
           <button routerLink="notifications" class="m-1 btn btn-light btn-outline-primary">Notifications</button>
           <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="reports">Reports Dashboard</button>
-          <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="flights">Flights</button>
-          <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="hotels">Hotels</button>
-          <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="activities">Activities</button>
+          <button *ngIf="isAdmin()" class="m-1 btn btn-light btn-outline-primary" routerLink="flights">Flights</button>
+          <button *ngIf="isAdmin()" class="m-1 btn btn-light btn-outline-primary" routerLink="hotels">Hotels</button>
+          <button *ngIf="isAdmin()" class="m-1 btn btn-light btn-outline-primary" routerLink="activities">Activities</button>
 
 <!--            <app-reports></app-reports>-->
 <!--      <p> notifications count: {{notif.notificationsCount}}-->
