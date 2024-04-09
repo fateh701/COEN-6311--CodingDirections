@@ -1,22 +1,30 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {SharedService} from "../../shared.service";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-view-activities',
   templateUrl: './view-activities.component.html',
   styleUrl: './view-activities.component.css'
 })
-export class ViewActivitiesComponent {
+export class ViewActivitiesComponent implements OnDestroy {
   selectedActivity: any = [];
+  routeParamsSubscription: Subscription;
 
   constructor(private route: ActivatedRoute, private service: SharedService, private router: Router) {
-    this.getSelectedActivity();
+    this.routeParamsSubscription = this.route.paramMap.subscribe(params => {
+      this.getSelectedActivity();
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.routeParamsSubscription.unsubscribe(); // Unsubscribe to avoid memory leaks
   }
 
   getSelectedActivity = () => {
-    var flightId = this.route.snapshot.paramMap.get('id');
-    this.service.getSelectedActivity(flightId).subscribe(
+    var activityId = this.route.snapshot.paramMap.get('id');
+    this.service.getSelectedActivity(activityId).subscribe(
       data => {
         this.selectedActivity = data;
       },
@@ -24,10 +32,6 @@ export class ViewActivitiesComponent {
         console.log(error);
       },
     );
-  }
-
-  editActivity(id: number) {
-    this.router.navigate(['/activities', id, 'edit']);
   }
 
   deleteActivity(id: number) {

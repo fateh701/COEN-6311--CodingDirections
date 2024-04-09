@@ -39,4 +39,8 @@ export class HotelFormComponent implements OnInit {
       });
     }
   }
+
+  reloadPage() {
+    window.location.reload();
+  }
 }

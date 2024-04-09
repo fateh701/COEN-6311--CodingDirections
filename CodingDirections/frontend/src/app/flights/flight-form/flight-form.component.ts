@@ -39,4 +39,8 @@ export class FlightFormComponent implements OnInit {
       });
     }
   }
+
+  reloadPage() {
+    window.location.reload();
+  }
 }

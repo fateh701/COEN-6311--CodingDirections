@@ -14,34 +14,27 @@ export class FlightsComponent {
   flightsList: any = [];
   filteredFlightsList: any = [];
   searchQuery: string = '';
-  selectedFlight: any;
-  showFlightForm: boolean = false;
+  showAddFlightButton: boolean = true;
   isAdmin: boolean = false;
 
   constructor(private router: Router, private service: SharedService, private authService: AuthenticationService)  {//, private authComponent: AuthenticationComponent) {
     this.getFlightsList();
     this.authService.user.subscribe(user => {
       this.isAdmin = user?.user_type === 'Admin'; // Check if user is admin
-      console.log('Is Admin:', this.isAdmin);
     });
+  }
+
+  ngOnInit(): void {
+    // Check if the current URL is /flights
+    if (this.router.url === '/flights') {
+      this.showAddFlightButton = false;
+    } else {
+      this.showAddFlightButton = true;
+    }
   }
 
   navFlights() {
     this.router.navigate(['/flights']);
-  }
-  addNewFlight() {
-    if (!this.isAdmin) {
-      // Optionally, you can display a message or handle the action for non-admin users
-      console.log(this.isAdmin);
-      alert("Only admins can add new flights.");
-      return;
-    }
-    this.router.navigate(['/flights']);
-    this.showFlightForm = true;
-  }
-
-  cancelAddNewFlight() {
-    this.showFlightForm = false;
   }
 
   getFlightsList = () => {

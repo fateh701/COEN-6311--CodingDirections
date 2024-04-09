@@ -1,6 +1,8 @@
-<div>
+<div class="flights">
   <!--For Search bar ,for filtering travel packages -->
-  <input type="text" [(ngModel)]="searchQuery" (input)="getFilteredFlightsList()" placeholder="Search by name">
+  <label for="filter">Filter by:  </label>
+  <input type="text" id="filter" name="filter" [(ngModel)]="searchQuery" (input)="getFilteredFlightsList()" placeholder="Search by name">
+  <br><br>
   <h2 (click)="navFlights()">Flights</h2>
   <ul>
     <li *ngFor="let flight of filteredFlightsList">
@@ -12,11 +14,11 @@
 <!--    <button class="view-button" routerLink="/flights/{{ flight.id }}">View</button>-->
 <!--  </div>-->
 
-  <button (click)="addNewFlight()">Add New Flight</button>
+  <button *ngIf="showAddFlightButton" (click)="navFlights()">Add New Flight</button>
+
 
 </div>
 <br>
-<app-view></app-view>
-<app-view *ngIf="selectedFlight"></app-view>
-
-<app-flight-form *ngIf="showFlightForm" (cancel)="cancelAddNewFlight()"></app-flight-form>
+<app-view *ngIf="showAddFlightButton"></app-view>
+<!--<app-view *ngIf="selectedFlight"></app-view>-->
+<app-flight-form></app-flight-form>
