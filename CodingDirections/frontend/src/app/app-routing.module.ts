@@ -19,6 +19,7 @@ import { AccountComponent } from "./account/account.component";
 import { AuthenticationComponent } from "./authentication/authentication.component";
 import { FlightFormComponent } from './flights/flight-form/flight-form.component';
 import {ActivityFormComponent} from "./activities/activity-form/activity-form.component";
+import { AccountmanagementComponent } from "./accountmanagement/accountmanagement.component";
 
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
@@ -37,7 +38,8 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'profile',component:AccountComponent},
                          {path:'authentication',component:AuthenticationComponent},
                          {path:'bookings',component:BookingsAllComponent},
-                         {path:'reports',component:ReportsComponent}
+                         {path:'reports',component:ReportsComponent},
+                         {path:'accountmanagement',component:AccountmanagementComponent},
 
         ];
 

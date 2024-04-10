@@ -31,7 +31,9 @@ import { ReportsComponent } from './reports/reports.component';
 import { FlightFormComponent } from './flights/flight-form/flight-form.component';
 import { ActivityFormComponent } from './activities/activity-form/activity-form.component';
 import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
-
+import { AccountmanagementComponent } from './accountmanagement/accountmanagement.component';
+import {MatTable} from "@angular/material/table";
+import { MatTableModule } from '@angular/material/table';
 // @ts-ignore
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
     FlightFormComponent,
     ActivityFormComponent,
     HotelFormComponent,
+    AccountmanagementComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +68,8 @@ import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
     FormsModule,
     ReactiveFormsModule,
     AuthenticationModule,
+    MatTable,
+    MatTableModule,
   ],
   providers: [
     SharedService, //This is the service that will be used to make the HTTP requests to the server
