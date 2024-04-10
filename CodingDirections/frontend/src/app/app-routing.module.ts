@@ -17,7 +17,6 @@ import { ReportsComponent} from "./reports/reports.component";
 import { HeaderComponent } from "./header/header.component";
 import { AccountComponent } from "./account/account.component";
 import { AuthenticationComponent } from "./authentication/authentication.component";
-import { NotificationsComponent} from "./notifications/notifications.component";
 import { FlightFormComponent } from './flights/flight-form/flight-form.component';
 import {ActivityFormComponent} from "./activities/activity-form/activity-form.component";
 
@@ -38,7 +37,6 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'profile',component:AccountComponent},
                          {path:'authentication',component:AuthenticationComponent},
                          {path:'bookings',component:BookingsAllComponent},
-                         {path:'notifications',component:NotificationsComponent},
                          {path:'reports',component:ReportsComponent}
 
         ];

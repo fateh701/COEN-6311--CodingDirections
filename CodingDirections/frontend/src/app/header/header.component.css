@@ -100,3 +100,7 @@ body {
 .navbar-text {
   color: #fff; /* Text color */
 }
+
+.notification {
+  color: #000000
+}
