@@ -14,19 +14,38 @@ from rest_framework.authentication import TokenAuthentication
 import logging
 from rest_framework.views import APIView
 from django.http import HttpResponseBadRequest
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_POST, require_http_methods
 from channels.layers import get_channel_layer
 import json
 from django.template import RequestContext
 from asgiref.sync import async_to_sync
 #from ..notification_app.tasks import test_func
 from django.core.mail import send_mail
+# from authenticationBackend.forms import SignUpForm
+
 import sys
+import stripe
+
 sys.path.append("../..")
 
 
 logger = logging.getLogger(__name__) # creating  a logger instance
 
+stripe.api_key = 'sk_test_51P27GmRvQV0xL8xGvRm518DYriB1MfB7QRRORSvZrj6x9LIVugSDjYO2xvUp8pr64oDrDqD2M1gsOAdXp8BrrNiF00LOGn57GN'
+
+def create_payment(request):
+    if request.method == 'POST':
+        token = request.POST.get('token')
+        try:
+            charge = stripe.Charge.create(
+                amount=1000,  # Amount in cents
+                currency='usd',
+                description='Example charge',
+                source=token,
+            )
+            return JsonResponse({'success': True})
+        except stripe.error.CardError as e:
+            return JsonResponse({'success': False,'error':e})
 class FlightViewSet(viewsets.ModelViewSet):
     queryset = Flight.objects.all()
     serializer_class = FlightSerializer
@@ -235,6 +254,30 @@ def calculateRevenuePerPackage(TravelPackage,bookingCount):
     return revenuePerPackage
 
 
+
+def get_users_data(request):
+    users = User.objects.all()
+    data = [{'id': user.id, 'username': user.username,'FirstName':user.first_name,'LastName':user.last_name, 'email': user.email,'IsActive':user.is_active,'lastLogin':user.last_login} for user in users if user.user_type == 'User']
+    return JsonResponse(data, safe=False)
+
+#for User management from angular
+#it will work for both user and agent deletion as it simply delete based on id
+@require_http_methods(["DELETE"])
+def delete_user(request, user_id):
+    try:
+        user = User.objects.get(id=user_id)
+        user.delete()
+        return JsonResponse({'message': 'User deleted successfully'}, status=204)
+    except User.DoesNotExist:
+        return JsonResponse({'error': 'User not found'}, status=404)
+
+#for Agent management from angular
+def get_agents_data(request):
+    agents = User.objects.all()
+    data = [{'id': user.id, 'username': user.username,'FirstName':user.first_name,'LastName':user.last_name, 'email': user.email,'IsActive':user.is_active,'lastLogin':user.last_login} for user in agents if user.user_type == 'Agent']
+    return JsonResponse(data, safe=False)
+
+
 # class NotificationViewSet(viewsets.ModelViewSet):
 #     notificationlist = Notification.objects.all()
 
@@ -279,3 +322,16 @@ def calculateRevenuePerPackage(TravelPackage,bookingCount):
 #     except BookingDetails.DoesNotExist:
 #         return JsonResponse({'message': 'Not Found'})
 
+# def register(request):
+#     msg = None
+#     if request.method == 'POST':
+#         form = SignUpForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             msg = 'user created'
+#             return msg
+#         else:
+#             msg = 'form is not valid'
+#     else:
+#         form = SignUpForm()
+#     return render(request,'register.html', {'form': form, 'msg': msg})

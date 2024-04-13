@@ -8,6 +8,7 @@ import { ActivitiesComponent } from "./activities/activities.component";
 import { ViewTravelPackagesComponent } from "./travelpackages/view-travel-packages/view-travel-packages.component";
 import { BookingsComponent} from "./bookings/bookings.component";
 import { BookingsReviewComponent} from "./bookings/bookings-review/bookings-review.component";
+import { BookingsPaymentComponent} from "./bookings/bookings-payment/bookings-payment.component";
 import { BookingsConfirmationComponent} from "./bookings/bookings-confirmation/bookings-confirmation.component";
 import { BookingsAllComponent } from "./bookings/bookings-all/bookings-all.component";
 import { ReportsComponent} from "./reports/reports.component";
@@ -16,9 +17,9 @@ import { ReportsComponent} from "./reports/reports.component";
 import { HeaderComponent } from "./header/header.component";
 import { AccountComponent } from "./account/account.component";
 import { AuthenticationComponent } from "./authentication/authentication.component";
-import { NotificationsComponent} from "./notifications/notifications.component";
 import { FlightFormComponent } from './flights/flight-form/flight-form.component';
 import {ActivityFormComponent} from "./activities/activity-form/activity-form.component";
+import { AccountmanagementComponent } from "./accountmanagement/accountmanagement.component";
 
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
@@ -32,12 +33,13 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'booking-review',component:BookingsReviewComponent},
                          {path:'booking-review/:id',component:BookingsReviewComponent},
                          {path:'bookings-confirmation',component:BookingsConfirmationComponent},
+                         {path:'bookings-payment',component:BookingsPaymentComponent},
                          {path:'bookings-confirmation/:id',component:BookingsConfirmationComponent},
                          {path:'profile',component:AccountComponent},
                          {path:'authentication',component:AuthenticationComponent},
                          {path:'bookings',component:BookingsAllComponent},
-                         {path:'notifications',component:NotificationsComponent},
-                         {path:'reports',component:ReportsComponent}
+                         {path:'reports',component:ReportsComponent},
+                         {path:'accountmanagement',component:AccountmanagementComponent},
 
         ];
 

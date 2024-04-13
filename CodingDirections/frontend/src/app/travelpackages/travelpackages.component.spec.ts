@@ -11,7 +11,7 @@ describe('TravelpackagesComponent', () => {
       declarations: [TravelpackagesComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(TravelpackagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,3 +21,4 @@ describe('TravelpackagesComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

@@ -46,5 +46,10 @@ urlpatterns = [
     #path(r'home/',views.notificationhome,name='home'), #for notification
     #path(r'celery/',views.celerytest,name='celery'), #for testing celery
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page
+    path('users/',views.get_users_data,name='users'), #for user details
+    path('users/<int:user_id>/', views.delete_user, name='delete_user'),
+    path('agents/',views.get_agents_data,name='agents'), #for agent details
+    path('agents/<int:user_id>/', views.delete_user, name='delete_agent'),
     #path('delete-booking/', views.delete_booking, name='delete_booking'),  #for deleting booking
+    #path('login/',views.register,name='login'), #for login
 ]
