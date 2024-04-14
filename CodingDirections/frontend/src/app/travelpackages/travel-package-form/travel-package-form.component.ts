@@ -76,6 +76,7 @@ export class TravelPackageFormComponent implements OnInit {
         .subscribe(
           response => {
             console.log('Travel package updated:', response);
+            this.router.navigate(['/travelpackages']);
             // Handle success, e.g., show a success message to the user
           },
           error => {
@@ -89,6 +90,8 @@ export class TravelPackageFormComponent implements OnInit {
         .subscribe(
           response => {
             console.log('Travel package created:', response);
+            location.reload();
+            console.log('navigate success');
             // Handle success, e.g., show a success message to the user
           },
           error => {
