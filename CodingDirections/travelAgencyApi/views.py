@@ -317,32 +317,44 @@ class CustomerBookingsViewSet(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-
-
-# for travelpackage vs booking count report
+#for travel package vs booking count report
 class TravelPackageVsBookingCountReportViewData(APIView):
     def get(self, request):
         start_date = request.query_params.get('startDate')
         end_date = request.query_params.get('endDate')
+        booking_counts = BookingDetails.objects.none()
+        booking_counts_custom = BookingDetailsCustomPackage.objects.none()
+
         if start_date is None or end_date is None:
             booking_counts = BookingDetails.objects.values('travel_package', 'created_date').annotate(
+                booking_count=Count('customer'))
+            booking_counts_custom = BookingDetailsCustomPackage.objects.values('custom_travel_package', 'created_date').annotate(
                 booking_count=Count('customer'))
         else:
             booking_counts = BookingDetails.objects.filter(created_date__range=[start_date, end_date]).values(
                 'travel_package', 'created_date').annotate(booking_count=Count('customer'))
+            booking_counts_custom = BookingDetailsCustomPackage.objects.filter(created_date__range=[start_date, end_date]).values(
+                'custom_travel_package', 'created_date').annotate(booking_count=Count('customer'))
 
-        # #if we want to get travel package name from booking then
-        # for entry in booking_counts:
-        #     id = entry['travel_package']
-        #     name = TravelPackage.objects.get(pk=id).name
-        #     print(name)
+        # Merge the querysets
+        booking_counts = list(booking_counts) + list(booking_counts_custom)
+        data=[]
+        for entry in booking_counts:
+            if 'travel_package' in entry:
+                entry['travel_package_name'] = TravelPackage.objects.get(pk=entry['travel_package']).name
+            else:
+                entry['travel_package_name'] = CustomTravelPackage.objects.get(pk=entry['custom_travel_package']).name
 
-        # we will pass id,travelpackage name and total count of ooking ,so this is report for package Vs Booking count
-        data = [{'travel_package_id': entry['travel_package'],
-                 'created_date': entry['created_date'],  # for date of booking
-                 'travel_package_name': TravelPackage.objects.get(pk=entry['travel_package']).name,
-                 'booking_count': entry['booking_count']} for entry in booking_counts]
+            data.append({
+                'travel_package_id': entry['travel_package'] if 'travel_package' in entry else entry['custom_travel_package'],
+                'created_date': entry['created_date'],
+                'travel_package_name': entry['travel_package_name'],
+                'booking_count': entry['booking_count']
+            })
+
+
         return Response(data)
+
 
 
 # for Revenue Report Chart
@@ -350,25 +362,48 @@ class RevenueReportViewData(APIView):
     def get(self, request):
         start_date = request.query_params.get('startDate')
         end_date = request.query_params.get('endDate')
+        booking_counts = BookingDetails.objects.none()
+        booking_counts_custom = BookingDetailsCustomPackage.objects.none()
+
         if start_date is None or end_date is None:
             booking_counts = BookingDetails.objects.values('travel_package', 'created_date').annotate(
+                booking_count=Count('customer'))
+            booking_counts_custom = BookingDetailsCustomPackage.objects.values('custom_travel_package',
+                                                                               'created_date').annotate(
                 booking_count=Count('customer'))
         else:
             booking_counts = BookingDetails.objects.filter(created_date__range=[start_date, end_date]).values(
                 'travel_package', 'created_date').annotate(booking_count=Count('customer'))
+            booking_counts_custom = BookingDetailsCustomPackage.objects.filter(
+                created_date__range=[start_date, end_date]).values(
+                'custom_travel_package', 'created_date').annotate(booking_count=Count('customer'))
 
-        # we want travel package name and its revenue generated so will loop through above query data and calculate revenue for each package
-        # we will pass Each Travel Package object and its booking count to calculateRevenuePerPackage function
-        data = [{'travel_package_name': TravelPackage.objects.get(pk=entry['travel_package']).name,
-                 'created_date': entry['created_date'],  # for date of booking
-                 'revenue': calculateRevenuePerPackage(TravelPackage.objects.get(pk=entry['travel_package']),
-                                                       entry['booking_count'])} for entry in booking_counts]
+        # Merge the querysets
+        booking_counts = list(booking_counts) + list(booking_counts_custom)
+        data = []
+        for entry in booking_counts:
+            if 'travel_package' in entry:
+                entry['travel_package_name'] = TravelPackage.objects.get(pk=entry['travel_package']).name
+            else:
+                entry['travel_package_name'] = CustomTravelPackage.objects.get(pk=entry['custom_travel_package']).name
+
+            # we want travel package name and its revenue generated so will loop through above query data and calculate revenue for each package
+            # we will pass Each Travel Package object and its booking count to calculateRevenuePerPackage function
+            data.append({
+                'travel_package_id': entry['travel_package'] if 'travel_package' in entry else entry['custom_travel_package'],
+                'created_date': entry['created_date'],
+                'travel_package_name': entry['travel_package_name'],
+                'revenue': calculateRevenuePerPackage(TravelPackage.objects.get(
+                    pk=entry['travel_package']).price if 'travel_package' in entry else CustomTravelPackage.objects.get(
+                    pk=entry['custom_travel_package']).price, entry['booking_count'])
+                })
+
         return Response(data)
 
 
 # it will take Travel Package,and how many times it was booked and calculate Revenue for that package
-def calculateRevenuePerPackage(TravelPackage, bookingCount):
-    revenuePerPackage = TravelPackage.price * bookingCount
+def calculateRevenuePerPackage(price, bookingCount):
+    revenuePerPackage = price * bookingCount
     return revenuePerPackage
 
 
