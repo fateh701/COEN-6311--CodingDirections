@@ -52,7 +52,7 @@ export class CustomTravelPackageFormComponent implements OnInit {
     const userInfo = JSON.parse(localStorage.getItem('userData')!);
     // @ts-ignore
     console.log("current user info:",userInfo);
-    this.currentUser = userInfo;
+    this.currentUser = userInfo.id;
   }
 
   fetchCustomTravelPackageDetails(id: number) {
@@ -67,6 +67,7 @@ export class CustomTravelPackageFormComponent implements OnInit {
           this.selectedHotels = response.hotels;
           this.selectedActivities = response.activities;
           this.price = response.price;
+          // this.currentUser = response.created_by;
         },
         error => {
           console.error('Error fetching custom travel package details:', error);
@@ -82,7 +83,7 @@ export class CustomTravelPackageFormComponent implements OnInit {
       hotels: this.selectedHotels,
       activities: this.selectedActivities,
       price: this.price,
-      // created_by: this.currentUser.id
+      // created_by: this.currentUser
     };
     console.log('Payload:', payload);
     if (this.editing && this.customtravelPackageId) {
@@ -105,7 +106,7 @@ export class CustomTravelPackageFormComponent implements OnInit {
         .subscribe(
           response => {
             console.log('Custom Travel package created:', response);
-            location.reload();
+            // location.reload();
             console.log('navigate success');
             // Handle success, e.g., show a success message to the user
           },
