@@ -30,17 +30,19 @@ export class FlightFormComponent implements OnInit {
   onSubmit() {
     if (this.editing) {
       this.service.editFlight(this.flight.id, this.flight).subscribe(() => {
-        this.router.navigate(['/flights']);
+        console.log("edited!")
+        location.reload();
+
       });
     } else {
       this.service.addFlight(this.flight).subscribe(() => {
-        this.router.navigate(['/flights']);
         console.log("added!")
+        location.reload();
       });
     }
   }
 
   reloadPage() {
-    window.location.reload();
+    location.reload();
   }
 }

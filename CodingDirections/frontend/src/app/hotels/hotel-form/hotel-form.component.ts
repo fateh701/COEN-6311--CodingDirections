@@ -30,17 +30,18 @@ export class HotelFormComponent implements OnInit {
   onSubmit() {
     if (this.editing) {
       this.service.editHotel(this.hotel.id, this.hotel).subscribe(() => {
-        this.router.navigate(['/hotels']);
+        console.log("edited!");
+        location.reload();
       });
     } else {
       this.service.addHotel(this.hotel).subscribe(() => {
-        this.router.navigate(['/hotels']);
-        console.log("added!")
+        console.log("added!");
+        location.reload();
       });
     }
   }
 
   reloadPage() {
-    window.location.reload();
+    location.reload();
   }
 }

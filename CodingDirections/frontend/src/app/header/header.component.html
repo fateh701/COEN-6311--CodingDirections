@@ -10,7 +10,7 @@
           <button (click)="onLogout()" *ngIf="isAuthenticated"  class="m-1 btn btn-light btn-outline-primary">Logout</button>
           <button routerLink="travelpackages" class="m-1 btn btn-light btn-outline-primary">Browse Travel Packages</button>
           <button *ngIf="user?.user_type === 'User'" routerLink="bookings" class ="m-1 btn btn-light btn-outline-primary">My Bookings</button>
-          <button routerLink="addtravelpackage" class="m-1 btn btn-light btn-outline-primary">Create a Custom Package</button>
+          <button routerLink="customtravelpackages" class="m-1 btn btn-light btn-outline-primary">Browse Custom Packages</button>
           <button *ngIf="isAdmin()" class="m-1 btn btn-light btn-outline-primary" routerLink="reports">Reports Dashboard</button>
           <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="flights">Flights</button>
           <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="hotels">Hotels</button>

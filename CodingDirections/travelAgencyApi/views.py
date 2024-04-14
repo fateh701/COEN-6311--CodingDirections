@@ -2,9 +2,8 @@ from django.db.models import Count
 from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import viewsets, status
-from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent, Modification
-from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, \
-    BookingDetailsSerializer, BookingAgentSerializer
+from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent, Modification, CustomTravelPackage
+from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer, CustomTravelPackageSerializer
 from django.shortcuts import get_object_or_404, render, HttpResponse
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 # from django.contrib.auth.models import User
@@ -102,6 +101,16 @@ class TravelPackageViewSet(viewsets.ModelViewSet):
     #     TravelPackage.save()
     #     return JsonResponse({'message': 'TravelPackage cancelled'})
 
+class CustomTravelPackageViewSet(viewsets.ModelViewSet):
+    queryset = CustomTravelPackage.objects.all()
+    serializer_class = CustomTravelPackageSerializer
+
+    def get_queryset(self):
+        queryset = CustomTravelPackage.objects.all()
+        search_query = self.request.query_params.get('search')
+        if search_query:
+            queryset = queryset.filter(name__icontains=search_query)
+        return queryset
 
 class BookingAgentViewSet(viewsets.ModelViewSet):
     queryset = BookingAgent.objects.all()
@@ -424,6 +433,82 @@ def update_travel_package(request, pk):
 
         # Serialize the updated travel package
         serializer = TravelPackageSerializer(travel_package)
+
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    else:
+        return Response({'error': 'Method not allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
+
+@api_view(['POST'])
+def create_custom_travel_package(request):
+    if request.method == 'POST':
+        # Create a new custom travel package
+
+        # Extract data from the request
+        name = request.data.get('name')
+        flights_ids = request.data.get('flights', [])
+        hotels_ids = request.data.get('hotels', [])
+        activities_ids = request.data.get('activities', [])
+        price = request.data.get('price', 0)  # Default price if not provided
+
+        # Check if all required fields are present
+        if not name or not flights_ids or not hotels_ids:
+            return Response({'error': 'Name, flights, and hotels are required fields'},
+                            status=status.HTTP_400_BAD_REQUEST)
+
+        # Fetch flights, hotels, and activities
+        flights = Flight.objects.filter(id__in=flights_ids)
+        hotels = Hotel.objects.filter(id__in=hotels_ids)
+        activities = Activity.objects.filter(id__in=activities_ids)
+
+        # Create the custom travel package
+        custom_travel_package = CustomTravelPackage.objects.create(name=name, price=price)
+        custom_travel_package.flights.set(flights)
+        custom_travel_package.hotels.set(hotels)
+        custom_travel_package.activities.set(activities)
+
+        # Serialize the created custom travel package
+        serializer = CustomTravelPackageSerializer(custom_travel_package)
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    else:
+        return Response({'error': 'Method not allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
+
+@api_view(['PUT'])
+def update_custom_travel_package(request, pk):
+    if request.method == 'PUT':
+        try:
+            custom_travel_package = CustomTravelPackage.objects.get(pk=pk)
+        except CustomTravelPackage.DoesNotExist:
+            return Response({'error': 'Custom Travel package does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+            # Extract data from the request
+        name = request.data.get('name')
+        flights_ids = request.data.get('flights', [])
+        hotels_ids = request.data.get('hotels', [])
+        activities_ids = request.data.get('activities', [])
+        price = request.data.get('price', custom_travel_package.price)  # Use current price if not provided
+
+        # Update the custom travel package
+        custom_travel_package.name = name
+        custom_travel_package.price = price
+        custom_travel_package.flights.clear()
+        custom_travel_package.hotels.clear()
+        custom_travel_package.activities.clear()
+        custom_travel_package.save()
+
+        # Update flights, hotels, and activities
+        flights = Flight.objects.filter(id__in=flights_ids)
+        hotels = Hotel.objects.filter(id__in=hotels_ids)
+        activities = Activity.objects.filter(id__in=activities_ids)
+
+        custom_travel_package.flights.set(flights)
+        custom_travel_package.hotels.set(hotels)
+        custom_travel_package.activities.set(activities)
+
+        # Serialize the updated custom travel package
+        serializer = CustomTravelPackageSerializer(custom_travel_package)
 
         return Response(serializer.data, status=status.HTTP_200_OK)
     else:

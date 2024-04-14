@@ -64,7 +64,23 @@ class TravelPackage(models.Model):
 
     class Meta:
       ordering = ['name']
-  
+
+
+class CustomTravelPackage(models.Model):
+    name = models.CharField(max_length=100)
+    flights = models.ManyToManyField(Flight)
+    hotels = models.ManyToManyField(Hotel)
+    activities = models.ManyToManyField(Activity, blank=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=1122.00)
+    # created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['name']
+
+
 # class Notification(models.Model):
 #     #Notification = ('info', 'Information'),
 #     recepient = models.ForeignKey(User, on_delete=models.CASCADE,default=2)
@@ -85,6 +101,7 @@ class BookingAgent(models.Model):
     class Meta:
         ordering = ['user']
 
+
 class BookingDetails(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
     travel_package = models.ManyToManyField(TravelPackage)
@@ -98,11 +115,12 @@ class BookingDetails(models.Model):
     class Meta:
         ordering = ['customer']
 
-#Patch by Prinkal: 27-2-2024
+
 class Modification(models.Model):
     Client = models.CharField(max_length=50)
     request = models.TextField()
     Request_creation_Date_Time= models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return self.Client
 

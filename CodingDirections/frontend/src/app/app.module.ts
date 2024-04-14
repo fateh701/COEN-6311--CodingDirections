@@ -35,6 +35,9 @@ import { AccountmanagementComponent } from './accountmanagement/accountmanagemen
 import {MatTable} from "@angular/material/table";
 import { MatTableModule } from '@angular/material/table';
 import { TravelPackageFormComponent } from './travelpackages/travel-package-form/travel-package-form.component';
+import { CustomTravelpackagesComponent } from './customtravelpackages/customtravelpackages.component';
+import { CustomTravelPackageFormComponent } from './customtravelpackages/custom-travel-package-form/custom-travel-package-form.component';
+import { ViewCustomTravelPackagesComponent } from './customtravelpackages/view-custom-travel-packages/view-custom-travel-packages.component';
 // @ts-ignore
 @NgModule({
   declarations: [
@@ -61,6 +64,9 @@ import { TravelPackageFormComponent } from './travelpackages/travel-package-form
     HotelFormComponent,
     AccountmanagementComponent,
     TravelPackageFormComponent,
+    CustomTravelpackagesComponent,
+    CustomTravelPackageFormComponent,
+    ViewCustomTravelPackagesComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,4 +86,5 @@ import { TravelPackageFormComponent } from './travelpackages/travel-package-form
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

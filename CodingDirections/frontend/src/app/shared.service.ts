@@ -19,22 +19,14 @@ export class SharedService {
   constructor(private http:HttpClient,private authService:AuthService) {
     // this.webSocketSubject = webSocket('ws://localhost:8000/ws/notify/'); //for Realtime notifications setup
 
-   }
-
-  // getTravelPackagesList(): Observable<any[]> {
-  //   return this.http.get<any[]>(`${this.baseAPIUrl}/travel-packages/`, { headers: this.httpHeaders });
-  // }
-
-  editTravelPackage(id: number, data: any): Observable<any> {
-    return this.http.put<any>(`${this.baseAPIUrl}/travel-packages/${id}/`, data, { headers: this.httpHeaders });
   }
 
   deleteTravelPackage(id: number): Observable<any> {
     return this.http.delete<any>(`${this.baseAPIUrl}/travel-packages/${id}/`, { headers: this.httpHeaders });
   }
 
-  addTravelPackage(data: any): Observable<any> {
-    return this.http.post<any>(`${this.baseAPIUrl}/travel-packages/`, data, { headers: this.httpHeaders });
+  deleteCustomTravelPackage(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.baseAPIUrl}/custom-travel-packages/${id}/`, { headers: this.httpHeaders });
   }
   getFlightsList():Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/flights/',{headers:this.httpHeaders});
@@ -64,6 +56,14 @@ export class SharedService {
 
   getSelectedTravelpackage(id:any):Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/travel-packages/' + id + '/',{headers:this.httpHeaders});
+  }
+
+  getCustomTravelpackagesList():Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl + '/custom-travel-packages/',{headers:this.httpHeaders});
+  }
+
+  getSelectedCustomTravelpackage(id:any):Observable<any[]>{
+    return this.http.get<any[]>(this.baseAPIUrl + '/custom-travel-packages/' + id + '/',{headers:this.httpHeaders});
   }
 
   getHotelsList():Observable<any[]>{
@@ -176,7 +176,9 @@ export class SharedService {
     return this.http.delete<void>(`${this.baseAPIUrl}/agents/${agentId}/`, { headers: this.httpHeaders });
   }
 
-
+  // getUserById(userId: number): Observable<any> {
+  //   return this.http.get<any>(`${this.baseAPIUrl}/users/${userId}/`);
+  // }
 
 }
 
