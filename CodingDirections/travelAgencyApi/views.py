@@ -2,8 +2,8 @@ from django.db.models import Count
 from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import viewsets, status
-from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent, Modification, CustomTravelPackage
-from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer, CustomTravelPackageSerializer
+from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent, Modification, CustomTravelPackage,BookingDetailsCustomPackage
+from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer, CustomTravelPackageSerializer, BookingDetailsCustomPackageSerializer
 from django.shortcuts import get_object_or_404, render, HttpResponse
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 # from django.contrib.auth.models import User
@@ -136,7 +136,7 @@ class BookingDetailsViewSet(viewsets.ModelViewSet):
         return queryset
 
 
-# creating a  function to create booking using only travel package id as input
+# creating a  function to create booking using only travel package id and user id as input
 @api_view(['POST'])
 # @authentication_classes([TokenAuthentication]) #15-3
 # @permission_classes([IsAuthenticated]) #15-3
@@ -161,7 +161,7 @@ def create_booking(request):
                 return Response({'error': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
             travel_package = get_object_or_404(TravelPackage, id=travel_package_id)
-            booking = BookingDetails.objects.create(customer=user, payment_status_flag=False, agent=bookingAgent)
+            booking = BookingDetails.objects.create(customer=user, payment_status_flag=True, agent=bookingAgent)
             booking.travel_package.set([travel_package])
             serializer: BookingDetailsSerializer = BookingDetailsSerializer(booking)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -170,6 +170,38 @@ def create_booking(request):
     # to test whether create booking page works or not uncomment below two line,you will get user info who is logged in.
     # elif request.method=='GET':
     #     return profile_view(request)
+
+# creating a  function to create booking  for custom packageusing only travel package id as input
+@api_view(['POST'])
+# @authentication_classes([TokenAuthentication]) #15-3
+# @permission_classes([IsAuthenticated]) #15-3
+def create_customPackage_booking(request):
+    if request.method == 'POST':
+        # Assuming the request contains the travel package ID
+        travel_package_id = request.data.get('travel_package_id')
+
+        # pass here user id so that we can get the user object and use it to create booking
+        try:
+            travel_package = CustomTravelPackage.objects.get(pk=travel_package_id)
+            # return Response({'message': 'Travel package exists', 'travel_package': travel_package.name})
+            try:
+                # user = request.user
+                user = User.objects.get(pk=request.data.get('user_id'))  # 18-3
+                logger.info('Booking to be created for user %s with custom travel package %s', user.id, travel_package_id)
+                customer_location = "canada"  # get the location of the customer from the request send from frontend ,pick location from user profiel directly
+                bookingAgent = BookingAgent.objects.filter(location=customer_location).first()
+                if bookingAgent is None:
+                    return Response({'error': 'Booking agent not found'}, status=status.HTTP_400_BAD_REQUEST)
+            except User.DoesNotExist:
+                return Response({'error': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+            cust_travel_package = get_object_or_404(CustomTravelPackage, id=travel_package_id)
+            booking = BookingDetailsCustomPackage.objects.create(customer=user, payment_status_flag=True, agent=bookingAgent)
+            booking.custom_travel_package.set([cust_travel_package])
+            serializer: BookingDetailsCustomPackageSerializer = BookingDetailsCustomPackageSerializer(booking)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        except CustomTravelPackage.DoesNotExist:
+            return Response({'error': 'Custom Travel package does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
 
 @api_view(['GET'])

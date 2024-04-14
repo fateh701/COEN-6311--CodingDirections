@@ -11,7 +11,7 @@ import {SharedService} from "../shared.service";
   styleUrl: './accountmanagement.component.css'
 })
 export class AccountmanagementComponent {
-  displayedColumns: string[] = ['id', 'username', 'email', 'user_type', 'actions'];
+  displayedColumns: string[] = ['id', 'username', 'email', 'actions'];
   users: User[] = [];
   agents: User[] = [];
   searchTerm: string =''; //for search functionality based on username
