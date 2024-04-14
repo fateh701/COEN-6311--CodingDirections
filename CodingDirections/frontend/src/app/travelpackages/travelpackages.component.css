@@ -1,7 +1,22 @@
 .search-bar {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 65%; /* Adjust as needed */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Container background color */
+  border: 1px solid #ddd; /* Container border */
+  border-radius: 5px; /* Container border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Container box shadow */
+}
+
+.search-bar label {
+  margin-right: 10px;
+}
+
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 /* Container-like structure for travel packages */
@@ -35,13 +50,30 @@
   background-color: #025067;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  margin-right: 5px; /* Add margin to the right side of the "View" button */
+}
+
+.delete-button {
+  background-color: #ff0000; /* Example background color for delete button */
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 5px; /* Add margin to the left side of the "Delete" button */
 }
 
 .view-button:hover {
   background-color: #068aaf;
+}
+
+.delete-button:hover {
+  background-color: #ff4444; /* Example hover background color for delete button */
 }

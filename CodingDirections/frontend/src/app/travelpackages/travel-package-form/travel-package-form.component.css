@@ -30,7 +30,7 @@ form h3 {
 
 form button {
   padding: 10px;
-  background-color: #068aaf; /* Button background color */
+  background-color: #025067; /* Button background color */
   color: #fff; /* Button text color */
   text-align: center;
   text-decoration: none;
@@ -39,5 +39,5 @@ form button {
 }
 
 form button:hover {
-  background-color: #025067;
+  background-color: #068aaf;
 }

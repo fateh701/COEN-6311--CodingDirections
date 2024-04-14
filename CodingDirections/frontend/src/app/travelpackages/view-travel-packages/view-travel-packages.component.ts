@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SharedService } from "../../shared.service";
 import { ActivatedRoute } from '@angular/router';
+import {AuthenticationService} from "../../authentication/authentication.service";
 
 @Component({
   selector: 'app-view-travel-packages',
@@ -9,12 +10,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewTravelPackagesComponent {
   selectedPackage: any;
-  constructor(private route: ActivatedRoute, private service: SharedService) {
-    this.getSelectedPackage()
+  userRole: string | undefined;
+  constructor(private route: ActivatedRoute, private service: SharedService, private authService: AuthenticationService) {
+    this.getSelectedPackage();
+    this.authService.user.subscribe(user => {
+      this.userRole = user?.user_type;
+      // console.log('User Role:', this.userRole);
+    });
+  }
+
+  isAdmin(): boolean {
+    return this.userRole === 'Admin';
   }
 
   getSelectedPackage() {
-
     //get package detail for particular package id only
     const packageId = this.route.snapshot.paramMap.get('id');
     this.service.getSelectedTravelpackage(packageId).subscribe(
@@ -26,6 +35,4 @@ export class ViewTravelPackagesComponent {
       }
     )
   }
-
-
 }

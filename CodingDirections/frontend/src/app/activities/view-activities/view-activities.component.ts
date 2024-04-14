@@ -57,5 +57,4 @@ export class ViewActivitiesComponent implements OnDestroy {
       );
     }
   }
-
 }
