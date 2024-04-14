@@ -1,0 +1,42 @@
+<div *ngIf="selectedPackage">
+    <div class="labelheader">
+      <h1>viewing Custom Travel Package: {{ selectedPackage.name }} </h1>
+    </div>
+  <div>
+    <div class="labelheader">
+      <h3>Flights</h3>
+    </div>
+    <div class="item-container" *ngFor="let flight of selectedPackage.flights">
+      <p>{{ flight.name }}</p>
+      <button class="view-button" routerLink="/flights/{{ flight.id }}">View</button>
+    </div>
+  </div>
+  <div>
+    <div class="labelheader">
+      <h3>Hotels</h3>
+    </div>
+    <div class="item-container" *ngFor="let hotel of selectedPackage.hotels">
+      <p>{{ hotel.name }}</p>
+      <button class="view-button" routerLink="/hotels/{{ hotel.id }}">View</button>
+    </div>
+  </div>
+  <div>
+    <div class="labelheader">
+      <h3>Activities</h3>
+    </div>
+    <div class="item-container" *ngFor="let activity of selectedPackage.activities">
+      <p>{{ activity.name }}</p>
+      <button class="view-button" routerLink="/activities/{{ activity.id }}">View</button>
+    </div>
+  </div>
+  <div>
+    <div class="labelheader">
+      <h3>Price</h3>
+    </div>
+    <div class="item-container">
+      <h6>{{ selectedPackage.price }}</h6>
+    </div>
+  </div>
+</div>
+<app-bookings></app-bookings>
+<app-custom-travel-package-form *ngIf="isAdmin()"></app-custom-travel-package-form>

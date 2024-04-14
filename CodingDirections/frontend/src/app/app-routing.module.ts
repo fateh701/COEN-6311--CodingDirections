@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FlightsComponent } from "./flights/flights.component";
 import { TravelpackagesComponent } from "./travelpackages/travelpackages.component";
+import { CustomTravelpackagesComponent } from "./customtravelpackages/customtravelpackages.component";
 import { HotelsComponent } from "./hotels/hotels.component";
 import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
 import { ActivitiesComponent } from "./activities/activities.component";
 import { ViewTravelPackagesComponent } from "./travelpackages/view-travel-packages/view-travel-packages.component";
+import { ViewCustomTravelPackagesComponent } from "./customtravelpackages/view-custom-travel-packages/view-custom-travel-packages.component";
 import { BookingsComponent} from "./bookings/bookings.component";
 import { BookingsReviewComponent} from "./bookings/bookings-review/bookings-review.component";
 import { BookingsPaymentComponent} from "./bookings/bookings-payment/bookings-payment.component";
@@ -26,6 +28,8 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'flights/:id', component:FlightsComponent},
                          {path : 'travelpackages', component : TravelpackagesComponent},
                          {path : 'travelpackages/:id', component : ViewTravelPackagesComponent},
+                         {path : 'customtravelpackages', component : CustomTravelpackagesComponent},
+                         {path : 'customtravelpackages/:id', component : ViewCustomTravelPackagesComponent},
                          {path : 'hotels', component : HotelsComponent},
                          {path:'hotels/:id', component:HotelsComponent},
                          {path : 'activities', component : ActivitiesComponent},

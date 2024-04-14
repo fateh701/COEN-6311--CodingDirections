@@ -25,6 +25,7 @@ router.register(r'flights', views.FlightViewSet)
 router.register(r'hotels', views.HotelViewSet)
 router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
+router.register(r'custom-travel-packages', views.CustomTravelPackageViewSet)
 router.register(r'booking-details', views.BookingDetailsViewSet) #get all the bookings made till now
 router.register(r'booking-agent', views.BookingAgentViewSet)
 #add url for create_booking method
@@ -39,6 +40,8 @@ urlpatterns = [
     path(r'create-booking/',views.create_booking,name='create-booking'), #add booking detail in form of json,mainly used for frontend,dont remove
     path('create-travel-package/', views.create_travel_package, name='create_travel_package'),
     path('update-travel-package/<int:pk>/', views.update_travel_package, name='update_travel_package'),
+    path('create-custom-travel-package/', views.create_custom_travel_package, name='create_custom_travel_package'),
+    path('update-custom-travel-package/<int:pk>/', views.update_custom_travel_package, name='update_custom_travel_package'),
     #path(r'current-user-info/',views.current_user_info,name='current-user-info'), #for current user info
     path(r'profile/',views.profile_view,name='profile'), #for current user info
     path(r'tpvscount/',views.TravelPackageVsBookingCountReportViewData.as_view(),name='reports'),

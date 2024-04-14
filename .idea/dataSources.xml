@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="f313cf48-a180-4809-9f47-c6d389f38eaf">
+    <data-source source="LOCAL" name="db" uuid="fa3e8b85-145b-40cd-9769-f780f4a0267f">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\p3pio\PycharmProjects\latest\CodingDirections\db.sqlite3</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="db [2]" uuid="70f97661-f7fa-426a-818f-a8b3bf266629">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\p3pio\PycharmProjects\pullingFromMaster\CodingDirections\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ASUS\Desktop\Concordia\Semester 1 (Winter 24)\COEN 6311\COEN-6311--CodingDirections\CodingDirections\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
