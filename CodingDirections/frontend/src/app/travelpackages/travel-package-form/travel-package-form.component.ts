@@ -28,20 +28,6 @@ export class TravelPackageFormComponent implements OnInit {
     private http: HttpClient
   ) {}
 
-  // ngOnInit(): void {
-  //   const id = this.route.snapshot.paramMap.get('id');
-  //   if (id) {
-  //     this.editing = true;
-  //     this.service.getSelectedTravelpackage(id).subscribe(data => {
-  //       this.travelPackage = data;
-  //
-  //     });
-  //   }
-  //   this.getFlightsList(); // Fetch flights list
-  //   this.getHotelsList(); // Fetch hotels list
-  //   this.getActivitiesList(); // Fetch activities list
-  // }
-
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.getFlightsList(); // Fetch flights list
@@ -86,7 +72,7 @@ export class TravelPackageFormComponent implements OnInit {
 
     if (this.editing && this.travelPackageId) {
       // If editing, make a PUT request to update the existing travel package
-      this.http.put<any>(`http://127.0.0.1:8000/edit-travel-package/${this.travelPackageId}/`, payload)
+      this.http.put<any>(`http://127.0.0.1:8000/update-travel-package/${this.travelPackageId}/`, payload)
         .subscribe(
           response => {
             console.log('Travel package updated:', response);
