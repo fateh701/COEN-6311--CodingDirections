@@ -9,8 +9,8 @@
       <a routerLink="/hotels/{{ hotel.id }}">{{ hotel.name }}</a>
     </li>
   </ul>
-  <button *ngIf="showAddHotelButton && isAdmin()" (click)="navHotels()">Add New Hotel</button>
+  <button *ngIf="showAddHotelButton && isAgent()" (click)="navHotels()">Add New Hotel</button>
 </div>
 <br>
 <app-view-hotels *ngIf="showAddHotelButton"></app-view-hotels>
-<app-hotel-form *ngIf="isAdmin()"></app-hotel-form>
+<app-hotel-form *ngIf="isAgent()"></app-hotel-form>

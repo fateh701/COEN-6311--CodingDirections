@@ -16,8 +16,8 @@
         </div>
 
       <button class="view-button" routerLink="/travelpackages/{{ package.id }}">View</button>
-      <button *ngIf="isAdmin()"  class="delete-button" (click)="deleteTravelPackage(package.id)">Delete</button>
+      <button *ngIf="isAgent()"  class="delete-button" (click)="deleteTravelPackage(package.id)">Delete</button>
     </div>
   </div>
 </div>
-<app-travel-package-form *ngIf="isAdmin()"></app-travel-package-form>
+<app-travel-package-form *ngIf="isAgent()"></app-travel-package-form>

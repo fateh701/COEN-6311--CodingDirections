@@ -6,5 +6,5 @@
   <h5>Departure Time: {{ selectedFlight.departure_time }} </h5>
   <h5>Arrival Time: {{ selectedFlight.arrival_time }} </h5>
   <h5>Price: {{ selectedFlight.price }} </h5>
-  <button *ngIf="isAdmin()" (click)="deleteFlight(selectedFlight.id)">Delete</button>
+  <button *ngIf="isAgent()" (click)="deleteFlight(selectedFlight.id)">Delete</button>
 </div>

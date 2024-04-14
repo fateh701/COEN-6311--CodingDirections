@@ -3,5 +3,5 @@
   <h5>Name: {{selectedActivity.name}} </h5>
   <h5>Location: {{selectedActivity.location}}</h5>
   <h5>Price: {{selectedActivity.price}}</h5>
-  <button *ngIf="isAdmin()" (click)="deleteActivity(selectedActivity.id)">Delete</button>
+  <button *ngIf="isAgent()" (click)="deleteActivity(selectedActivity.id)">Delete</button>
 </div>
