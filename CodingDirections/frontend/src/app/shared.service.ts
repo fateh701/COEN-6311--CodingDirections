@@ -119,11 +119,23 @@ export class SharedService {
     return this.http.post<any>(this.baseAPIUrl + '/create-booking/',{ travel_package_id: val, user_id:userid },{ headers:headers });
   }
 
+  postConfirmCustomBooking(val:number,userid:number):Observable<any>{
+    const headers = new HttpHeaders({'Content-Type':'application/json',
+    'Authorization':`Bearer ${this.authService.getUserToken()}`,  //will pass token of loggedin user
+    });
+    console.log("From service.ts file its getting custom package:",val,headers);
+    return this.http.post<any>(this.baseAPIUrl + '/create-booking-custom/',{ travel_package_id: val, user_id:userid },{ headers:headers });
+  }
+
   getAllBookingsByID(userid:any):Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/customerBookings/?user_id='+userid,{headers:this.httpHeaders});
   }
- deleteBooking(bookingId: number) {
-  return this.http.delete(`${this.baseAPIUrl}/booking-details/${bookingId}`);
+  deleteBooking(bookingId: number) {
+    return this.http.delete(`${this.baseAPIUrl}/booking-details/${bookingId}`);
+  }
+
+  deleteCustomPackageBooking(bookingId: number) {
+    return this.http.delete(`${this.baseAPIUrl}/booking-details-customPackage/${bookingId}`);
   }
   getTravelPackageVsBookingCountData(startDate: string | null, endDate: string | null):Observable<any[]>{
     if ((startDate=='' && endDate=='') || (startDate==null && endDate==null)){

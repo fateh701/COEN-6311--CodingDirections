@@ -27,6 +27,7 @@ router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
 router.register(r'custom-travel-packages', views.CustomTravelPackageViewSet)
 router.register(r'booking-details', views.BookingDetailsViewSet) #get all the bookings made till now
+router.register(r'booking-details-customPackage', views.BookingDetailsCustomPackageViewSet) #get all the bookings made till now
 router.register(r'booking-agent', views.BookingAgentViewSet)
 #add url for create_booking method
 
