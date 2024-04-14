@@ -335,3 +335,77 @@ def get_agents_data(request):
 #     else:
 #         form = SignUpForm()
 #     return render(request,'register.html', {'form': form, 'msg': msg})
+
+@api_view(['POST'])
+def create_travel_package(request):
+    if request.method == 'POST':
+        # Extract data from the request
+        name = request.data.get('name')
+        flights_ids = request.data.get('flights', [])
+        hotels_ids = request.data.get('hotels', [])
+        activities_ids = request.data.get('activities', [])
+        price = request.data.get('price', 0)  # Default price if not provided
+
+        # Check if all required fields are present
+        if not name or not flights_ids or not hotels_ids:
+            return Response({'error': 'Name, flights, and hotels are required fields'}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Fetch flights, hotels, and activities
+        flights = Flight.objects.filter(id__in=flights_ids)
+        hotels = Hotel.objects.filter(id__in=hotels_ids)
+        activities = Activity.objects.filter(id__in=activities_ids)
+
+        # Create the travel package
+        travel_package = TravelPackage.objects.create(name=name, price=price)
+        travel_package.flights.set(flights)
+        travel_package.hotels.set(hotels)
+        travel_package.activities.set(activities)
+
+        # Serialize the created travel package
+        serializer = TravelPackageSerializer(travel_package)
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    else:
+        return Response({'error': 'Method not allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
+@api_view(['PUT'])
+def edit_travel_package(request, travel_package_id):
+    if request.method == 'PUT':
+        # Extract data from the request
+        name = request.data.get('name')
+        flights_ids = request.data.get('flights', [])
+        hotels_ids = request.data.get('hotels', [])
+        activities_ids = request.data.get('activities', [])
+        price = request.data.get('price', 0)  # Default price if not provided
+
+        # Check if all required fields are present
+        if not name or not flights_ids or not hotels_ids:
+            return Response({'error': 'Name, flights, and hotels are required fields'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            # Fetch the travel package to edit
+            travel_package = TravelPackage.objects.get(pk=travel_package_id)
+
+            # Fetch flights, hotels, and activities
+            flights = Flight.objects.filter(id__in=flights_ids)
+            hotels = Hotel.objects.filter(id__in=hotels_ids)
+            activities = Activity.objects.filter(id__in=activities_ids)
+
+            # Update the travel package fields
+            travel_package.name = name
+            travel_package.price = price
+            travel_package.flights.set(flights)
+            travel_package.hotels.set(hotels)
+            travel_package.activities.set(activities)
+
+            # Save the changes
+            travel_package.save()
+
+            # Serialize the updated travel package
+            serializer = TravelPackageSerializer(travel_package)
+
+            return Response(serializer.data)
+        except TravelPackage.DoesNotExist:
+            return Response({'error': 'Travel package does not exist'}, status=status.HTTP_404_NOT_FOUND)
+    else:
+        return Response({'error': 'Method not allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)

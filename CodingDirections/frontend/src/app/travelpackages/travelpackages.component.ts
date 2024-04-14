@@ -38,4 +38,17 @@ export class TravelpackagesComponent {
       );
     }
     }
+
+    deleteTravelPackage(id: number): void {
+    if (confirm("Are you sure you want to delete this Travel Package?")) {
+      this.service.deleteTravelPackage(id).subscribe(
+        () => {
+          this.getTravelpackagesList(); // Refresh the list after deletion
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    }
+  }
 }

@@ -29,6 +29,15 @@
       <button class="view-button" routerLink="/activities/{{ activity.id }}">View</button>
     </div>
   </div>
+  <div>
+    <div class="labelheader">
+      <h3>Price</h3>
+    </div>
+    <div class="item-container">
+      <h6>{{ selectedPackage.price }}</h6>
+    </div>
+  </div>
 </div>
-
 <app-bookings></app-bookings>
+<!--<app-activity-form *ngIf="isAdmin()"></app-activity-form>-->
+<app-travel-package-form></app-travel-package-form>

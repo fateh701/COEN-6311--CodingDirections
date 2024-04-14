@@ -34,6 +34,7 @@ import { HotelFormComponent } from './hotels/hotel-form/hotel-form.component';
 import { AccountmanagementComponent } from './accountmanagement/accountmanagement.component';
 import {MatTable} from "@angular/material/table";
 import { MatTableModule } from '@angular/material/table';
+import { TravelPackageFormComponent } from './travelpackages/travel-package-form/travel-package-form.component';
 // @ts-ignore
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { MatTableModule } from '@angular/material/table';
     ActivityFormComponent,
     HotelFormComponent,
     AccountmanagementComponent,
+    TravelPackageFormComponent,
   ],
   imports: [
     BrowserModule,

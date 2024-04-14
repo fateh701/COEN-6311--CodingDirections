@@ -21,7 +21,7 @@ class Flight(models.Model):
         return self.name
 
     class Meta:  # this is to display the list of flights in ascending order of departure time
-        ordering = ['departure_time'];
+        ordering = ['departure_time']
 
 
 class Hotel(models.Model):
@@ -37,7 +37,7 @@ class Hotel(models.Model):
         return self.name
 
     class Meta:  # this is to display the list of hotels in ascending order of name
-        ordering = ['name'];
+        ordering = ['name']
 
 
 class Activity(models.Model):
@@ -49,7 +49,7 @@ class Activity(models.Model):
         return self.name
 
     class Meta: # this is to display the list of activities in ascending order of name
-        ordering = ['name'];
+        ordering = ['name']
 
 
 class TravelPackage(models.Model):
@@ -57,13 +57,13 @@ class TravelPackage(models.Model):
     flights = models.ManyToManyField(Flight)
     hotels = models.ManyToManyField(Hotel)
     activities = models.ManyToManyField(Activity, blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2,default=1122.00)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=1122.00)
 
     def __str__(self):
         return self.name
 
     class Meta:
-      ordering = ['name'];
+      ordering = ['name']
   
 # class Notification(models.Model):
 #     #Notification = ('info', 'Information'),

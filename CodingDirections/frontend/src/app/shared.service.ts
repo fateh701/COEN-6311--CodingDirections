@@ -21,13 +21,28 @@ export class SharedService {
 
    }
 
+  // getTravelPackagesList(): Observable<any[]> {
+  //   return this.http.get<any[]>(`${this.baseAPIUrl}/travel-packages/`, { headers: this.httpHeaders });
+  // }
+
+  editTravelPackage(id: number, data: any): Observable<any> {
+    return this.http.put<any>(`${this.baseAPIUrl}/travel-packages/${id}/`, data, { headers: this.httpHeaders });
+  }
+
+  deleteTravelPackage(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.baseAPIUrl}/travel-packages/${id}/`, { headers: this.httpHeaders });
+  }
+
+  addTravelPackage(data: any): Observable<any> {
+    return this.http.post<any>(`${this.baseAPIUrl}/travel-packages/`, data, { headers: this.httpHeaders });
+  }
   getFlightsList():Observable<any[]>{
     return this.http.get<any[]>(this.baseAPIUrl + '/flights/',{headers:this.httpHeaders});
   }
 
   editFlight(id: number, data: any) {
   return this.http.put<any>(`${this.baseAPIUrl}/flights/${id}/`, data, { headers: this.httpHeaders });
-}
+  }
 
   deleteFlight(id: number) {
     return this.http.delete<any>(`${this.baseAPIUrl}/flights/${id}/`, { headers: this.httpHeaders });
