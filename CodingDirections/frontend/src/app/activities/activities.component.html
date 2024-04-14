@@ -1,8 +1,7 @@
-<div class="activities">
-  <h2 (click)="navActivities()">Activities</h2>
-</div>
+
 <div class="activities" *ngIf="isAgent()">
   <!--For Search bar ,for filtering travel packages -->
+  <h2 (click)="navActivities()">Activities</h2>
   <label for="filter">Filter by:  </label>
   <input type="text" id="filter" name="filter" [(ngModel)]="searchQuery" (input)="getFilteredActivitiesList()" placeholder="Search by name">
   <br><br>
