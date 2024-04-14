@@ -23,6 +23,10 @@ export class ViewTravelPackagesComponent {
     return this.userRole === 'Admin';
   }
 
+  isAgent(): boolean {
+    return this.userRole === 'Admin' || this.userRole === 'Agent';
+  }
+
   getSelectedPackage() {
     //get package detail for particular package id only
     const packageId = this.route.snapshot.paramMap.get('id');

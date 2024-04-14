@@ -26,6 +26,10 @@ export class TravelpackagesComponent {
     return this.userRole === 'Admin';
   }
 
+  isAgent(): boolean {
+    return this.userRole === 'Admin' || this.userRole === 'Agent';
+  }
+
   getTravelpackagesList = () => {
     this.service.getTravelpackagesList().subscribe(
       data => {

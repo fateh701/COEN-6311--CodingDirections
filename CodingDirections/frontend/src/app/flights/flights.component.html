@@ -9,8 +9,8 @@
       <a routerLink="/flights/{{ flight.id }}">{{ flight.name }}</a>
     </li>
   </ul>
-  <button *ngIf="showAddFlightButton && isAdmin()" (click)="navFlights()">Add New Flight</button>
+  <button *ngIf="showAddFlightButton && isAgent()" (click)="navFlights()">Add New Flight</button>
 </div>
 <br>
 <app-view *ngIf="showAddFlightButton"></app-view>
-<app-flight-form *ngIf="isAdmin()"></app-flight-form>
+<app-flight-form *ngIf="isAgent()"></app-flight-form>

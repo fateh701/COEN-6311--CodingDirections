@@ -28,6 +28,10 @@ export class ViewHotelsComponent implements OnDestroy {
     return this.userRole === 'Admin';
   }
 
+  isAgent(): boolean {
+    return this.userRole === 'Admin' || this.userRole === 'Agent';
+  }
+
   ngOnDestroy(): void {
     this.routeParamsSubscription.unsubscribe(); // Unsubscribe to avoid memory leaks
   }

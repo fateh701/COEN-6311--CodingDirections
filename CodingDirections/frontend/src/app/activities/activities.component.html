@@ -10,9 +10,9 @@
       <a routerLink="/activities/{{ package.id }}">{{ package.name }}</a>
     </li>
   </ul>
-  <button *ngIf="showAddActivityButton && isAdmin()" (click)="navActivities()">Add New Hotel</button>
+  <button *ngIf="showAddActivityButton && isAgent()" (click)="navActivities()">Add New Hotel</button>
 </div>
 <br>
 <app-view-activities *ngIf="showAddActivityButton"></app-view-activities>
-<app-activity-form *ngIf="isAdmin()"></app-activity-form>
+<app-activity-form *ngIf="isAgent()"></app-activity-form>
 
