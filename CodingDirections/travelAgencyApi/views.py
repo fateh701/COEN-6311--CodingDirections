@@ -135,6 +135,17 @@ class BookingDetailsViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(name__icontains=search_query)
         return queryset
 
+class BookingDetailsCustomPackageViewSet(viewsets.ModelViewSet):
+    queryset = BookingDetailsCustomPackage.objects.all()
+    serializer_class = BookingDetailsCustomPackageSerializer
+
+    def get_queryset(self):
+        queryset = BookingDetailsCustomPackage.objects.all()
+        search_query = self.request.query_params.get('search')
+        if search_query:
+            queryset = queryset.filter(name__icontains=search_query)
+        return queryset
+
 
 # creating a  function to create booking using only travel package id and user id as input
 @api_view(['POST'])
@@ -209,39 +220,91 @@ def profile_view(request):
     return render(request, 'profile.html', {'user': request.user})
 
 
+# class CustomerBookingsViewSet(APIView):
+#
+#     def get_single_object(self, pk):
+#
+#         try:
+#             return get_object_or_404(BookingDetails, pk=pk)  # get the booking object from the database
+#         except BookingDetails.DoesNotExist:
+#             return Response({'error': 'Booking object not found'}, status=status.HTTP_404_NOT_FOUND)
+#
+#     # Retrieve all the bookings made by the logged in user
+#     def get(self, request, pk=None):
+#         if pk is not None:
+#             # Retrieve a single booking by its primary key,will be needed for crud operations api redirection
+#             booking = get_object_or_404(BookingDetails, pk=pk)
+#             serializer = BookingDetailsSerializer(booking)
+#             return Response(serializer.data, status=status.HTTP_200_OK)
+#         else:
+#             # Retrieve all bookings for the current customer
+#             # user_id = request.user.id
+#             user_id = request.query_params.get(
+#                 'user_id')  # PATCH-BY-PUJAN 15-3 (URL with userid =3 will be  http://127.0.0.1:8000/customerBookings/?user_id=3)
+#             if user_id is None:
+#                 return Response({'error': 'User ID not send for GET request'}, status=status.HTTP_400_BAD_REQUEST)
+#
+#             logger.log(logging.INFO, 'Retrieving bookings for user %s', user_id)
+#             bookings = BookingDetails.objects.filter(customer=user_id)
+#             serializer = BookingDetailsSerializer(bookings, many=True)
+#             return Response(serializer.data)
+#
+#     # Update the booking detail as per the user request
+#     def put(self, request, pk=None):
+#         booking = self.get_single_object(pk)
+#         serializer = BookingDetailsSerializer(booking, data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_200_OK)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#
+#     # Delete the booking detail as per the user request
+#     def delete(self, request, pk=None):
+#         booking = self.get_single_object(pk)
+#         booking.delete()
+#         return Response(status=status.HTTP_204_NO_CONTENT)
 class CustomerBookingsViewSet(APIView):
-
     def get_single_object(self, pk):
-
         try:
-            return get_object_or_404(BookingDetails, pk=pk)  # get the booking object from the database
+            # First try to get the object from BookingDetails
+            return get_object_or_404(BookingDetails, pk=pk)
         except BookingDetails.DoesNotExist:
-            return Response({'error': 'Booking object not found'}, status=status.HTTP_404_NOT_FOUND)
+            # If not found in BookingDetails, try to get from BookingDetailsCustomPackage
+            try:
+                return get_object_or_404(BookingDetailsCustomPackage, pk=pk)
+            except BookingDetailsCustomPackage.DoesNotExist:
+                return Response({'error': 'Booking object not found'}, status=status.HTTP_404_NOT_FOUND)
 
     # Retrieve all the bookings made by the logged in user
     def get(self, request, pk=None):
         if pk is not None:
             # Retrieve a single booking by its primary key,will be needed for crud operations api redirection
-            booking = get_object_or_404(BookingDetails, pk=pk)
-            serializer = BookingDetailsSerializer(booking)
+            booking = self.get_single_object(pk)
+            if isinstance(booking, BookingDetails):
+                serializer = BookingDetailsSerializer(booking)
+            else:
+                serializer = BookingDetailsCustomPackageSerializer(booking)
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             # Retrieve all bookings for the current customer
             # user_id = request.user.id
-            user_id = request.query_params.get(
-                'user_id')  # PATCH-BY-PUJAN 15-3 (URL with userid =3 will be  http://127.0.0.1:8000/customerBookings/?user_id=3)
+            user_id = request.query_params.get('user_id')
             if user_id is None:
                 return Response({'error': 'User ID not send for GET request'}, status=status.HTTP_400_BAD_REQUEST)
-
             logger.log(logging.INFO, 'Retrieving bookings for user %s', user_id)
             bookings = BookingDetails.objects.filter(customer=user_id)
+            bookings_custom = BookingDetailsCustomPackage.objects.filter(customer=user_id)
             serializer = BookingDetailsSerializer(bookings, many=True)
-            return Response(serializer.data)
+            serializer_custom = BookingDetailsCustomPackageSerializer(bookings_custom, many=True)
+            return Response(serializer.data + serializer_custom.data)
 
     # Update the booking detail as per the user request
     def put(self, request, pk=None):
         booking = self.get_single_object(pk)
-        serializer = BookingDetailsSerializer(booking, data=request.data)
+        if isinstance(booking, BookingDetails):
+            serializer = BookingDetailsSerializer(booking, data=request.data)
+        else:
+            serializer = BookingDetailsCustomPackageSerializer(booking, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -252,6 +315,8 @@ class CustomerBookingsViewSet(APIView):
         booking = self.get_single_object(pk)
         booking.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
 
 
 # for travelpackage vs booking count report
