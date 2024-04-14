@@ -1,7 +1,15 @@
-<div *ngIf="selectedPackage">
+<div *ngIf="selectedPackage" class="view-container">
+  <div class="labelheader">
+    <h1>Viewing Custom Package: {{ selectedPackage.name }} </h1>
+  </div>
+  <div>
     <div class="labelheader">
-      <h1>viewing Custom Travel Package: {{ selectedPackage.name }} </h1>
+      <h3>Created By</h3>
     </div>
+    <div class="item-container">
+      <p>User ID: {{ selectedPackage.created_by }}</p>
+    </div>
+  </div>
   <div>
     <div class="labelheader">
       <h3>Flights</h3>
@@ -38,5 +46,5 @@
     </div>
   </div>
 </div>
-<app-bookings></app-bookings>
+<!--<app-bookings></app-bookings>-->
 <app-custom-travel-package-form *ngIf="isAgent()"></app-custom-travel-package-form>

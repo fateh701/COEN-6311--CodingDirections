@@ -20,6 +20,7 @@ export class CustomTravelPackageFormComponent implements OnInit {
   payload: any = {}; // Define payload property
   editing: boolean = false;
   customtravelPackageId: number | null = null;
+  currentUser: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -29,6 +30,7 @@ export class CustomTravelPackageFormComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.getCurrentUser()
     this.route.paramMap.subscribe(params => {
       this.getFlightsList(); // Fetch flights list
       this.getHotelsList(); // Fetch hotels list
@@ -42,11 +44,23 @@ export class CustomTravelPackageFormComponent implements OnInit {
     });
   }
 
+  getCurrentUser() {
+    if (typeof localStorage === 'undefined' || localStorage === null || !localStorage.getItem('userData')!) {
+    return;
+    }
+    //const userid: AuthResData = JSON.parse(localStorage.getItem('userData')!);
+    const userInfo = JSON.parse(localStorage.getItem('userData')!);
+    // @ts-ignore
+    console.log("current user info:",userInfo);
+    this.currentUser = userInfo;
+  }
+
   fetchCustomTravelPackageDetails(id: number) {
     // Make an HTTP request to fetch the details of the custom travel package with the given ID
     this.http.get<any>(`http://127.0.0.1:8000/custom-travel-packages/${id}`)
       .subscribe(
         response => {
+          console.log('Custom Travel package details:', response);
           // Populate the form fields with the fetched data
           this.name = response.name;
           this.selectedFlights = response.flights;
@@ -67,9 +81,10 @@ export class CustomTravelPackageFormComponent implements OnInit {
       flights: this.selectedFlights,
       hotels: this.selectedHotels,
       activities: this.selectedActivities,
-      price: this.price
+      price: this.price,
+      // created_by: this.currentUser.id
     };
-
+    console.log('Payload:', payload);
     if (this.editing && this.customtravelPackageId) {
       // If editing, make a PUT request to update the existing custom travel package
       this.http.put<any>(`http://127.0.0.1:8000/update-custom-travel-package/${this.customtravelPackageId}/`, payload)

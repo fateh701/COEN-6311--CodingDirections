@@ -176,7 +176,9 @@ export class SharedService {
     return this.http.delete<void>(`${this.baseAPIUrl}/agents/${agentId}/`, { headers: this.httpHeaders });
   }
 
-
+  // getUserById(userId: number): Observable<any> {
+  //   return this.http.get<any>(`${this.baseAPIUrl}/users/${userId}/`);
+  // }
 
 }
 

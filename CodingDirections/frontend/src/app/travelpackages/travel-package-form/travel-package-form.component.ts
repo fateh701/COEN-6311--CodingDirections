@@ -47,6 +47,7 @@ export class TravelPackageFormComponent implements OnInit {
     this.http.get<any>(`http://127.0.0.1:8000/travel-packages/${id}`)
       .subscribe(
         response => {
+          console.log('Travel package details:', response);
           // Populate the form fields with the fetched data
           this.name = response.name;
           this.selectedFlights = response.flights;
@@ -69,7 +70,7 @@ export class TravelPackageFormComponent implements OnInit {
       activities: this.selectedActivities,
       price: this.price
     };
-
+    console.log('Payload:', payload);
     if (this.editing && this.travelPackageId) {
       // If editing, make a PUT request to update the existing travel package
       this.http.put<any>(`http://127.0.0.1:8000/update-travel-package/${this.travelPackageId}/`, payload)

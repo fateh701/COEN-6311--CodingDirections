@@ -11,8 +11,11 @@ import {AuthenticationService} from "../../authentication/authentication.service
 export class ViewCustomTravelPackagesComponent {
   selectedPackage: any;
   userRole: string | undefined;
+  // createdBy: any;
+
   constructor(private route: ActivatedRoute, private service: SharedService, private authService: AuthenticationService) {
     this.getSelectedPackage();
+
     this.authService.user.subscribe(user => {
       this.userRole = user?.user_type;
       // console.log('User Role:', this.userRole);
@@ -33,10 +36,23 @@ export class ViewCustomTravelPackagesComponent {
     this.service.getSelectedCustomTravelpackage(packageId).subscribe(
       data => {
         this.selectedPackage = data;
+        // this.getUserDetails(this.selectedPackage.created_by);
       },
       error => {
         console.log(error);
       }
     )
   }
+
+  // getUserDetails(userId: number) {
+  //   this.service.getUserById(userId).subscribe(
+  //     data => {
+  //       console.log("user data is: ", data);
+  //       this.createdBy = data;
+  //     },
+  //     error => {
+  //       console.log(error);
+  //     }
+  //   );
+  // }
 }

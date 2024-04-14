@@ -142,6 +142,17 @@ tr:hover {background-color: #f5f5f5;}
   text-align: center; /* Center align the contents */
 }
 
+.view-container {
+  width: 80%; /* Adjust as needed */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #2b151f; /* Container background color */
+  border: 1px solid #ddd; /* Container border */
+  border-radius: 5px; /* Container border radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Container box shadow */
+  text-align: center; /* Center align the contents */
+}
+
 .view-button {
   display: inline-block; /* Ensure buttons are displayed in a row */
   margin-top: 10px;
@@ -162,7 +173,7 @@ label {
   display: flex;
   justify-content: center; /* Center align horizontally */
   margin-bottom: 20px; /* Add margin at the bottom */
-  color: #8c5151
+  color: #b38d98
 }
 
 .view-button:hover {
