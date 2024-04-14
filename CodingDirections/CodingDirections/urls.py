@@ -38,6 +38,7 @@ urlpatterns = [
     path('customerBookings/',views.CustomerBookingsViewSet.as_view(),name='customerBookings'), #for customer booking details
     path('customerBookings/<int:pk>/',views.CustomerBookingsViewSet.as_view(),name='customerBookingsCURD'), #for customer booking details
     path(r'create-booking/',views.create_booking,name='create-booking'), #add booking detail in form of json,mainly used for frontend,dont remove
+    path(r'create-booking-custom/',views.create_customPackage_booking,name='create-booking-custom'), #add booking detail in form of json,mainly used for frontend,dont remove
     path('create-travel-package/', views.create_travel_package, name='create_travel_package'),
     path('update-travel-package/<int:pk>/', views.update_travel_package, name='update_travel_package'),
     path('create-custom-travel-package/', views.create_custom_travel_package, name='create_custom_travel_package'),
