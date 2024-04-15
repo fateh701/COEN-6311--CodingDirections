@@ -36,7 +36,7 @@ export class BookingsPaymentComponent implements OnInit {
     this.service.getSelectedTravelpackage(bookingId).subscribe(
       data => {
         this.selectedBooking = data;
-        console.log("id:" + this.selectedBooking.id);
+        console.log("id:" + this.selectedBooking.id + "price" + this.selectedBooking.price);
       },
       error => {
         console.log(error);
