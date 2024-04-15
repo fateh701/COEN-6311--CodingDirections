@@ -1,22 +1,44 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {SharedService} from "../../shared.service";
+import { Subscription } from 'rxjs';
+import {AuthenticationService} from "../../authentication/authentication.service";
 
 @Component({
   selector: 'app-view-activities',
   templateUrl: './view-activities.component.html',
   styleUrl: './view-activities.component.css'
 })
-export class ViewActivitiesComponent {
+export class ViewActivitiesComponent implements OnDestroy {
   selectedActivity: any = [];
+  routeParamsSubscription: Subscription;
+  userRole: string | undefined;
 
-  constructor(private route: ActivatedRoute, private service: SharedService, private router: Router) {
-    this.getSelectedActivity();
+  constructor(private route: ActivatedRoute, private service: SharedService, private router: Router, private authService: AuthenticationService) {
+    this.routeParamsSubscription = this.route.paramMap.subscribe(params => {
+      this.getSelectedActivity();
+    });
+    this.authService.user.subscribe(user => {
+      this.userRole = user?.user_type;
+      // console.log('User Role:', this.userRole);
+    });
+  }
+
+  isAdmin(): boolean {
+    return this.userRole === 'Admin';
+  }
+
+  isAgent(): boolean {
+    return this.userRole === 'Admin' || this.userRole === 'Agent';
+  }
+
+  ngOnDestroy(): void {
+    this.routeParamsSubscription.unsubscribe(); // Unsubscribe to avoid memory leaks
   }
 
   getSelectedActivity = () => {
-    var flightId = this.route.snapshot.paramMap.get('id');
-    this.service.getSelectedActivity(flightId).subscribe(
+    var activityId = this.route.snapshot.paramMap.get('id');
+    this.service.getSelectedActivity(activityId).subscribe(
       data => {
         this.selectedActivity = data;
       },
@@ -24,10 +46,6 @@ export class ViewActivitiesComponent {
         console.log(error);
       },
     );
-  }
-
-  editActivity(id: number) {
-    this.router.navigate(['/activities', id, 'edit']);
   }
 
   deleteActivity(id: number) {
@@ -43,5 +61,4 @@ export class ViewActivitiesComponent {
       );
     }
   }
-
 }

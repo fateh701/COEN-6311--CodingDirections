@@ -3,7 +3,8 @@ export interface singupModel{
     username: string,
     first_name: string,
     last_name: string,
-    password: string
+    password: string,
+    user_type: string
 }
 
 export interface AuthResData{
@@ -12,7 +13,8 @@ export interface AuthResData{
     first_name?: string,
     last_name?: string,
     username: string,
-    token?: string
+    token?: string,
+    user_type?: string
 }
 
 export interface loginModel{
@@ -27,7 +29,8 @@ export class User{
     public username: string,
     public first_name: string | undefined,
     public last_name: string | undefined,
-    public token: string | undefined
+    public token: string | undefined,
+    public user_type: string | undefined
   ){}
 
 }

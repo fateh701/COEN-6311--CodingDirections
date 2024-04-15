@@ -32,7 +32,7 @@ export class AuthenticationService{
   }
 
   private handleAuthentication(resData: AuthResData){
-    const user = new User(resData.user_id,resData.email,resData.username,resData.first_name,resData.last_name,resData.token);
+    const user = new User(resData.user_id,resData.email,resData.username,resData.first_name,resData.last_name,resData.token, resData.user_type);
     this.user.next(user);
     localStorage.setItem('userData',JSON.stringify(user));  //this will store the user data in the local storage,so no need to login every  time
   }
@@ -51,7 +51,7 @@ export class AuthenticationService{
     else{
       //localStorage['userData']
       const userData:AuthResData = JSON.parse(localStorage.getItem('userData')!);
-      const loadedUser = new User(userData.user_id,userData.email,userData.username,userData.first_name,userData.last_name,userData.token);
+      const loadedUser = new User(userData.user_id,userData.email,userData.username,userData.first_name,userData.last_name,userData.token, userData.user_type);
       this.user.next(loadedUser);
       return;
     }

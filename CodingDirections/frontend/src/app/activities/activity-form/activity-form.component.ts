@@ -30,13 +30,18 @@ export class ActivityFormComponent implements OnInit {
   onSubmit() {
     if (this.editing) {
       this.service.editActivity(this.activity.id, this.activity).subscribe(() => {
-        this.router.navigate(['/activities']);
+        console.log("edited!");
+        location.reload();
       });
     } else {
       this.service.addActivity(this.activity).subscribe(() => {
-        this.router.navigate(['/activities']);
-        console.log("added!")
+        console.log("added!");
+        location.reload();
       });
     }
+  }
+
+  reloadPage() {
+    location.reload();
   }
 }

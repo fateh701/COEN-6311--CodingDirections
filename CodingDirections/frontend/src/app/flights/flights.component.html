@@ -1,22 +1,16 @@
-<div>
+<div class="flights" *ngIf="isAgent()">
   <!--For Search bar ,for filtering travel packages -->
-  <input type="text" [(ngModel)]="searchQuery" (input)="getFilteredFlightsList()" placeholder="Search by name">
   <h2 (click)="navFlights()">Flights</h2>
+  <label for="filter">Filter by:  </label>
+  <input type="text" id="filter" name="filter" [(ngModel)]="searchQuery" (input)="getFilteredFlightsList()" placeholder="Search by name">
+  <br><br>
   <ul>
     <li *ngFor="let flight of filteredFlightsList">
       <a routerLink="/flights/{{ flight.id }}">{{ flight.name }}</a>
     </li>
   </ul>
-<!--  <div class="flight-container" *ngFor="let flight of filteredFlightsList">-->
-<!--    <p>{{ flight.name }}</p>-->
-<!--    <button class="view-button" routerLink="/flights/{{ flight.id }}">View</button>-->
-<!--  </div>-->
-
-  <button (click)="addNewFlight()">Add New Flight</button>
-
+  <button *ngIf="showAddFlightButton && isAgent()" (click)="navFlights()">Add New Flight</button>
 </div>
 <br>
-<app-view></app-view>
-<app-view *ngIf="selectedFlight"></app-view>
-
-<app-flight-form *ngIf="showFlightForm" (cancel)="cancelAddNewFlight()"></app-flight-form>
+<app-view *ngIf="showAddFlightButton"></app-view>
+<app-flight-form *ngIf="isAgent()"></app-flight-form>

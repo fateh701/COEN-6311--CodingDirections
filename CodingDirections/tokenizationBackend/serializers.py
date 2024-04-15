@@ -5,7 +5,7 @@ from rest_framework import serializers
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()     #will be User model of AuthenticationBackend.models
-        fields = ['email','username','password','first_name','last_name']
+        fields = ['email','username','password','first_name','last_name', 'user_type']
         extra_kwargs = {'password':{'write_only':True,'min_length':8}} #password is write only and min length is 8
 
     def create(self, validated_data):

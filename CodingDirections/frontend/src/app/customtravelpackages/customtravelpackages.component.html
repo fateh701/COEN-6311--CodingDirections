@@ -1,0 +1,23 @@
+<div class="custom-travel-packages">
+  <!--For Search bar ,for filtering custom travel packages -->
+  <div class="search-bar">
+    <h2>Custom Travel Packages</h2>
+    <label for="filter">Filter by:  </label>
+    <input type="text" id="filter" name="filter" [(ngModel)]="searchQuery" (input)="getFilteredCustomTravelpackagesList()" placeholder="Search Custom Packages by Name">
+  </div>
+  <!-- Custom Travel Packages -->
+  <div class="custom-travel-package-container" *ngFor="let package of filteredCustomTravelPackagesList">
+    <div class="custom-travel-package-card">
+        <div class="custom-travel-package-card-image">
+          <img [src]="package.image" alt="Custom Travel Package Image">
+        </div>
+        <div class="custom-travel-package-card-details">
+          <h3>{{ package.name }}</h3>
+        </div>
+
+      <button class="view-button" routerLink="/customtravelpackages/{{ package.id }}">View</button>
+      <button *ngIf="isUser()"  class="delete-button" (click)="deleteCustomTravelPackage(package.id)">Delete</button>
+    </div>
+  </div>
+</div>
+<app-custom-travel-package-form *ngIf="isUser()"></app-custom-travel-package-form>

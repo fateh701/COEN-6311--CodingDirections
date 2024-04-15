@@ -1,17 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { SharedService } from "../../shared.service";
 import { ActivatedRoute, Router } from "@angular/router";
+import { Subscription } from 'rxjs';
+import {AuthenticationService} from "../../authentication/authentication.service";
 
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.css']
 })
-export class ViewComponent {
+export class ViewComponent implements OnDestroy {
   selectedFlight: any = [];
+  routeParamsSubscription: Subscription;
+  userRole: string | undefined;
 
-  constructor(private route: ActivatedRoute, private service: SharedService, private router: Router) {
-    this.getSelectedFlight();
+  constructor(private route: ActivatedRoute, private service: SharedService, private router: Router, private authService: AuthenticationService) {
+    this.routeParamsSubscription = this.route.paramMap.subscribe(params => {
+      this.getSelectedFlight();
+    });
+    this.authService.user.subscribe(user => {
+      this.userRole = user?.user_type;
+      // console.log('User Role:', this.userRole);
+    });
+  }
+
+  isAdmin(): boolean {
+    return this.userRole === 'Admin';
+  }
+
+  isAgent(): boolean {
+    return this.userRole === 'Admin' || this.userRole === 'Agent';
+  }
+
+  ngOnDestroy(): void {
+    this.routeParamsSubscription.unsubscribe(); // Unsubscribe to avoid memory leaks
   }
 
   getSelectedFlight = () => {
@@ -24,10 +46,6 @@ export class ViewComponent {
         console.log(error);
       },
     );
-  }
-
-  editFlight(id: number) {
-    this.router.navigate(['/flights', id, 'edit']);
   }
 
   deleteFlight(id: number) {

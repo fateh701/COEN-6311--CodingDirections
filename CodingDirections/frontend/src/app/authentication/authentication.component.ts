@@ -56,6 +56,7 @@ export class AuthenticationComponent{
       'last_name': this.signupForm.value.last_name,
       'username': this.signupForm.value.username,
       'email': this.signupForm.value.email,
+      'user_type': this.signupForm.value.user_type,
       'password': this.signupForm.value.passwords.password
     }).subscribe(
       (data: AuthResData) => {
@@ -68,6 +69,7 @@ export class AuthenticationComponent{
       }
     )
   }
+
 
   onLogin(){
     this.authenticationService.login(this.loginForm.value).subscribe(

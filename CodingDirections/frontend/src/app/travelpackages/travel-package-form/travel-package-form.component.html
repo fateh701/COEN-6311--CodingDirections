@@ -1,0 +1,32 @@
+<form (ngSubmit)="onSubmit()">
+  <h3>{{ editing ? 'Edit Travel Package' : 'Add New Travel Package' }}</h3>
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="name" required>
+  </div>
+  <div>
+    <label for="flights">Flights:</label>
+    <select id="flights" name="flights" multiple [(ngModel)]="selectedFlights">
+      <option *ngFor="let flight of flightsList" [value]="flight.id">{{ flight.name }}</option>
+      <!-- Options for selecting flights -->
+    </select>
+  </div>
+  <div>
+    <label for="hotels">Hotels:</label>
+    <select id="hotels" name="hotels" multiple [(ngModel)]="selectedHotels">
+      <option *ngFor="let hotel of hotelsList" [value]="hotel.id">{{ hotel.name }}</option>
+      <!-- Options for selecting hotels -->
+    </select>
+  </div>
+  <div>
+    <label for="activities">Activities:</label>
+    <select id="activities" name="activities" multiple [(ngModel)]="selectedActivities">
+      <option *ngFor="let activity of activitiesList" [value]="activity.id">{{ activity.name }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" [(ngModel)]="price" required>
+  </div>
+  <button type="submit">{{ editing ? 'Update Travel Package' : 'Add Travel Package' }}</button>
+</form>

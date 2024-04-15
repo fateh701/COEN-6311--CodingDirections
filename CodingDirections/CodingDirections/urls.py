@@ -25,6 +25,7 @@ router.register(r'flights', views.FlightViewSet)
 router.register(r'hotels', views.HotelViewSet)
 router.register(r'activities', views.ActivityViewSet)
 router.register(r'travel-packages', views.TravelPackageViewSet)
+router.register(r'custom-travel-packages', views.CustomTravelPackageViewSet)
 router.register(r'booking-details', views.BookingDetailsViewSet) #get all the bookings made till now
 router.register(r'booking-agent', views.BookingAgentViewSet)
 #add url for create_booking method
@@ -37,6 +38,10 @@ urlpatterns = [
     path('customerBookings/',views.CustomerBookingsViewSet.as_view(),name='customerBookings'), #for customer booking details
     path('customerBookings/<int:pk>/',views.CustomerBookingsViewSet.as_view(),name='customerBookingsCURD'), #for customer booking details
     path(r'create-booking/',views.create_booking,name='create-booking'), #add booking detail in form of json,mainly used for frontend,dont remove
+    path('create-travel-package/', views.create_travel_package, name='create_travel_package'),
+    path('update-travel-package/<int:pk>/', views.update_travel_package, name='update_travel_package'),
+    path('create-custom-travel-package/', views.create_custom_travel_package, name='create_custom_travel_package'),
+    path('update-custom-travel-package/<int:pk>/', views.update_custom_travel_package, name='update_custom_travel_package'),
     #path(r'current-user-info/',views.current_user_info,name='current-user-info'), #for current user info
     path(r'profile/',views.profile_view,name='profile'), #for current user info
     path(r'tpvscount/',views.TravelPackageVsBookingCountReportViewData.as_view(),name='reports'),
@@ -46,5 +51,10 @@ urlpatterns = [
     #path(r'home/',views.notificationhome,name='home'), #for notification
     #path(r'celery/',views.celerytest,name='celery'), #for testing celery
     path('api-auth/',include('rest_framework.urls',namespace='rest_framework')),   #for login option in default page
+    path('users/',views.get_users_data,name='users'), #for user details
+    path('users/<int:user_id>/', views.delete_user, name='delete_user'),
+    path('agents/',views.get_agents_data,name='agents'), #for agent details
+    path('agents/<int:user_id>/', views.delete_user, name='delete_agent'),
     #path('delete-booking/', views.delete_booking, name='delete_booking'),  #for deleting booking
+    #path('login/',views.register,name='login'), #for login
 ]

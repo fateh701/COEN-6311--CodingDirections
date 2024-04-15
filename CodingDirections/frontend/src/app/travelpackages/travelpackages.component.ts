@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {SharedService} from "../shared.service";
+import {AuthenticationService} from "../authentication/authentication.service";
 
 @Component({
   selector: 'app-travelpackages',
@@ -10,10 +11,23 @@ export class TravelpackagesComponent {
   travelPackagesList: any = [];
   filteredTravelPackagesList: any = [];  // This is the list that will be used to store the searched query travel packages
   searchQuery: string = '';  // This is the variable that will be used to store the search query
+  userRole: string | undefined;
 
 
-  constructor(private service: SharedService) {
+  constructor(private service: SharedService, private authService: AuthenticationService) {
     this.getTravelpackagesList();
+    this.authService.user.subscribe(user => {
+      this.userRole = user?.user_type;
+      // console.log('User Role:', this.userRole);
+    });
+  }
+
+  isAdmin(): boolean {
+    return this.userRole === 'Admin';
+  }
+
+  isAgent(): boolean {
+    return this.userRole === 'Admin' || this.userRole === 'Agent';
   }
 
   getTravelpackagesList = () => {
@@ -38,4 +52,17 @@ export class TravelpackagesComponent {
       );
     }
     }
+
+    deleteTravelPackage(id: number): void {
+    if (confirm("Are you sure you want to delete this Travel Package?")) {
+      this.service.deleteTravelPackage(id).subscribe(
+        () => {
+          this.getTravelpackagesList(); // Refresh the list after deletion
+        },
+        error => {
+          console.log(error);
+        }
+      );
+    }
+  }
 }

@@ -24,6 +24,10 @@ form input {
   border-radius: 5px;
 }
 
+form h3 {
+  margin-bottom: 10px;
+}
+
 form button {
   padding: 10px;
   background-color: #068aaf; /* Button background color */
@@ -32,4 +36,8 @@ form button {
   text-decoration: none;
   border: none;
   border-radius: 5px; /* Button border radius */
+}
+
+form button:hover {
+  background-color: #025067;
 }

@@ -1,10 +1,9 @@
 <div class="travel-packages">
   <!--For Search bar ,for filtering travel packages -->
   <div class="search-bar">
-    <div>
-      <label>Travel Packages</label>
-    </div>
-    <input type="text" [(ngModel)]="searchQuery" (input)="getFilteredTravelpackagesList()" placeholder="Search Packages by Name">
+    <h2>Travel Packages</h2>
+    <label for="filter">Filter by:  </label>
+    <input type="text" id="filter" name="filter" [(ngModel)]="searchQuery" (input)="getFilteredTravelpackagesList()" placeholder="Search Packages by Name">
   </div>
   <!-- Travel Packages -->
   <div class="travel-package-container" *ngFor="let package of filteredTravelPackagesList">
@@ -17,6 +16,8 @@
         </div>
 
       <button class="view-button" routerLink="/travelpackages/{{ package.id }}">View</button>
+      <button *ngIf="isAgent()"  class="delete-button" (click)="deleteTravelPackage(package.id)">Delete</button>
     </div>
   </div>
 </div>
+<app-travel-package-form *ngIf="isAgent()"></app-travel-package-form>

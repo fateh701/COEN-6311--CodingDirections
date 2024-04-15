@@ -1,17 +1,18 @@
-<div>
+
+<div class="activities" *ngIf="isAgent()">
   <!--For Search bar ,for filtering travel packages -->
-  <input type="text" [(ngModel)]="searchQuery" (input)="getFilteredActivitiesList()" placeholder="Search by name">
   <h2 (click)="navActivities()">Activities</h2>
+  <label for="filter">Filter by:  </label>
+  <input type="text" id="filter" name="filter" [(ngModel)]="searchQuery" (input)="getFilteredActivitiesList()" placeholder="Search by name">
+  <br><br>
   <ul>
     <li *ngFor="let package of filteredActivitiesList">
       <a routerLink="/activities/{{ package.id }}">{{ package.name }}</a>
     </li>
   </ul>
-  <button (click)="addNewActivity()">Add New Activity</button>
-
+  <button *ngIf="showAddActivityButton && isAgent()" (click)="navActivities()">Add New Hotel</button>
 </div>
 <br>
-<app-view-activities></app-view-activities>
-
-<app-activity-form *ngIf="showActivityForm" (cancel)="cancelAddNewActivity()"></app-activity-form>
+<app-view-activities *ngIf="showAddActivityButton"></app-view-activities>
+<app-activity-form *ngIf="isAgent()"></app-activity-form>
 

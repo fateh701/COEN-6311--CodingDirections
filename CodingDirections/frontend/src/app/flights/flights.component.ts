@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from "@angular/router";
 import {SharedService} from "../shared.service";
+import { AuthenticationService } from '../authentication/authentication.service';
+// import { AuthenticationComponent } from '../authentication/authentication.component';
+
 
 @Component({
   selector: 'app-flights',
@@ -11,27 +14,36 @@ export class FlightsComponent {
   flightsList: any = [];
   filteredFlightsList: any = [];
   searchQuery: string = '';
-  selectedFlight: any;
-  showFlightForm: boolean = false;
+  showAddFlightButton: boolean = true;
+  userRole: string | undefined;
 
-  constructor(private router: Router, private service: SharedService) {
+  constructor(private router: Router, private service: SharedService, private authService: AuthenticationService)  {//, private authComponent: AuthenticationComponent) {
     this.getFlightsList();
+    this.authService.user.subscribe(user => {
+      this.userRole = user?.user_type;
+      // console.log('User Role:', this.userRole);
+    });
   }
 
-  // addNewFlight() {
-  //   this.router.navigate(['/flights']);
-  // }
+  isAdmin(): boolean {
+    return this.userRole === 'Admin';
+  }
+
+  isAgent(): boolean {
+    return this.userRole === 'Agent' || this.userRole === 'Admin';
+  }
+
+  ngOnInit(): void {
+    // Check if the current URL is /flights
+    if (this.router.url === '/flights') {
+      this.showAddFlightButton = false;
+    } else {
+      this.showAddFlightButton = true;
+    }
+  }
 
   navFlights() {
     this.router.navigate(['/flights']);
-  }
-  addNewFlight() {
-    this.router.navigate(['/flights']);
-    this.showFlightForm = true;
-  }
-
-  cancelAddNewFlight() {
-    this.showFlightForm = false;
   }
 
   getFlightsList = () => {

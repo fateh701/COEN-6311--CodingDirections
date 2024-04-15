@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {SharedService} from "../shared.service";
 import {Router} from "@angular/router";
+import { AuthenticationService } from '../authentication/authentication.service';
 
 @Component({
   selector: 'app-hotels',
@@ -11,23 +12,36 @@ export class HotelsComponent {
   hotelsList: any = [];
   filteredHotelsList: any = [];
   searchQuery: string = '';
-  selectedHotel: any;
-  showHotelForm: boolean = false;
+  showAddHotelButton: boolean = true;
+  userRole: string | undefined;
 
-  constructor(private router: Router, private service: SharedService) {
+  constructor(private router: Router, private service: SharedService, private authService: AuthenticationService) {
     this.getHotelsList();
+    this.authService.user.subscribe(user => {
+      this.userRole = user?.user_type;
+      // console.log('User Role:', this.userRole);
+    });
   }
 
-    navHotels() {
-    this.router.navigate(['/hotels']);
-  }
-  addNewHotel() {
-    this.router.navigate(['/hotels']);
-    this.showHotelForm = true;
+  isAdmin(): boolean {
+    return this.userRole === 'Admin';
   }
 
-  cancelAddNewHotel() {
-    this.showHotelForm = false;
+  isAgent(): boolean {
+    return this.userRole === 'Agent' || this.userRole === 'Admin';
+  }
+
+  ngOnInit(): void {
+    // Check if the current URL is /hotels
+    if (this.router.url === '/hotels') {
+      this.showAddHotelButton = false;
+    } else {
+      this.showAddHotelButton = true;
+    }
+  }
+
+  navHotels() {
+    this.router.navigate(['/hotels']);
   }
 
   getHotelsList = () => {
