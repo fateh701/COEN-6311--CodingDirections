@@ -41,6 +41,7 @@ import { ViewCustomTravelPackagesComponent } from './customtravelpackages/view-c
 import { CustomtpbookingsComponent } from './customtpbookings/customtpbookings.component';
 import { CustomBookingsReviewComponent } from './customtpbookings/custom-bookings-review/custom-bookings-review.component';
 import { CustomBookingsConfirmationComponent } from './customtpbookings/custom-bookings-confirmation/custom-bookings-confirmation.component';
+import { HomeComponent } from './home/home.component';
 // @ts-ignore
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { CustomBookingsConfirmationComponent } from './customtpbookings/custom-b
     CustomtpbookingsComponent,
     CustomBookingsReviewComponent,
     CustomBookingsConfirmationComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-size: cover;
   background-position: center;
 }
+.home-container::before{
+  background-image: url("assets/homepg.jpg");
+}
 label{
   color: #8c5151; /* Replace #yourColor with the color you want */
 }

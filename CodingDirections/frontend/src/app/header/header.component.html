@@ -1,7 +1,7 @@
 <div claass="container">
     <nav class="navbar navbar-expand-sm bg-gradient navbar-text">
       <div class="navbar-header">
-            <a href="#" class="navbar-brand">Coding Directions</a>
+            <a href="" class="navbar-brand">Coding Directions</a>
       </div>
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -17,7 +17,7 @@
           <button *ngIf="isAgent()" class="m-1 btn btn-light btn-outline-primary" routerLink="activities">Activities</button>
           <button *ngIf="isAdmin()" routerLink="accountmanagement" class="m-1 btn btn-light btn-outline-primary">User Management</button>
 
-          <div class="dropdown">
+          <div class="dropdown dropdown-right">
               <button type="button" class="icon-button">
                 <span class="material-icons">notifications</span>
                 <span class="icon-button__badge">{{notificationsCount}}</span>
@@ -35,18 +35,18 @@
 
     </nav>
 
-   <div *ngIf="isAdmin()" class="sendNotification">
-    <input type="text" [(ngModel)]="newNotificationMessage" placeholder="Enter notification message">
-    <label>
-      Send to Agents:
-      <input type="checkbox" [(ngModel)]="sendToAgents">
-    </label>
-    <label>
-      Send to Users:
-      <input type="checkbox" [(ngModel)]="sendToUsers">
-    </label>
-    <button (click)="sendNewNotification()">Send Notification</button>
-  </div>
+<!--   <div *ngIf="isAdmin()" class="sendNotification">-->
+<!--    <input type="text" [(ngModel)]="newNotificationMessage" placeholder="Enter notification message">-->
+<!--    <label>-->
+<!--      Send to Agents:-->
+<!--      <input type="checkbox" [(ngModel)]="sendToAgents">-->
+<!--    </label>-->
+<!--    <label>-->
+<!--      Send to Users:-->
+<!--      <input type="checkbox" [(ngModel)]="sendToUsers">-->
+<!--    </label>-->
+<!--    <button (click)="sendNewNotification()">Send Notification</button>-->
+<!--  </div>-->
 
 </div>
 <!--<app-notifications></app-notifications>-->

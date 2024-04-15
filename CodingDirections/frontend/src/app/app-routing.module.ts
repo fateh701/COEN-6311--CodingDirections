@@ -26,9 +26,11 @@ import { CustomtpbookingsComponent } from './customtpbookings/customtpbookings.c
 import { CustomBookingsReviewComponent } from './customtpbookings/custom-bookings-review/custom-bookings-review.component';
 import { CustomBookingsConfirmationComponent } from './customtpbookings/custom-bookings-confirmation/custom-bookings-confirmation.component';
 import { CustomBookingsPaymentComponent } from './customtpbookings/custom-bookings-payment/custom-bookings-payment.component';
+import {HomeComponent} from "./home/home.component";
 
 
-const routes: Routes = [ {path : 'flights', component : FlightsComponent},
+const routes: Routes = [ {path : '',component:HomeComponent},
+                         {path : 'flights', component : FlightsComponent},
                          {path:'flights/:id', component:FlightsComponent},
                          {path : 'travelpackages', component : TravelpackagesComponent},
                          {path : 'travelpackages/:id', component : ViewTravelPackagesComponent},
