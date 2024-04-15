@@ -45,26 +45,8 @@ export class CustomBookingsConfirmationComponent {
   }
 
   confirmBooking(): void {
-      //this.router.navigate(['/bookings-payment']);
-      const userToken = this.authService.getUserINFO()?.token;
-      const userID = this.getUserID();
-      //console.log("Userid from user info dict:", userID);
-      if (userID === undefined || userID === null || userID === '' || userID === 0 || isNaN(userID)) {
-        console.log("userID not found in local storage,trace the confirmBooking function from custom booking component");
-      } else {
-        console.log("Userid from user info dict:", userID);
-        // @ts-ignore
-        this.service.postConfirmCustomBooking(this.selectedBooking.id, userID).subscribe(
-          response => {
-            //Handle successful booking confirmation
-            console.log("Booking confirmed")
-            this.router.navigate(['/bookings']);
-          },
-          error => {
-            console.log("Error confirming booking:", error);
-          },
-        )
-      }
+      this.router.navigate(['/custom-bookings-payment',this.route.snapshot.paramMap.get('id')]);
+
     }
 
 }

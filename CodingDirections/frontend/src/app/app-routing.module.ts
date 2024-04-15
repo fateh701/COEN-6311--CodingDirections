@@ -25,6 +25,7 @@ import { AccountmanagementComponent } from "./accountmanagement/accountmanagemen
 import { CustomtpbookingsComponent } from './customtpbookings/customtpbookings.component';
 import { CustomBookingsReviewComponent } from './customtpbookings/custom-bookings-review/custom-bookings-review.component';
 import { CustomBookingsConfirmationComponent } from './customtpbookings/custom-bookings-confirmation/custom-bookings-confirmation.component';
+import { CustomBookingsPaymentComponent } from './customtpbookings/custom-bookings-payment/custom-bookings-payment.component';
 
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
@@ -42,6 +43,8 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'bookings-confirmation',component:BookingsConfirmationComponent},
                          {path:'bookings-payment',component:BookingsPaymentComponent},
                          {path:'bookings-payment/:id',component:BookingsPaymentComponent},
+                         {path:'custom-bookings-payment',component:CustomBookingsPaymentComponent},
+                         {path:'custom-bookings-payment/:id',component:CustomBookingsPaymentComponent},
                          {path:'bookings-confirmation/:id',component:BookingsConfirmationComponent},
                          {path:'custom-bookings-review',component:CustomBookingsReviewComponent},
                          {path:'custom-bookings-review/:id',component:CustomBookingsReviewComponent},
