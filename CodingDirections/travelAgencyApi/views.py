@@ -2,8 +2,8 @@ from django.db.models import Count
 from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import viewsets, status
-from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent, Modification, CustomTravelPackage
-from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer, CustomTravelPackageSerializer
+from .models import Flight, Hotel, Activity, TravelPackage, BookingDetails, BookingAgent, Modification, CustomTravelPackage,BookingDetailsCustomPackage
+from .serializers import FlightSerializer, HotelSerializer, ActivitySerializer, TravelPackageSerializer, BookingDetailsSerializer, BookingAgentSerializer, CustomTravelPackageSerializer, BookingDetailsCustomPackageSerializer
 from django.shortcuts import get_object_or_404, render, HttpResponse
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 # from django.contrib.auth.models import User
@@ -135,8 +135,19 @@ class BookingDetailsViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(name__icontains=search_query)
         return queryset
 
+class BookingDetailsCustomPackageViewSet(viewsets.ModelViewSet):
+    queryset = BookingDetailsCustomPackage.objects.all()
+    serializer_class = BookingDetailsCustomPackageSerializer
 
-# creating a  function to create booking using only travel package id as input
+    def get_queryset(self):
+        queryset = BookingDetailsCustomPackage.objects.all()
+        search_query = self.request.query_params.get('search')
+        if search_query:
+            queryset = queryset.filter(name__icontains=search_query)
+        return queryset
+
+
+# creating a  function to create booking using only travel package id and user id as input
 @api_view(['POST'])
 # @authentication_classes([TokenAuthentication]) #15-3
 # @permission_classes([IsAuthenticated]) #15-3
@@ -161,7 +172,7 @@ def create_booking(request):
                 return Response({'error': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
             travel_package = get_object_or_404(TravelPackage, id=travel_package_id)
-            booking = BookingDetails.objects.create(customer=user, payment_status_flag=False, agent=bookingAgent)
+            booking = BookingDetails.objects.create(customer=user, payment_status_flag=True, agent=bookingAgent)
             booking.travel_package.set([travel_package])
             serializer: BookingDetailsSerializer = BookingDetailsSerializer(booking)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -171,45 +182,129 @@ def create_booking(request):
     # elif request.method=='GET':
     #     return profile_view(request)
 
+# creating a  function to create booking  for custom packageusing only travel package id as input
+@api_view(['POST'])
+# @authentication_classes([TokenAuthentication]) #15-3
+# @permission_classes([IsAuthenticated]) #15-3
+def create_customPackage_booking(request):
+    if request.method == 'POST':
+        # Assuming the request contains the travel package ID
+        travel_package_id = request.data.get('travel_package_id')
+
+        # pass here user id so that we can get the user object and use it to create booking
+        try:
+            travel_package = CustomTravelPackage.objects.get(pk=travel_package_id)
+            # return Response({'message': 'Travel package exists', 'travel_package': travel_package.name})
+            try:
+                # user = request.user
+                user = User.objects.get(pk=request.data.get('user_id'))  # 18-3
+                logger.info('Booking to be created for user %s with custom travel package %s', user.id, travel_package_id)
+                customer_location = "canada"  # get the location of the customer from the request send from frontend ,pick location from user profiel directly
+                bookingAgent = BookingAgent.objects.filter(location=customer_location).first()
+                if bookingAgent is None:
+                    return Response({'error': 'Booking agent not found'}, status=status.HTTP_400_BAD_REQUEST)
+            except User.DoesNotExist:
+                return Response({'error': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+            cust_travel_package = get_object_or_404(CustomTravelPackage, id=travel_package_id)
+            booking = BookingDetailsCustomPackage.objects.create(customer=user, payment_status_flag=True, agent=bookingAgent)
+            booking.custom_travel_package.set([cust_travel_package])
+            serializer: BookingDetailsCustomPackageSerializer = BookingDetailsCustomPackageSerializer(booking)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        except CustomTravelPackage.DoesNotExist:
+            return Response({'error': 'Custom Travel package does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
 
 @api_view(['GET'])
 def profile_view(request):
     return render(request, 'profile.html', {'user': request.user})
 
 
+# class CustomerBookingsViewSet(APIView):
+#
+#     def get_single_object(self, pk):
+#
+#         try:
+#             return get_object_or_404(BookingDetails, pk=pk)  # get the booking object from the database
+#         except BookingDetails.DoesNotExist:
+#             return Response({'error': 'Booking object not found'}, status=status.HTTP_404_NOT_FOUND)
+#
+#     # Retrieve all the bookings made by the logged in user
+#     def get(self, request, pk=None):
+#         if pk is not None:
+#             # Retrieve a single booking by its primary key,will be needed for crud operations api redirection
+#             booking = get_object_or_404(BookingDetails, pk=pk)
+#             serializer = BookingDetailsSerializer(booking)
+#             return Response(serializer.data, status=status.HTTP_200_OK)
+#         else:
+#             # Retrieve all bookings for the current customer
+#             # user_id = request.user.id
+#             user_id = request.query_params.get(
+#                 'user_id')  # PATCH-BY-PUJAN 15-3 (URL with userid =3 will be  http://127.0.0.1:8000/customerBookings/?user_id=3)
+#             if user_id is None:
+#                 return Response({'error': 'User ID not send for GET request'}, status=status.HTTP_400_BAD_REQUEST)
+#
+#             logger.log(logging.INFO, 'Retrieving bookings for user %s', user_id)
+#             bookings = BookingDetails.objects.filter(customer=user_id)
+#             serializer = BookingDetailsSerializer(bookings, many=True)
+#             return Response(serializer.data)
+#
+#     # Update the booking detail as per the user request
+#     def put(self, request, pk=None):
+#         booking = self.get_single_object(pk)
+#         serializer = BookingDetailsSerializer(booking, data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_200_OK)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#
+#     # Delete the booking detail as per the user request
+#     def delete(self, request, pk=None):
+#         booking = self.get_single_object(pk)
+#         booking.delete()
+#         return Response(status=status.HTTP_204_NO_CONTENT)
 class CustomerBookingsViewSet(APIView):
-
     def get_single_object(self, pk):
-
         try:
-            return get_object_or_404(BookingDetails, pk=pk)  # get the booking object from the database
+            # First try to get the object from BookingDetails
+            return get_object_or_404(BookingDetails, pk=pk)
         except BookingDetails.DoesNotExist:
-            return Response({'error': 'Booking object not found'}, status=status.HTTP_404_NOT_FOUND)
+            # If not found in BookingDetails, try to get from BookingDetailsCustomPackage
+            try:
+                return get_object_or_404(BookingDetailsCustomPackage, pk=pk)
+            except BookingDetailsCustomPackage.DoesNotExist:
+                return Response({'error': 'Booking object not found'}, status=status.HTTP_404_NOT_FOUND)
 
     # Retrieve all the bookings made by the logged in user
     def get(self, request, pk=None):
         if pk is not None:
             # Retrieve a single booking by its primary key,will be needed for crud operations api redirection
-            booking = get_object_or_404(BookingDetails, pk=pk)
-            serializer = BookingDetailsSerializer(booking)
+            booking = self.get_single_object(pk)
+            if isinstance(booking, BookingDetails):
+                serializer = BookingDetailsSerializer(booking)
+            else:
+                serializer = BookingDetailsCustomPackageSerializer(booking)
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             # Retrieve all bookings for the current customer
             # user_id = request.user.id
-            user_id = request.query_params.get(
-                'user_id')  # PATCH-BY-PUJAN 15-3 (URL with userid =3 will be  http://127.0.0.1:8000/customerBookings/?user_id=3)
+            user_id = request.query_params.get('user_id')
             if user_id is None:
                 return Response({'error': 'User ID not send for GET request'}, status=status.HTTP_400_BAD_REQUEST)
-
             logger.log(logging.INFO, 'Retrieving bookings for user %s', user_id)
             bookings = BookingDetails.objects.filter(customer=user_id)
+            bookings_custom = BookingDetailsCustomPackage.objects.filter(customer=user_id)
             serializer = BookingDetailsSerializer(bookings, many=True)
-            return Response(serializer.data)
+            serializer_custom = BookingDetailsCustomPackageSerializer(bookings_custom, many=True)
+            return Response(serializer.data + serializer_custom.data)
 
     # Update the booking detail as per the user request
     def put(self, request, pk=None):
         booking = self.get_single_object(pk)
-        serializer = BookingDetailsSerializer(booking, data=request.data)
+        if isinstance(booking, BookingDetails):
+            serializer = BookingDetailsSerializer(booking, data=request.data)
+        else:
+            serializer = BookingDetailsCustomPackageSerializer(booking, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -222,30 +317,44 @@ class CustomerBookingsViewSet(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-# for travelpackage vs booking count report
+#for travel package vs booking count report
 class TravelPackageVsBookingCountReportViewData(APIView):
     def get(self, request):
         start_date = request.query_params.get('startDate')
         end_date = request.query_params.get('endDate')
+        booking_counts = BookingDetails.objects.none()
+        booking_counts_custom = BookingDetailsCustomPackage.objects.none()
+
         if start_date is None or end_date is None:
             booking_counts = BookingDetails.objects.values('travel_package', 'created_date').annotate(
+                booking_count=Count('customer'))
+            booking_counts_custom = BookingDetailsCustomPackage.objects.values('custom_travel_package', 'created_date').annotate(
                 booking_count=Count('customer'))
         else:
             booking_counts = BookingDetails.objects.filter(created_date__range=[start_date, end_date]).values(
                 'travel_package', 'created_date').annotate(booking_count=Count('customer'))
+            booking_counts_custom = BookingDetailsCustomPackage.objects.filter(created_date__range=[start_date, end_date]).values(
+                'custom_travel_package', 'created_date').annotate(booking_count=Count('customer'))
 
-        # #if we want to get travel package name from booking then
-        # for entry in booking_counts:
-        #     id = entry['travel_package']
-        #     name = TravelPackage.objects.get(pk=id).name
-        #     print(name)
+        # Merge the querysets
+        booking_counts = list(booking_counts) + list(booking_counts_custom)
+        data=[]
+        for entry in booking_counts:
+            if 'travel_package' in entry:
+                entry['travel_package_name'] = TravelPackage.objects.get(pk=entry['travel_package']).name
+            else:
+                entry['travel_package_name'] = CustomTravelPackage.objects.get(pk=entry['custom_travel_package']).name
 
-        # we will pass id,travelpackage name and total count of ooking ,so this is report for package Vs Booking count
-        data = [{'travel_package_id': entry['travel_package'],
-                 'created_date': entry['created_date'],  # for date of booking
-                 'travel_package_name': TravelPackage.objects.get(pk=entry['travel_package']).name,
-                 'booking_count': entry['booking_count']} for entry in booking_counts]
+            data.append({
+                'travel_package_id': entry['travel_package'] if 'travel_package' in entry else entry['custom_travel_package'],
+                'created_date': entry['created_date'],
+                'travel_package_name': entry['travel_package_name'],
+                'booking_count': entry['booking_count']
+            })
+
+
         return Response(data)
+
 
 
 # for Revenue Report Chart
@@ -253,25 +362,48 @@ class RevenueReportViewData(APIView):
     def get(self, request):
         start_date = request.query_params.get('startDate')
         end_date = request.query_params.get('endDate')
+        booking_counts = BookingDetails.objects.none()
+        booking_counts_custom = BookingDetailsCustomPackage.objects.none()
+
         if start_date is None or end_date is None:
             booking_counts = BookingDetails.objects.values('travel_package', 'created_date').annotate(
+                booking_count=Count('customer'))
+            booking_counts_custom = BookingDetailsCustomPackage.objects.values('custom_travel_package',
+                                                                               'created_date').annotate(
                 booking_count=Count('customer'))
         else:
             booking_counts = BookingDetails.objects.filter(created_date__range=[start_date, end_date]).values(
                 'travel_package', 'created_date').annotate(booking_count=Count('customer'))
+            booking_counts_custom = BookingDetailsCustomPackage.objects.filter(
+                created_date__range=[start_date, end_date]).values(
+                'custom_travel_package', 'created_date').annotate(booking_count=Count('customer'))
 
-        # we want travel package name and its revenue generated so will loop through above query data and calculate revenue for each package
-        # we will pass Each Travel Package object and its booking count to calculateRevenuePerPackage function
-        data = [{'travel_package_name': TravelPackage.objects.get(pk=entry['travel_package']).name,
-                 'created_date': entry['created_date'],  # for date of booking
-                 'revenue': calculateRevenuePerPackage(TravelPackage.objects.get(pk=entry['travel_package']),
-                                                       entry['booking_count'])} for entry in booking_counts]
+        # Merge the querysets
+        booking_counts = list(booking_counts) + list(booking_counts_custom)
+        data = []
+        for entry in booking_counts:
+            if 'travel_package' in entry:
+                entry['travel_package_name'] = TravelPackage.objects.get(pk=entry['travel_package']).name
+            else:
+                entry['travel_package_name'] = CustomTravelPackage.objects.get(pk=entry['custom_travel_package']).name
+
+            # we want travel package name and its revenue generated so will loop through above query data and calculate revenue for each package
+            # we will pass Each Travel Package object and its booking count to calculateRevenuePerPackage function
+            data.append({
+                'travel_package_id': entry['travel_package'] if 'travel_package' in entry else entry['custom_travel_package'],
+                'created_date': entry['created_date'],
+                'travel_package_name': entry['travel_package_name'],
+                'revenue': calculateRevenuePerPackage(TravelPackage.objects.get(
+                    pk=entry['travel_package']).price if 'travel_package' in entry else CustomTravelPackage.objects.get(
+                    pk=entry['custom_travel_package']).price, entry['booking_count'])
+                })
+
         return Response(data)
 
 
 # it will take Travel Package,and how many times it was booked and calculate Revenue for that package
-def calculateRevenuePerPackage(TravelPackage, bookingCount):
-    revenuePerPackage = TravelPackage.price * bookingCount
+def calculateRevenuePerPackage(price, bookingCount):
+    revenuePerPackage = price * bookingCount
     return revenuePerPackage
 
 

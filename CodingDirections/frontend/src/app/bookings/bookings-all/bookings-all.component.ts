@@ -68,5 +68,20 @@ export class BookingsAllComponent {
       );
     }
   }
+
+  deleteCustomPackageBooking(bookingId: number) {
+    if (confirm('Are you sure you want to delete this booking?')) {
+      this.service.deleteCustomPackageBooking(bookingId).subscribe(
+        () => {
+          // Remove the deleted booking from the list
+          this.allbookingsbyID = this.allbookingsbyID.filter(booking => booking.id !== bookingId);
+          console.log('Booking deleted successfully');
+        },
+        error => {
+          console.error('Error deleting booking:', error);
+        }
+      );
+  }
+}
 }
 

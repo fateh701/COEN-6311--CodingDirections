@@ -22,6 +22,9 @@ import { AuthenticationComponent } from "./authentication/authentication.compone
 import { FlightFormComponent } from './flights/flight-form/flight-form.component';
 import {ActivityFormComponent} from "./activities/activity-form/activity-form.component";
 import { AccountmanagementComponent } from "./accountmanagement/accountmanagement.component";
+import { CustomtpbookingsComponent } from './customtpbookings/customtpbookings.component';
+import { CustomBookingsReviewComponent } from './customtpbookings/custom-bookings-review/custom-bookings-review.component';
+import { CustomBookingsConfirmationComponent } from './customtpbookings/custom-bookings-confirmation/custom-bookings-confirmation.component';
 
 
 const routes: Routes = [ {path : 'flights', component : FlightsComponent},
@@ -40,6 +43,10 @@ const routes: Routes = [ {path : 'flights', component : FlightsComponent},
                          {path:'bookings-payment',component:BookingsPaymentComponent},
                          {path:'bookings-payment/:id',component:BookingsPaymentComponent},
                          {path:'bookings-confirmation/:id',component:BookingsConfirmationComponent},
+                         {path:'custom-bookings-review',component:CustomBookingsReviewComponent},
+                         {path:'custom-bookings-review/:id',component:CustomBookingsReviewComponent},
+                         {path:'custom-bookings-confirmation',component:CustomBookingsConfirmationComponent},
+                         {path:'custom-bookings-confirmation/:id',component:CustomBookingsConfirmationComponent},
                          {path:'profile',component:AccountComponent},
                          {path:'authentication',component:AuthenticationComponent},
                          {path:'bookings',component:BookingsAllComponent},

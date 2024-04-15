@@ -115,6 +115,19 @@ class BookingDetails(models.Model):
     class Meta:
         ordering = ['customer']
 
+class BookingDetailsCustomPackage(models.Model):
+    customer = models.ForeignKey(User, on_delete=models.CASCADE)
+    custom_travel_package = models.ManyToManyField(CustomTravelPackage)
+    payment_status_flag = models.BooleanField(default=False)
+    agent = models.ForeignKey(BookingAgent, on_delete=models.SET_NULL, null=True)
+    created_date = models.DateTimeField(default=timezone.now()) #prinkal
+
+    def __str__(self):
+        return self.customer.username + " " + str(self.payment_status_flag)
+
+    class Meta:
+        ordering = ['customer']
+
 
 class Modification(models.Model):
     Client = models.CharField(max_length=50)
