@@ -5,11 +5,11 @@ import {SharedService} from "../../shared.service";
 import { AuthenticationService } from '../../authentication/authentication.service';
 import {ActivatedRoute,Router} from "@angular/router";
 @Component({
-  selector: 'app-bookings-payment',
-  templateUrl: './bookings-payment.component.html',
-  styleUrls: ['./bookings-payment.component.css']
+  selector: 'app-custom-bookings-payment',
+  templateUrl: './custom-bookings-payment.component.html',
+  styleUrls: ['./custom-bookings-payment.component.css']
 })
-export class BookingsPaymentComponent implements OnInit {
+export class CustomBookingsPaymentComponent implements OnInit {
   stripePromise: Promise<Stripe | null>;
   card: any;
   selectedBooking: any = {};
@@ -33,10 +33,10 @@ export class BookingsPaymentComponent implements OnInit {
   getSelectedBooking = () => {
     //fetch and display the booking details
     const bookingId = this.route.snapshot.paramMap.get('id'); //packageid will be passed here from booking review component.ts
-    this.service.getSelectedTravelpackage(bookingId).subscribe(
+    this.service.getSelectedCustomTravelpackage(bookingId).subscribe(
       data => {
         this.selectedBooking = data;
-        console.log("id:" + this.selectedBooking.id + "price" + this.selectedBooking.price);
+        console.log("id:" + this.selectedBooking.id);
       },
       error => {
         console.log(error);
@@ -96,26 +96,26 @@ export class BookingsPaymentComponent implements OnInit {
         var errorElement = document.getElementById('card-errors');
         errorElement!.textContent = result.error.message;
       } else {
-        const userToken = this.authService.getUserINFO()?.token;
-        const userID = this.getUserID();
-        //console.log("Userid from user info dict:", userID);
-        if (userID === undefined || userID === null || userID === '' || userID === 0 || isNaN(userID)) {
-          console.log("userID not found in local storage,trace the confirmBooking function");
-        } else {
-          console.log("Userid from user info dict:", userID);
-          // @ts-ignore
-          this.service.postConfirmBooking(this.selectedBooking.id, userID).subscribe(
-            response => {
-              //Handle successful booking confirmation
-              console.log("Booking confirmed")
-              this.router.navigate(['/bookings']);
-            },
-            error => {
-              console.log("Error confirming booking:", error);
-            },
-          )
-        }
+
+         const userToken = this.authService.getUserINFO()?.token;
+      const userID = this.getUserID();
+      //console.log("Userid from user info dict:", userID);
+      if (userID === undefined || userID === null || userID === '' || userID === 0 || isNaN(userID)) {
+        console.log("userID not found in local storage,trace the confirmBooking function from custom booking component");
+      } else {
+        console.log("Userid from user info dict:", userID);
+        // @ts-ignore
+        this.service.postConfirmCustomBooking(this.selectedBooking.id, userID).subscribe(
+          response => {
+            //Handle successful booking confirmation
+            console.log("Booking confirmed")
+            this.router.navigate(['/bookings']);
+          },
+          error => {
+            console.log("Error confirming booking:", error);
+          },
+        )
       }
-    });
-  }
-}
+    }
+  });
+}}

@@ -1,0 +1,23 @@
+.booking-container {
+  text-align: center; /* Center align the content */
+  margin-top: 20px; /* Add some top margin */
+}
+
+.booking-container h4 {
+  color: #8c5151; /* Change text color */
+  font-size: 20px; /* Adjust font size */
+  margin-bottom: 10px; /* Add some bottom margin */
+}
+
+.booking-container button {
+  padding: 10px 20px; /* Add padding to the button */
+  background-color: #068aaf; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius to button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.booking-container button:hover {
+  background-color: #046381; /* Change button background color on hover */
+}

@@ -6,6 +6,8 @@
 </div>
 
 <div *ngFor="let booking of allbookingsbyID">
+
+  <!--  Travel Package Bookings List -->
   <div *ngFor = "let package of booking.travel_package">
 <!--    <a routerLink="/travelpackages/{{ package.id }}">{{package.name }}</a>-->
     <div>
@@ -16,8 +18,27 @@
         </mat-card-header>
         <mat-card-actions align="end">
           <button routerLink="/travelpackages/{{ package.id }}" class="m-1 btn btn-light btn-outline-primary">View Details</button>
-          <button (click)="editBooking(booking)" class="m-1 btn btn-light btn-outline-primary">Edit</button>
-          <button (click)="deleteBooking(booking.id)" class="m-1 btn btn-light btn-outline-danger">Delete</button>
+<!--          <button (click)="editBooking(booking)" class="m-1 btn btn-light btn-outline-primary">Edit</button>-->
+          <button (click)="deleteBooking(booking.id)" class="m-1 btn btn-light btn-outline-danger">Cancel Booking</button>
+        </mat-card-actions>
+      </mat-card>
+      <br>
+    </div>
+  </div>
+
+  <!--  Custom Travel Package Bookings List -->
+  <div *ngFor = "let package of booking.custom_travel_package">
+<!--    <a routerLink="/travelpackages/{{ package.id }}">{{package.name }}</a>-->
+    <div>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{package.name}}</mat-card-title>
+          <mat-card-subtitle>Booking Created Date: {{booking.created_date}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions align="end">
+          <button routerLink="/customtravelpackages/{{ package.id }}" class="m-1 btn btn-light btn-outline-primary">View Details</button>
+<!--          <button (click)="editBooking(booking)" class="m-1 btn btn-light btn-outline-primary">Edit</button>-->
+          <button (click)="deleteCustomPackageBooking(booking.id)" class="m-1 btn btn-light btn-outline-danger">Cancel Booking</button>
         </mat-card-actions>
       </mat-card>
       <br>

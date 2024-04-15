@@ -53,7 +53,7 @@ export class BookingsConfirmationComponent {
     // ))
 
     confirmBooking(): void {
-      this.router.navigate(['/bookings-payment']);
+      this.router.navigate(['/bookings-payment',this.route.snapshot.paramMap.get('id')]);
       //const userToken = this.authService.getUserINFO()?.token;
 //       const userID = this.getUserID();
 //       //console.log("Userid from user info dict:", userID);

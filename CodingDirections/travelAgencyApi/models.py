@@ -115,6 +115,19 @@ class BookingDetails(models.Model):
     class Meta:
         ordering = ['customer']
 
+class BookingDetailsCustomPackage(models.Model):
+    customer = models.ForeignKey(User, on_delete=models.CASCADE)
+    custom_travel_package = models.ManyToManyField(CustomTravelPackage)
+    payment_status_flag = models.BooleanField(default=False)
+    agent = models.ForeignKey(BookingAgent, on_delete=models.SET_NULL, null=True)
+    created_date = models.DateTimeField(default=timezone.now()) #prinkal
+
+    def __str__(self):
+        return self.customer.username + " " + str(self.payment_status_flag)
+
+    class Meta:
+        ordering = ['customer']
+
 
 class Modification(models.Model):
     Client = models.CharField(max_length=50)
@@ -124,13 +137,11 @@ class Modification(models.Model):
     def __str__(self):
         return self.Client
 
-# class BookingForm(forms.Form):
-#     #travel_package_id = forms.IntegerField()
-#     location = forms.CharField(label='Location', max_length=100)
-#     date = forms.DateField(label='Date')
-#     pricerange = forms.ChoiceField(label='Price Range', choices=[
-#         ('1000-2000', '$1000 - $2000'),
-#         ('2000-3000', '$2000 - $30000'),
-#         ('40000-5000', '40000 - $5000'),
-#         ('5000+', '$5000+')
-#     ])
+class PaymentDetails(models.Model):
+    booking = models.ForeignKey(BookingDetails, on_delete=models.CASCADE)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    payment_method = models.CharField(max_length=50)
+    payment_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f"Payment for {self.booking.customer.username} - {self.amount} {self.payment_method}"
