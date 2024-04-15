@@ -30,7 +30,8 @@ export class CustomTravelPackageFormComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getCurrentUser()
+    this.calculateTotalPrice();
+    this.getCurrentUser();
     this.route.paramMap.subscribe(params => {
       this.getFlightsList(); // Fetch flights list
       this.getHotelsList(); // Fetch hotels list
@@ -82,7 +83,7 @@ export class CustomTravelPackageFormComponent implements OnInit {
       flights: this.selectedFlights,
       hotels: this.selectedHotels,
       activities: this.selectedActivities,
-      price: this.price,
+      price: this.calculateTotalPrice()
       // created_by: this.currentUser
     };
     console.log('Payload:', payload);
@@ -105,9 +106,8 @@ export class CustomTravelPackageFormComponent implements OnInit {
       this.http.post<any>('http://127.0.0.1:8000/create-custom-travel-package/', payload)
         .subscribe(
           response => {
-            console.log('Custom Travel package created:', response);
-            // location.reload();
-            console.log('navigate success');
+            // console.log('Custom Travel package created:', response);
+            location.reload();
             // Handle success, e.g., show a success message to the user
           },
           error => {
@@ -116,6 +116,30 @@ export class CustomTravelPackageFormComponent implements OnInit {
           }
         );
     }
+  }
+
+  calculateTotalPrice(): number {
+    let totalPrice = 0;
+    this.selectedFlights.forEach(flightId => {
+      const flight = this.flightsList.find(f => f.id === flightId);
+      if (flight) {
+        totalPrice += Number(flight.price);
+      }
+    });
+    this.selectedHotels.forEach(hotelId => {
+      const hotel = this.hotelsList.find(f => f.id === hotelId);
+      if (hotel) {
+        totalPrice += Number(hotel.price_per_night);
+      }
+    });
+    this.selectedActivities.forEach(activityId => {
+      const activity = this.activitiesList.find(f => f.id === activityId);
+      if (activity) {
+        totalPrice += Number(activity.price);
+      }
+    });
+    console.log('Total price:', totalPrice);
+    return totalPrice;
   }
 
   getFlightsList = () => {
